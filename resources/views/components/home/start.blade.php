@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-6 col-sm-12 XXXd-xs-none wow fadeInLeft">
+                <div class="col-lg-6 col-md-6 col-sm-12 XXXd-xs-none wow fadeInLeft mb-5">
                     <div class="text-center">
                         <img alt="Ernie" src="images/_/ernie.jpg" class="ernie_c">
                         <img alt="Ernie &amp; Oliver" src="images/_/ernie-oliver.jpg" class="ernie_c oliver_c">

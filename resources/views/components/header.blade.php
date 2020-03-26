@@ -10,10 +10,10 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="scroll nav-link link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie-bert">Ernie & Bert</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
                 </ul>
             </div>
             <div class="header-social d-none d-lg-inline-block">
@@ -37,10 +37,10 @@
                 <div class="navbar-nav">
                     <li class="nav-item"><a class="scroll nav-link link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie-bert">Ernie & Bert</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#kontakt">Kontakt</a></li>
                     <span class="menu-line"><i class="ti ti-angle-right" aria-hidden="true"></i></span>
                 </div>
