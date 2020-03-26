@@ -24,7 +24,9 @@ jQuery(function ($) {
     $(".scroll").on("click", function(event){
         event.preventDefault();
         $('html,body').animate({
-            scrollTop: $(this.hash).offset().top - 40}, 1100);
+            scrollTop: $(this.hash).offset().top - 40
+        }, 1100);
+        window.location.hash = this.hash
     });
     /* ====================================
        Nav Fixed On Scroll

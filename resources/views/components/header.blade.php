@@ -1,6 +1,6 @@
 <!-- Header start -->
 <header class="cursor-light">
-    <nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg black nav-radius">
+    <nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg black nav-bottom-line">
         <div class="container">
             <a class="logo link" href="javascript:void(0)">
                 <img src="images/logo-yellow.png" alt="logo" title="Logo" class="logo-default">

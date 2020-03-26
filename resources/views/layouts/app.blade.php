@@ -20,7 +20,7 @@
         @include('components.styles')
 
 	</head>
-	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
         @include('components.loader')
         @include('components.header')
 
