@@ -61,17 +61,18 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12 pt-xs-25px text-lg-left text-center">
-                                    <button type="submit" class="btn-setting btn-hvr-setting-main btn-primary btn-hvr text-uppercase" id="submit_btn"><i class="ti ti-reload ti-reload mr-2 d-none" aria-hidden="true"></i><b class="font-weight-normal">
-                                        Anmeldung absenden
-                                    </b>
+                                    <button type="submit" class="btn-setting btn-hvr-setting-main btn-primary btn-hvr text-uppercase" id="submit_btn"><i class="ti ti-reload ti-reload mr-2 d-none" aria-hidden="true"></i>
+                                        <b class="font-weight-normal">
+                                            Anmeldung absenden
+                                        </b>
                                         <span class="btn-hvr-setting btn-hvr-black">
-                             <span class="btn-hvr-setting-inner">
-                             <span class="btn-hvr-effect"></span>
-                             <span class="btn-hvr-effect"></span>
-                             <span class="btn-hvr-effect"></span>
-                             <span class="btn-hvr-effect"></span>
-                             </span>
-                            </span>
+                                         <span class="btn-hvr-setting-inner">
+                                         <span class="btn-hvr-effect"></span>
+                                         <span class="btn-hvr-effect"></span>
+                                         <span class="btn-hvr-effect"></span>
+                                         <span class="btn-hvr-effect"></span>
+                                         </span>
+                                        </span>
                                     </button>
                                 </div>
                             </div>

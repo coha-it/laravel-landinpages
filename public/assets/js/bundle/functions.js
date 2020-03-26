@@ -547,11 +547,15 @@ jQuery(function ($) {
     $(".form_c").on('submit', function () {
         var form = $(this);
         var form_wrapper = $('.form_c_wrapper');
+        var btn = $("#submit_btn");
+        var btn_b = btn.find('b');
+        var btn_i = btn.find('i');
 
         //disable submit button on click
-        $("#submit_btn").attr("disabled", true);
-        $("#submit_btn b").text('Sending');
-        $("#submit_btn i").removeClass('d-none');
+        btn.attr("disabled", true);
+        btn.attr("orig_text", btn_b.text());
+        btn_b.text('Sending');
+        btn_i.removeClass('d-none');
 
         var post_data = form.serialize();
 
@@ -560,22 +564,24 @@ jQuery(function ($) {
             method: form.attr('method'),
             url: form.attr('action'),
             data: post_data
-        }).done(function(response) {
-            console.log('jogh');
-            //load json data from server and output message
-            if (response.type == 'error') {
-                console.log('error!')
-            } else {
-                console.log('jo')
-                //reset values in all input fields
-                form.find('input').val('');
-                form.find('textarea').val('');
+        })
+        .fail(function(response) {
+            btn.removeAttr('disabled');
+            var txt = btn.attr('orig_text')
+            btn_b.text(txt);
+            btn_b.text('Es gab leider ein Problem. Bitte versuchen Sie es erneut')
+            btn_i.addClass('d-none');
+        })
+        .done(function(response) {
+            console.log('jo')
+            //reset values in all input fields
+            form.find('input').val('');
+            form.find('textarea').val('');
 
-                console.log(response)
+            console.log(response)
 
-                form_wrapper.hide(600);
-                form_wrapper.after(response);
-            }
+            form_wrapper.hide(600);
+            form_wrapper.after(response);
         });
 
     });
