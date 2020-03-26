@@ -82,6 +82,10 @@ body.fancybox-iosfix {
     position: inherit !important;
 }
 
+body.fancybox-active {
+    overflow: visible;
+}
+
 .oliver_alle_play_button_c {
     left: 50%;
     transform: translate(-50%, -50%);
