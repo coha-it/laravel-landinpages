@@ -544,78 +544,38 @@ jQuery(function ($) {
        Contact Us
        ====================================== */
 
-    $("#submit_btn").on('click', function () {
+    $(".form_c").on('submit', function () {
+        var form = $(this);
+        var form_wrapper = $('.form_c_wrapper');
 
         //disable submit button on click
-        $("#submit_btn").attr("disabled", "disabled");
+        $("#submit_btn").attr("disabled", true);
         $("#submit_btn b").text('Sending');
         $("#submit_btn i").removeClass('d-none');
 
-        var user_name = $('input[name=name]').val();
-        var user_email = $('input[name=email]').val();
-        var user_phone = $('input[name=phone]').val();
-        var user_message = $('textarea[name=message]').val();
+        var post_data = form.serialize();
 
-        //simple validation at client's end
-        var post_data, output;
-        var proceed = true;
-        if (user_name == "") {
-            proceed = false;
-        }
-        if (user_email == "") {
-            proceed = false;
-        }
-        // if (user_phone == "") {
-        //proceed = false;
-        // }
+        //Ajax post data to server
+        $.ajax({
+            url: form.attr('action'),
+            data: post_data
+        }).done(function(response) {
+            console.log('jogh');
+            //load json data from server and output message
+            if (response.type == 'error') {
+                console.log('error!')
+            } else {
+                console.log('jo')
+                //reset values in all input fields
+                form.find('input').val('');
+                form.find('textarea').val('');
 
-        if (user_message == "") {
-            proceed = false;
-        }
-        //everything looks good! proceed...
-        if (proceed) {
+                console.log(response)
 
-            //data to be sent to server
-            post_data = {
-                'userName': user_name,
-                'userEmail': user_email,
-                'userPhone': user_phone,
-                'userMessage': user_message
-            };
-
-            //Ajax post data to server
-            $.post('contact.php', post_data, function (response) {
-
-                //load json data from server and output message
-                if (response.type == 'error') {
-                    output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">' + response.text + '</div>';
-                } else {
-                    output = '<div class="alert-success" style="padding:10px 15px; margin-bottom:30px;">' + response.text + '</div>';
-
-                    //reset values in all input fields
-                    $('.contact-form input').val('');
-                    $('.contact-form textarea').val('');
-                }
-
-                $("#result").hide().html(output).slideDown();
-
-                // enable submit button on action done
-                $("#submit_btn").removeAttr("disabled");
-                $("#submit_btn b").text('SUBMIT REQUEST');
-                $("#submit_btn i").addClass('d-none');
-
-            }, 'json');
-
-        }
-        else {
-            output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">Please provide the missing fields.</div>';
-            $("#result").hide().html(output).slideDown();
-
-            // enable submit button on action done
-            $("#submit_btn").removeAttr("disabled");
-            $("#submit_btn b").text('SUBMIT REQUEST');
-            $("#submit_btn i").addClass('d-none');
-        }
+                form_wrapper.hide(600);
+                form_wrapper.after(response);
+            }
+        });
 
     });
 

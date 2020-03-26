@@ -43,8 +43,8 @@ class ContactCtrl extends Controller
         $body    = $this->buildMessage($data);
 
         \Mail::raw($body, function ($message) use ($subject) {
-            $message->from('info@corporate-happiness.de', 'New Work Finance');
-            $message->subject("New Work Finance - Formular: ".trans('values.'.$subject));
+            $message->from('info@corporate-happiness.de', 'Krisen-Ernie');
+            $message->subject("Krisen-Ernie Formular: ".trans('values.'.$subject));
 
             // Receiver
             if (\App::environment(['local'])) {
@@ -73,12 +73,12 @@ class ContactCtrl extends Controller
             'email' => $req->data['email'],
             'firstname' => $req->data['firstname'],
             'lastname' => $req->data['lastname'],
-            'position' => $req->data['position'],
+            'position' => $req->data['position'] ?? '',
             'streetandnumber' => $req->data['streetandnumber'],
             'zipandlocation' => $req->data['zipandlocation'],
             'phone' => $req->data['phone'],
             'company' => $req->data['company'],
-            'ustid' => $req->data['ustid'],
+            'ustid' => $req->data['ustid'] ?? '',
             'message' => $req->data['message'],
             'data'  => json_encode($req->data, JSON_FORCE_OBJECT),
             'ip'    => $req->ip(),

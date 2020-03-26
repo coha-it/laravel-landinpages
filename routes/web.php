@@ -15,8 +15,8 @@
 Route::get('/',             'PageCtrl@home')->name('home'); // Home
 Route::get('/impressum',    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
 Route::get('/imprint',      'PageCtrl@imprint');
-Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
-Route::get('/contact',      'PageCtrl@contact');
+// Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
+// Route::get('/contact',      'PageCtrl@contact');
 Route::get('/anmelden',     'PageCtrl@register')->name('register'); // Register - Anmelden
 Route::get('/register',     'PageCtrl@register');
 Route::get('/danke',        'PageCtrl@thanks')->name('thanks');

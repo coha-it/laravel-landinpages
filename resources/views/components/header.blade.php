@@ -12,13 +12,13 @@
                     <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
                 </ul>
             </div>
-            <div class="header-social d-none d-lg-inline-block">
+            {{-- <div class="header-social d-none d-lg-inline-block">
                 <a href="#contact" class="email-text-hvr"><i class="ti ti-email" aria-hidden="true"></i></a>
-            </div>
+            </div> --}}
             <!-- side menu open button -->
             <a class="menu_bars d-inline-block menu-bars-setting animated-wrap" id="sidemenu_toggle">
                 <div class="menu-lines animated-element">
@@ -39,14 +39,14 @@
                     <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
+                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
                     <li class="nav-item"><a class="scroll nav-link link" href="#kontakt">Kontakt</a></li>
                     <span class="menu-line"><i class="ti ti-angle-right" aria-hidden="true"></i></span>
                 </div>
             </nav>
             <div class="side-footer text-white w-100">
-                <p class="text-white">&copy; 2020 Corporate Happiness GmbH </p>
+                <p class="text-white">&copy; 2020 Krisen-Ernie </p>
             </div>
         </div>
     </div>

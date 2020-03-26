@@ -12,8 +12,10 @@
     @include('components.home.vid-alle')
     @include('components.home.vid-ernie')
     @include('components.home.vid-unternehmer')
+    @include('components.home.anmelden')
+    @include('components.home.kunden')
 
 
-    @include('components.home.counter')
+    {{-- @include('components.home.counter') --}}
 
 @endsection
