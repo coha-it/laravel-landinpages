@@ -3,8 +3,8 @@
     <nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg black nav-bottom-line">
         <div class="container">
             <a class="logo link" href="javascript:void(0)">
-                <img src="images/logo-yellow.png" alt="logo" title="Logo" class="logo-default">
-                <img src="images/logo-yellow.png" alt="logo" title="Logo" class="logo-scrolled">
+                <img src="images/_/krisen-ernie-logo-1.svg" alt="logo" title="Logo" class="logo_c logo-default">
+                <img src="images/_/krisen-ernie-logo-1.svg" alt="logo" title="Logo" class="logo_c logo-scrolled">
             </a>
             <div class="collapse navbar-collapse d-none d-lg-block">
                 <ul class="nav navbar-nav ml-auto">

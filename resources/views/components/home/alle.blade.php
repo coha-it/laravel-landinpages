@@ -13,7 +13,17 @@
                     <p class="mb-35px">
                         In dem folgenden Video erzählt Dr. Oliver Haas, wie Du diese Erkenntnisse nutzen kannst, um selbst gestärkt aus dieser Krise hervorzugehen:
                     </p>
-                    <a href="javascript:void(0)" class="btn-setting btn-hvr-setting-main btn-summer-sky text-white btn-hvr">Become a client
+                    <a data-fancybox href="https://vimeo.com/76979871" class="btn-setting btn-hvr-setting-main btn-primary text-white btn-hvr">Video ansehen
+                        <span class="btn-hvr-setting btn-hvr-black">
+                         <span class="btn-hvr-setting-inner">
+                         <span class="btn-hvr-effect"></span>
+                         <span class="btn-hvr-effect"></span>
+                         <span class="btn-hvr-effect"></span>
+                         <span class="btn-hvr-effect"></span>
+                         </span>
+                        </span>
+                    </a>
+                    <a href="#anmelden" class="btn-setting btn-hvr-setting-main btn-transparent2 btn-hvr">Anmelden
                         <span class="btn-hvr-setting btn-hvr-black">
                          <span class="btn-hvr-setting-inner">
                          <span class="btn-hvr-effect"></span>
@@ -27,9 +37,9 @@
             </div>
             <div class="col-md-6 col-sm-12 text-center center-block">
                 <div style="position: relative;">
-                    <img alt="Video für Alle" src="images/_/oliver-video.jpg" style="max-width: 500px;width: 100%;">
-                    <a data-fancybox="" href="https://vimeo.com/76979871" class="video-play-button position-absolute" style="left: 0%;top: 20%;">
-                        <i class="ti ti-control-play"></i>
+                    <img alt="Video für Alle" src="images/_/oliver-video.jpg" class="shadow_c" style="max-width: 500px;width: 100%;">
+                    <a data-fancybox href="https://vimeo.com/76979871" class="video-play-button position-absolute bg-primary text-white" style="right: 0%;top: 0%;">
+                        <i class="fa fa-play" style="margin: 0 -.3em 0 0;"></i>
                     </a>
                 </div>
             </div>
