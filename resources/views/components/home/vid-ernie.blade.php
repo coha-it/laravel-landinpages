@@ -40,7 +40,7 @@
                     <p>Dann hast Du unten die Möglichkeit, Dich für den kostenlosen Online-Kurs anzumelden. Dort erwarten Dich spannende Videos und Übungen, in denen wir Dir die wichtigsten Erkenntnisse vermitteln, wie uns die Positive Psychologie auch und gerade in Krisenzeiten helfen kann, Herausforderungen zu überwinden und sogar in diesen Zeiten zu wachsen – persönlich wie auch wirtschaftlich.</p>
                     <p>Du lernst die Quintessenz unserer jahrzehntelangen Erfahrung kombiniert mit den Kernerkenntnissen der Positiven Psychologie und der Hirnforschung. Hier ist alles, was Du brauchst, um Dein psychisches Immunsystem zu kräftigen, gestärkt aus der Corona-Krise hervorzugehen und in diesen stürmischen Zeiten auch für Deine Mitmenschen, Kollegen und  Mitarbeiter wie ein Leuchtturm Orientierung zu schenken.</p>
                 </div>
-                <a href="#anmelden" class="btn-setting btn-hvr-setting-main btn-primary text-white btn-hvr" style="width: 100%;"> Jetzt anmelden
+                <a href="#anmelden" class="btn-setting btn-hvr-setting-main btn-primary text-white btn-hvr scroll" style="width: 100%;"> Jetzt anmelden
                     <span class="btn-hvr-setting btn-hvr-black">
                      <span class="btn-hvr-setting-inner">
                      <span class="btn-hvr-effect"></span>

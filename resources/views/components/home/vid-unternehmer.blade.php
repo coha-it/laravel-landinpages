@@ -28,7 +28,7 @@
                          </span>
                         </span>
                     </a>
-                    <a href="#anmelden" class="btn-setting btn-hvr-setting-main btn-transparent2 btn-hvr">Anmelden
+                    <a href="#anmelden" class="btn-setting btn-hvr-setting-main btn-transparent2 btn-hvr scroll">Anmelden
                         <span class="btn-hvr-setting btn-hvr-black">
                          <span class="btn-hvr-setting-inner">
                          <span class="btn-hvr-effect"></span>

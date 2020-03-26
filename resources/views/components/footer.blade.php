@@ -12,7 +12,11 @@
                     <span class="px-3 py-1"><a class="scroll link wow fadeInUp text-muted" href="#kunden">Kunden</a></span>
                     <span class="px-3 py-1"><a class="scroll link wow fadeInUp text-muted" href="{{ route('imprint') }}" >Impressum</a></span>
                 </div>
-                <p class="copyrights mt-2 mb-2">© 2020 Krisen-Ernie</p>
+                <p class="copyrights mt-2 mb-2">
+                    <a href="mailto:info@krisen-ernie.de">info@krisen-ernie.de</a>
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    <span>© 2020 Krisen-Ernie</span>
+                </p>
             </div>
         </div>
     </div>
