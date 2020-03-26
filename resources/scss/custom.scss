@@ -1,151 +1,49 @@
-// Fixes
-html body.anim .overlay-loading2:before,
-.overlay-anim-box2.overlay-anim2:before { transform: translateX(101%);}
-span.Typewriter__wrapper:after {content:"\00a0";}
-.gold-color { color: #dcc01a;}
-
-// Fixes 2
-/* COHA */
-@media only screen and (min-width: 660px) {
-	.coha--text-split-2 {
-		-webkit-column-count: 2;
-		-moz-column-count: 2;
-		column-count: 2;
-	}
-}
-
-.coha--btn {
-    .border-btn-box {
-        backdrop-filter: blur(5px) brightness(0.43);
-        background-color: rgba(0, 0, 0, 0);
-    }
-    .border-btn-inner {
-        // background-color: #fff;
-    }
-}
-
-.flying-wrapper {
-    transition: 0ms;
-    position: fixed;
-    bottom: 0;
-    transform: translateY(100%);
-    left: 0;
-    right: 0;
-    z-index: 9;
-    text-align: center;
-    opacity: 0;
-}
-
-.to-top-btn._mPS2id-h + .flying-wrapper {
-    transition: transform 550ms 0ms, bottom 550ms 0ms, opacity 550ms 550ms;
-    opacity: 1;
-}
-
-.to-top-btn:not(.mPS2id-highlight) + .flying-wrapper {
-    transform: translateY(0%);
-    bottom: 25px;
-}
-
-.coha--cut-text-wrapper {
-    position: relative;
-
-    &> div:first-child{
-        max-height: 500px;
-        height: 50vh;
-        min-height: 250px;
-        padding-bottom: 110px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-
-    &> .after {
-        box-shadow: 0px 0 55px 56px #f5f5f5;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 0;
-        display: inline-block;
-        pointer-events: none;
-    }
-}
-
-
-// App SCSS
-.pointer-large,
-.swiper-pagination-clickable .swiper-pagination-bullet,
-.mfp-close,
-.mfp-gallery .mfp-image-holder .mfp-figure,
-.mfp-zoom,
-.mfp-zoom-out-cur,
-.mfp-zoom-out-cur .mfp-image-holder .mfp-close,
-button.mfp-arrow {
-    cursor: pointer !important;
-}
-
-.bullets > li {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin-left: 25px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.portfolio-content {
-    background: #f5f5f5;
-
-    .portfolio-content-inner {
-        overflow: hidden;
-    }
-}
-
-
-.imprint {
-    background: #1d1e21;
-    p {
-        margin: 0 0 25px;
-    }
-}
-
-// Brand Boxes:
-.client-list {
-    .brand-box.single {
-        .opac-img {
-            opacity: 1;
-            filter: grayscale(1) brightness(0.78);
-            margin: auto;
-            bottom: 0;
-        }
-
-    }
-
-    li:hover .brand-box.single .opac-img {filter: unset;}
-}
-
-.dark-bg-1 {
-    .fas {
-        color: #fff;
-    }
-}
-
-.coha-fa {
-    font-size: 3em;
-    width: 20px;
-    z-index: 99999;
-    position: absolute;
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.mfp-iframe-holder .mfp-content {
-    max-width: 2250px;
-}
-
-.contact-form-control {
+html,
+html body {
     font-size: 16px;
+    color: #4a4a4a;
+    font-weight: 400;
 }
 
+p,
+.main-title p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    line-height: 1.15;
+}
+
+// Colors
+.main-title h5 {
+    color: #546db5;
+}
+.bg-primary {
+    background-color: #546db5!important;
+}
+
+// Ernie und Oliver
+
+.ernie_c {
+    max-width: 350px;
+    width: 50%;
+    margin-left: -25%;
+    box-shadow: 0px 4px 25px -17px rgba(0, 0, 0, 0.2);
+    transform: rotate(0deg);
+
+    &:hover {
+        transform: rotate(-2deg);
+    }
+}
+.oliver_c {
+    margin: -55% 0 0 40%;
+    &:hover {
+        transform: rotate(2deg);
+    }
+}
+
+// Testing
+.icon-counters:hover .img-icon {
+    transform: unset;
+}

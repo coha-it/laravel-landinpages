@@ -1,4 +1,14 @@
-<!-- loading start -->
-<div class="loading">
-    <img class="logo-loading" src="{{ asset('assets/images/logo/logo-coha-w-2z.png') }}" alt="logo">
-</div><!-- loading end -->
+{{-- Loader --}}
+<div class="loader" id="loader-fade">
+    <div class="loader-container center-block">
+        <div class="grid-row">
+            <div class="col center-block">
+                <ul class="loading reversed">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

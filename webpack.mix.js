@@ -13,14 +13,76 @@ require('laravel-mix-purgecss');
  */
 
 // Mix JS Files
-mix.js(['resources/js/app.js', 'resources/js/main.js', 'resources/js/custom.js'], 'public/dist/js/app.js');
-mix.sass('resources/scss/custom.scss', 'public/dist/css/custom.css');
+mix.js([
+    'resources/js/app.js',
+    'resources/js/main.js',
+    'resources/js/custom.js'
+  ],
+  'public/dist/js/app.js'
+)
+.sass(
+    'resources/scss/custom.scss',
+    'public/dist/css/custom.css'
+);
 
 // LIVE
 if (mix.inProduction()) {
     mix
-        .styles(['public/assets/css/plugins.css','public/assets/css/style.css', 'public/dist/css/custom.css'],'public/assets/css/combined.min.css')
-        .combine(['public/assets/js/plugins.js', 'public/assets/js/typewriter.js', 'public/dist/js/app.js'], 'public/assets/js/combined.min.js')
+        .styles([
+            'public/assets/css/bundle/bootstrap.min.css',
+            'public/assets/css/bundle/themify-icons.css',
+            'public/assets/css/bundle/font-awesome.min.css',
+            'public/assets/css/bundle/animate.min.css',
+            'public/assets/css/bundle/cubeportfolio.min.css',
+            'public/assets/css/bundle/jquery.fancybox.min.css',
+            'public/assets/css/bundle/navigation.css',
+            'public/assets/css/bundle/settings.css',
+            'public/assets/css/bundle/swiper.min.css',
+            'public/assets/css/bundle/owl.carousel.min.css',
+            'public/assets/css/bundle/owl.theme.default.min.css',
+            'public/assets/css/bundle/before-after-img.css',
+            'public/assets/css/bundle/style.css',
+            // 'public/assets/css/bundle/yellow.css',
+          ],
+          'public/assets/css/combined.min.css'
+        )
+        .combine([
+            'public/assets/js/bundle/jquery-3.3.1.min.js',
+            'public/assets/js/bundle/popper.min.js',
+            'public/assets/js/bundle/bootstrap.min.js',
+            // 'public/assets/js/bundle/morphext.min.js',
+            // 'public/assets/js/bundle/jquery.flip.min.js',
+            // 'public/assets/js/bundle/jquery.appear.js',
+            // 'public/assets/js/bundle/isotope.pkgd.min.js',
+            // 'public/assets/js/bundle/jquery.cubeportfolio.min.js',
+            // 'public/assets/js/bundle/jquery.matchHeight-min.js',
+            // 'public/assets/js/bundle/parallaxie.min.js',
+            // 'public/assets/js/bundle/particles.min.js',
+            // 'public/assets/js/bundle/jquery.fancybox.min.js',
+            // 'public/assets/js/bundle/swiper.min.js',
+            // 'public/assets/js/bundle/owl.carousel.js',
+            // 'public/assets/js/bundle/wow.js',
+            // 'public/assets/js/bundle/TweenMax.min.js',
+            'public/assets/js/bundle/headroom.js',
+
+            // 'public/assets/js/bundle/revolution/jquery.themepunch.tools.min.js',
+            // 'public/assets/js/bundle/revolution/jquery.themepunch.revolution.min.js',
+            // 'public/assets/js/bundle/revolution/jquery.themepunch.revolution.contdown.min.js',
+
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.actions.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.carousel.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.kenburn.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.layeranimation.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.migration.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.navigation.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.parallax.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.slideanims.min.js',
+            // 'public/assets/js/bundle/revolution/extensions/revolution.extension.video.min.js',
+
+            'public/assets/js/bundle/functions.js',
+          ],
+          'public/assets/js/combined.min.js'
+        )
         .version()
         .purgeCss();
 }

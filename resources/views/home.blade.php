@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'New Work Finance | Mit Innovation durch Vorreiter der Branche werden!')
+@section('title', 'Krisen-Ernie | Kostenfreier Onlinekurs zur richtigen Umgang mit Krisen.')
 
 @section('content')
-    @include('components.home')
+
+    @include('components.home.start')
+    @include('components.home.alle')
+
+
+    @include('components.home.counter')
+
 @endsection
