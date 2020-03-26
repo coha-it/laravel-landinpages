@@ -557,6 +557,7 @@ jQuery(function ($) {
 
         //Ajax post data to server
         $.ajax({
+            method: form.attr('method'),
             url: form.attr('action'),
             data: post_data
         }).done(function(response) {
