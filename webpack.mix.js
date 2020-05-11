@@ -28,9 +28,9 @@ mix.js([
 if (mix.inProduction()) {
     mix
         .styles([
-            'assets/css/loaders/loader-pulse.css',
-            'assets/css/theme.css',
-            'dist/css/custom.css',
+            'public/assets/css/loaders/loader-pulse.css',
+            'public/assets/css/theme.css',
+            'public/dist/css/custom.css',
              /* And so on and so on */
           ],
           'public/assets/css/combined.min.css'
