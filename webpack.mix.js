@@ -28,13 +28,39 @@ mix.js([
 if (mix.inProduction()) {
     mix
         .styles([
-            'public/assets/css/bootstrap.min.css',
+            'assets/css/loaders/loader-pulse.css',
+            'assets/css/theme.css',
+            'dist/css/custom.css',
              /* And so on and so on */
           ],
           'public/assets/css/combined.min.css'
         )
         .combine([
-            'public/assets/js/bundle/jquery-3.3.1.min.js',
+            'public/assets/js/jquery.min.js',
+            'public/assets/js/popper.min.js',
+            'public/assets/js/bootstrap.js',
+
+            'public/assets/js/aos.js',
+            'public/assets/js/clipboard.min.js',
+            'public/assets/js/jquery.fancybox.min.js',
+            'public/assets/js/flatpickr.min.js',
+            'public/assets/js/flickity.pkgd.min.js',
+            'public/assets/js/ion.rangeSlider.min.js',
+            'public/assets/js/isotope.pkgd.min.js',
+            'public/assets/js/jarallax.min.js',
+            'public/assets/js/jarallax-video.min.js',
+            'public/assets/js/jarallax-element.min.js',
+            'public/assets/js/jquery.countdown.min.js',
+            'public/assets/js/jquery.smartWizard.min.js',
+            'public/assets/js/plyr.polyfilled.min.js',
+            'public/assets/js/prism.js',
+            'public/assets/js/scrollMonitor.js',
+            'public/assets/js/smooth-scroll.polyfills.min.js',
+            'public/assets/js/svg-injector.umd.production.js',
+            'public/assets/js/twitterFetcher_min.js',
+            'public/assets/js/typed.min.js',
+            'public/assets/js/theme.js',
+
             // and so on and so on
           ],
           'public/assets/js/combined.min.js'

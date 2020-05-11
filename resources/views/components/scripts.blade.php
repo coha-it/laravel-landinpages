@@ -48,9 +48,10 @@
     <script type="text/javascript" src="{{ asset('assets/js/typed.min.js') }}"></script>
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
-    <!-- Removes page load animation when window is finished loading -->
-    <script type="text/javascript">
-      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
-    </script>
 
 @endif
+
+<!-- Removes page load animation when window is finished loading -->
+<script type="text/javascript">
+    window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+</script>
