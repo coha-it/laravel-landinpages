@@ -1,56 +1,161 @@
-<!-- Header start -->
-<header class="cursor-light">
-    <nav class="navbar navbar-top-default navbar-expand-lg static-nav transparent-bg black nav-bottom-line">
-        <div class="container">
-            <a class="logo link" href="javascript:void(0)">
-                <img src="images/_/krisen-ernie-logo-1.svg" alt="logo" title="Logo" class="logo_c logo-default">
-                <img src="images/_/krisen-ernie-logo-1.svg" alt="logo" title="Logo" class="logo_c logo-scrolled">
-            </a>
-            <div class="collapse navbar-collapse d-none d-lg-block">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="scroll nav-link link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
-                </ul>
-            </div>
-            {{-- <div class="header-social d-none d-lg-inline-block">
-                <a href="#contact" class="email-text-hvr"><i class="ti ti-email" aria-hidden="true"></i></a>
-            </div> --}}
-            <!-- side menu open button -->
-            <a class="menu_bars d-inline-block menu-bars-setting animated-wrap" id="sidemenu_toggle">
-                <div class="menu-lines animated-element">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </a>
+<div class="navbar-container">
+    <nav class="navbar navbar-expand-lg navbar-light" data-overlay data-sticky="top">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
+          <img alt="Jumpstart" data-inject-svg src="assets/img/logos/jumpstart.svg">
+        </a>
+        <div class="d-flex align-items-center order-lg-3">
+          <a href="#" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Buy Jumpstart</a>
+          <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" data-inject-svg src="assets/img/icons/interface/icon-menu.svg">
+            <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm" data-inject-svg src="assets/img/icons/interface/icon-x.svg">
+          </button>
         </div>
+        <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end" id="navigation-menu">
+          <ul class="navbar-nav my-3 my-lg-0">
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Demos</a>
+                <div class="row dropdown-menu">
+                  <div class="col-auto" data-dropdown-content>
+                    <div class="dropdown-grid-menu"><a href="index.html" class="dropdown-item fade-page">Overview</a><a href="landing-1.html" class="dropdown-item fade-page">Landing 1</a><a href="landing-2.html" class="dropdown-item fade-page">Landing 2</a><a href="landing-3.html"
+                      class="dropdown-item fade-page">Landing 3</a><a href="landing-4.html" class="dropdown-item fade-page">Landing 4</a><a href="landing-5.html" class="dropdown-item fade-page">Landing 5</a><a href="landing-6.html" class="dropdown-item fade-page">Landing 6</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Pages</a>
+                <div class="row dropdown-menu">
+                  <div class="col-auto" data-dropdown-content>
+                    <div class="dropdown-grid-menu">
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Company</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="company-about-1.html" class="dropdown-item fade-page">About 1</a><a href="company-about-2.html" class="dropdown-item fade-page">About 2</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Blog</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="blog-listing-1.html" class="dropdown-item fade-page">Blog Listing 1</a><a href="blog-listing-2.html" class="dropdown-item fade-page">Blog Listing 2</a><a href="blog-listing-3.html" class="dropdown-item fade-page">Blog Listing 3</a>
+                              <a
+                              href="blog-article.html" class="dropdown-item fade-page">Blog Article</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Help Center</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="help-center-home.html" class="dropdown-item fade-page">Help Center Home</a><a href="help-center-category.html" class="dropdown-item fade-page">Help Center Category</a><a href="help-center-article.html" class="dropdown-item fade-page">Help Center Article</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Careers</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="careers-1.html" class="dropdown-item fade-page">Careers 1</a><a href="careers-2.html" class="dropdown-item fade-page">Careers 2</a><a href="career-single.html" class="dropdown-item fade-page">Career Single</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Case Studies</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="case-studies.html" class="dropdown-item fade-page">Case Studies</a><a href="case-study-single.html" class="dropdown-item fade-page">Case Study Single</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Pricing</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="pricing-plans.html" class="dropdown-item fade-page">Pricing Plans</a><a href="pricing-table.html" class="dropdown-item fade-page">Pricing Table</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Contact</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="contact.html" class="dropdown-item fade-page">Contact</a><a href="contact-map.html" class="dropdown-item fade-page">Contact Map</a><a href="contact-planner.html" class="dropdown-item fade-page">Contact Planner</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Account</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="account-settings.html" class="dropdown-item fade-page">Account Settings</a><a href="account-invoice.html" class="dropdown-item fade-page">Invoice</a><a href="account-sign-up-cover.html" class="dropdown-item fade-page">Sign Up - Cover</a>
+                              <a
+                              href="account-sign-in-cover.html" class="dropdown-item fade-page">Sign In - Cover</a><a href="account-sign-up-simple.html" class="dropdown-item fade-page">Sign Up - Simple</a><a href="account-sign-in-simple.html" class="dropdown-item fade-page">Sign In - Simple</a><a href="account-forgot-password.html"
+                                class="dropdown-item fade-page">Forgot Password</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" class="dropdown-item" data-toggle="dropdown-grid" href="#" role="button">Utility</a>
+                        <div class="row dropdown-menu">
+                          <div class="col-auto" data-dropdown-content>
+                            <div class="dropdown-grid-menu"><a href="utility-coming-soon-subscribe.html" class="dropdown-item fade-page">Coming Soon Subscribe</a><a href="utility-coming-soon-countdown.html" class="dropdown-item fade-page">Coming Soon Countdown</a><a href="utility-coming-soon-social.html"
+                              class="dropdown-item fade-page">Coming Soon Social</a><a href="utility-legal-terms.html" class="dropdown-item fade-page">Legal Terms</a><a href="404.html" class="dropdown-item fade-page">404</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Features</a>
+                <div class="row dropdown-menu">
+                  <div class="col-auto" data-dropdown-content>
+                    <div class="dropdown-grid-menu"><a href="style-guide.html" class="dropdown-item fade-page">Style Guide</a><a href="plugins.html" class="dropdown-item fade-page">Plugins</a><a href="navigation-bars.html" class="dropdown-item fade-page">Navigation Bars</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Support</a>
+                <div class="row dropdown-menu">
+                  <div class="col-auto" data-dropdown-content>
+                    <div class="dropdown-grid-menu"><a href="documentation/index.html" class="dropdown-item" target="_blank">Documentation</a><a href="documentation/changelog.html" class="dropdown-item" target="_blank">Changelog</a><a href="https://mediumrare.ticksy.com/" class="dropdown-item"
+                      target="_blank">Get Help</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <!-- Side Menu -->
-    <div class="side-menu d-none">
-        <div class="inner-wrapper nav-icon">
-            <span class="btn-close link" id="btn_sideNavClose"></span>
-            <nav class="side-nav w-100">
-                <div class="navbar-nav">
-                    <li class="nav-item"><a class="scroll nav-link link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#alle">Für Alle</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#ernie">Ernie & Bert</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#unternehmer">Unternehmer</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#anmelden">Anmelden</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#kunden">Kunden</a></li>
-                    <li class="nav-item"><a class="scroll nav-link link" href="#kontakt">Kontakt</a></li>
-                    <span class="menu-line"><i class="ti ti-angle-right" aria-hidden="true"></i></span>
-                </div>
-            </nav>
-            <div class="side-footer text-white w-100">
-                <p class="text-white">&copy; 2020 Krisen-Ernie </p>
-            </div>
-        </div>
-    </div>
-    <a id="close_side_menu" href="javascript:void(0);"></a>
-    <!--Side Menu-->
-</header>
-<!-- Header end -->
+  </div>

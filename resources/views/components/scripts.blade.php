@@ -3,42 +3,54 @@
 	<script src="{{ mix('assets/js/combined.min.js') }}"></script>
 @else
 
-    <script src="{{ asset('assets/js/bundle/jquery-3.3.1.min.js') }}"></script> {{-- jQuery (necessary for Bootstrap's JavaScript plugins) --}}
-    <script src="{{ asset('assets/js/bundle/popper.min.js') }}"></script> {{-- Bootstrap JS File --}}
-    <script src="{{ asset('assets/js/bundle/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/morphext.min.js') }}"></script> {{-- Morphtext JS File --}}
-    <script src="{{ asset('assets/js/bundle/jquery.flip.min.js') }}"></script> {{-- Flip JS File --}}
-    <script src="{{ asset('assets/js/bundle/jquery.appear.js') }}"></script> {{-- Appear JS File --}}
-    <script src="{{ asset('assets/js/bundle/isotope.pkgd.min.js') }}"></script> {{-- Isotop gallery --}}
-    <script src="{{ asset('assets/js/bundle/jquery.cubeportfolio.min.js') }}"></script> {{-- Cube Portfolio JS File --}}
-    <script src="{{ asset('assets/js/bundle/jquery.matchHeight-min.js') }}"></script> {{-- Equal Height JS File --}}
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.js') }}"></script>
 
-    <script src="{{ asset('assets/js/bundle/parallaxie.min.js') }}"></script> {{-- Parallax Background --}}
-    {{-- <script src="{{ asset('assets/js/bundle/particles.min.js') }}"></script> --}}
-    <script src="{{ asset('assets/js/bundle/jquery.fancybox.min.js') }}"></script> {{-- Fancy Box JS File --}}
-    <script src="{{ asset('assets/js/bundle/swiper.min.js') }}"></script> {{-- Swiper JS File --}}
-    <script src="{{ asset('assets/js/bundle/owl.carousel.js') }}"></script> {{-- Owl Carousel JS File --}}
-    <script src="{{ asset('assets/js/bundle/wow.js') }}"></script> {{-- Wow JS File --}}
-    <script src="{{ asset('assets/js/bundle/TweenMax.min.js') }}"></script> {{-- Tween Max Animation File --}}
-    <script src="{{ asset('assets/js/bundle/headroom.js') }}"></script> {{-- Headroom Nav File --}}
+    <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
 
-    {{-- Revolution Slider --}}
-    <script src="{{ asset('assets/js/bundle/revolution/jquery.themepunch.tools.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/jquery.themepunch.revolution.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/jquery.themepunch.revolution.contdown.min.js') }}"></script>
-
-    {{-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) --}}
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.actions.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.kenburn.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.migration.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.navigation.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.parallax.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.slideanims.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bundle/revolution/extensions/revolution.extension.video.min.js') }}"></script>
-    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJRG4KqGVNvAPY4UcVDLcLNXMXk2ktNfY"></script> --}}
-    {{-- <script src="js/maps.min.js"></script> --}}
-    <script src="{{ asset('assets/js/bundle/functions.js') }}"></script>
+    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+    <script type="text/javascript" src="{{ asset('assets/js/aos.js') }}"></script>
+    <!-- Clipboard (copies content from browser into OS clipboard) -->
+    <script type="text/javascript" src="{{ asset('assets/js/clipboard.min.js') }}"></script>
+    <!-- Fancybox (handles image and video lightbox and galleries) -->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.fancybox.min.js') }}"></script>
+    <!-- Flatpickr (calendar/date/time picker UI) -->
+    <script type="text/javascript" src="{{ asset('assets/js/flatpickr.min.js') }}"></script>
+    <!-- Flickity (handles touch enabled carousels and sliders) -->
+    <script type="text/javascript" src="{{ asset('assets/js/flickity.pkgd.min.js') }}"></script>
+    <!-- Ion rangeSlider (flexible and pretty range slider elements) -->
+    <script type="text/javascript" src="{{ asset('assets/js/ion.rangeSlider.min.js') }}"></script>
+    <!-- Isotope (masonry layouts and filtering) -->
+    <script type="text/javascript" src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <!-- jarallax (parallax effect and video backgrounds) -->
+    <script type="text/javascript" src="{{ asset('assets/js/jarallax.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jarallax-video.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/jarallax-element.min.js') }}"></script>
+    <!-- jQuery Countdown (displays countdown text to a specified date) -->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
+    <!-- jQuery smartWizard facilitates steppable wizard content -->
+    <script type="text/javascript" src="{{ asset('assets/js/jquery.smartWizard.min.js') }}"></script>
+    <!-- Plyr (unified player for Video, Audio, Vimeo and Youtube) -->
+    <script type="text/javascript" src="{{ asset('assets/js/plyr.polyfilled.min.js') }}"></script>
+    <!-- Prism (displays formatted code boxes) -->
+    <script type="text/javascript" src="{{ asset('assets/js/prism.js') }}"></script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script type="text/javascript" src="{{ asset('assets/js/scrollMonitor.js') }}"></script>
+    <!-- Smooth scroll (animation to links in-page)-->
+    <script type="text/javascript" src="{{ asset('assets/js/smooth-scroll.polyfills.min.js') }}"></script>
+    <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
+    <script type="text/javascript" src="{{ asset('assets/js/svg-injector.umd.production.js') }}"></script>
+    <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->
+    <script type="text/javascript" src="{{ asset('assets/js/twitterFetcher_min.js') }}"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script type="text/javascript" src="{{ asset('assets/js/typed.min.js') }}"></script>
+    <!-- Required theme scripts (Do not remove) -->
+    <script type="text/javascript" src="{{ asset('assets/js/theme.js') }}"></script>
+    <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript">
+      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+    </script>
 
 @endif

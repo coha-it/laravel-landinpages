@@ -5,11 +5,11 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
         <!-- Author -->
-        <meta name="author" content="Dr. Oliver Haas">
+        <meta name="author" content="Corporate Happiness GmbH">
         <!-- description -->
-        <meta name="description" content="Die Corona-Krise ist hier und wir alle machen uns Sorgen. Um unsere Familie, unsere wirtschaftliche Existenz und natürlich um unsere Gesundheit. Deshalb bleiben wir zu Hause, waschen uns regelmäßig die Hände und nehmen Vitamin-Tabletten ein. Das sind alles wichtige Maßnahmen und können uns helfen, unser körperliches Immunsystem zu unterstützen. Doch was sind eigentlich die Folgen der Krise auf unser psychisches Wohlbefinden? Denn worüber sich viele Menschen in solch schweren Zeiten nicht bewusst sind, ist, dass wir neben unserem physischen Immunsystem auch ein psychisches Immunsystem haben.">
+        <meta name="description" content="">
         <!-- keywords -->
-        <meta name="keywords" content="corona, panik, angst, lösung">
+        <meta name="keywords" content="">
 
         <title>@yield('title')</title>
 
@@ -21,7 +21,9 @@
 
 	</head>
 	<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
+
         @include('components.loader')
+
         @include('components.header')
 
 		{{-- animsition-overlay start --}}
@@ -33,9 +35,6 @@
 
             @yield('content')
 
-            @section('contactform')
-                {{-- @include('components.contactform') --}}
-            @show
         </main>{{-- animsition-overlay end --}}
 
         @include('components.footer')

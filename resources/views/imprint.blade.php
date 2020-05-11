@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'New Work Finance | Mit Innovation durch Vorreiter der Branche werden!')
+@section('title', 'Dreamteam Survey - Impressum')
 
 @section('content')
     {{-- page-head start --}}
@@ -9,7 +9,7 @@
         <div class="flex-min-height-inner">
             {{-- container start --}}
             <div class="container top-bottom-padding-120">
-                <h2 class="overlay-loading2 tr-delay03 medium-title gold-color">New Work Finance</h2>
+                <h2 class="overlay-loading2 tr-delay03 medium-title gold-color">Dreamteam Survey</h2>
                 <h3 class="large-title-bold text-color-4">
                     <span class="overlay-loading2 overlay-light-bg-1">Impressum </span><br>
                 </h3>
