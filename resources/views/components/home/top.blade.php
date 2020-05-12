@@ -56,7 +56,7 @@
             <div class="col">
                 <div class="row justify-content-center" data-jarallax-element="-50">
                     <div class="col-10 col-sm-8 col-md-7 col-lg-9 col-xl-7" data-aos="zoom-in" data-aos-delay="250">
-                        <img class="img-fluid" src="assets/img/mobile-app/mobile-app-1.png" alt="Screenshot">
+                        <img class="img-fluid" src="{{ url('https://dreamteam-survey.s3.eu-central-1.amazonaws.com/landingpage/images/stock_2.png') }}" alt="Screenshot">
                     </div>
                 </div>
             </div>
