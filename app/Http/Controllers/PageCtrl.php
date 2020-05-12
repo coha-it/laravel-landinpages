@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 class PageCtrl extends Controller
 {
     function home () {
-        return view('home', ['type' => 'register']);
+        return view('pages.home', ['type' => 'register']);
     }
     function imprint () {
-        return view('imprint');
+        return view('pages.imprint');
     }
     function contact () {
         return view('contact', ['type' => 'contact']);
@@ -19,6 +19,6 @@ class PageCtrl extends Controller
         return view('contact', ['type' => 'register']);
     }
     function thanks () {
-        return view('thanks');
+        return view('pages.thanks');
     }
 }

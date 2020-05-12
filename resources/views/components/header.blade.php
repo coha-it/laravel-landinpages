@@ -1,5 +1,5 @@
-<div class="navbar-container">
-    <nav class="navbar navbar-expand-lg navbar-light" data-overlay data-sticky="top">
+<div class="navbar-container bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
       <div class="container">
         <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
           <img alt="Jumpstart" data-inject-svg src="assets/img/logos/jumpstart.svg">
