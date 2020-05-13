@@ -52,8 +52,12 @@
         </div>
       </div>
       <div>
-        <a href="mailto:info@dcorporate-happiness.de" class="btn btn-sm btn-outline-light">Kontakt</a>
-        <a href="{{ route('imprint') }}" class="btn btn-sm btn-outline-light fade-page">Impressum</a>
+        <a href="mailto:info@dcorporate-happiness.de" class="btn btn-sm btn-outline-light">E-Mail</a>&nbsp;
+        <a href="tel:4989890673177" class="btn btn-sm btn-outline-light">Telefon</a>&nbsp;
+        <br>
+        <br>
+
+        <a href="{{ route('imprint') }}" class="text-white" style="opacity: .8;">Impressum</a>
       </div>
     </div>
     <div class="blob blob-5 w-25 h-25 bg-white opacity-10 bottom right"></div>
