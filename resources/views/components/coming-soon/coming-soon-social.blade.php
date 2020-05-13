@@ -12,7 +12,9 @@
         <div class="row section-title justify-content-center text-center">
           <div class="col-md-9 col-lg-8 col-xl-7">
             <h1 class="display-3">Webseite in Bearbeitung</h1>
-            <div class="lead">Folge uns in der Zwischenzeit doch auf Social-Media oder kontaktiere uns direkt:</div>
+            <div class="lead">Folge uns in der Zwischenzeit doch auf unseren Sozialen Medien,<br> oder kontaktiere uns direkt via 
+              <a href="mailto:info@dcorporate-happiness.de" class="text-white">E-Mail</a> oder 
+              <a href="tel:4989890673177" class="text-white">Mobil</a></div>
           </div>
         </div>
         <div class="row justify-content-center">
