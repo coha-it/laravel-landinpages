@@ -31,10 +31,10 @@ mix.js([
 if (mix.inProduction()) {
     mix
         .styles([
-            'public/assets/font-awesome-5/css/fontawesome.min.css',
-            'public/assets/font-awesome-5/css/regular.min.css',
-            'public/assets/font-awesome-5/css/brands.min.css',
-            'public/assets/font-awesome-5/css/solid.min.css',
+            'public/assets/font-awesome-5/fontawesome.min.css',
+            'public/assets/font-awesome-5/regular.min.css',
+            'public/assets/font-awesome-5/brands.min.css',
+            'public/assets/font-awesome-5/solid.min.css',
             'public/assets/css/loaders/loader-pulse.css',
             'public/assets/css/theme.css',
             'public/dist/css/custom.css',
