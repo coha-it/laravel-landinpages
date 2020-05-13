@@ -1,8 +1,12 @@
-<div class="navbar-container bg-light">
+@section('header')
+  <div class="navbar-container bg-light">
     <nav class="navbar navbar-expand-lg navbar-light" data-sticky="top">
       <div class="container">
         <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
-          <img alt="Jumpstart" data-inject-svg src="assets/img/logos/jumpstart.svg">
+          <img alt="Jumpstart" src="https://dreamteam-survey.s3.eu-central-1.amazonaws.com/images/logo/normal-tmp-dreamteam-survey-logo.svg"
+            {{-- data-inject-svg --}}
+            style="width: 206px;"
+          >
         </a>
         <div class="d-flex align-items-center order-lg-3">
           <a href="#" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Buy Jumpstart</a>
@@ -159,3 +163,4 @@
       </div>
     </nav>
   </div>
+@show

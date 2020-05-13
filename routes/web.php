@@ -12,19 +12,33 @@
 */
 
 // CMS
-Route::get('/',             'PageCtrl@home')->name('home'); // Home
 Route::get('/impressum',    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
 Route::get('/imprint',      'PageCtrl@imprint');
-// Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
-// Route::get('/contact',      'PageCtrl@contact');
-Route::get('/anmelden',     'PageCtrl@register')->name('register'); // Register - Anmelden
-Route::get('/register',     'PageCtrl@register');
-Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
 
-// Contact form
-Route::post('/send-contact-form', 'ContactCtrl@sendContactForm')->name('scf');
-Route::get( '/send-contact-form', 'PageCtrl@thanks');
 
-// Route::get('/danke',        'PageCtrl@thanks');
-// Route::get('/thanks',       'PageCtrl@thanks');
-// Route::get('/thank-you',    'PageCtrl@thanks');
+if (env('APP_UNDER_CONSTRUCTION'))
+{
+    Route::get('/', 'PageCtrl@comingSoon');
+} else {
+    Route::get('/',  'PageCtrl@home')->name('home');
+
+    // view('pages.coming-soon')
+
+    // Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
+    // Route::get('/contact',      'PageCtrl@contact');
+    Route::get('/anmelden',     'PageCtrl@register')->name('register'); // Register - Anmelden
+    Route::get('/register',     'PageCtrl@register');
+    Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
+
+    // Contact form
+    Route::post('/send-contact-form', 'ContactCtrl@sendContactForm')->name('scf');
+    Route::get( '/send-contact-form', 'PageCtrl@thanks');
+
+    // Route::get('/danke',        'PageCtrl@thanks');
+    // Route::get('/thanks',       'PageCtrl@thanks');
+    // Route::get('/thank-you',    'PageCtrl@thanks');
+}
+
+
+
+

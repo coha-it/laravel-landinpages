@@ -1,0 +1,3 @@
+@section('message')
+    {{-- Messages --}}
+@show

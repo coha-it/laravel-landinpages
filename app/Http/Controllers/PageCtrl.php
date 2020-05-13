@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class PageCtrl extends Controller
 {
+    function comingSoon () {
+        return view('pages.coming-soon');
+    }
     function home () {
         return view('pages.home', ['type' => 'register']);
     }

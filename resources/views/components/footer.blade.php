@@ -1,3 +1,4 @@
+@section('footer')
 <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
     <div class="container">
       <div class="row">
@@ -155,3 +156,4 @@
   <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
     <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" data-inject-svg>
   </a>
+@show

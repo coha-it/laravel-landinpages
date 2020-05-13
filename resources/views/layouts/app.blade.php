@@ -29,14 +29,12 @@
 		{{-- animsition-overlay start --}}
 		<main class="animsition-overlay" data-animsition-overlay="true">
 
-            @section('message')
-                {{-- Messages --}}
-            @show
+            @include('components.messages')
 
             @yield('content')
 
         </main>{{-- animsition-overlay end --}}
-
+        
         @include('components.footer')
         @include('components.scripts')
     </body>
