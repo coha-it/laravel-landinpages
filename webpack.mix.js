@@ -14,6 +14,7 @@ require('laravel-mix-purgecss');
 
 // Disable Notifications
 mix.disableSuccessNotifications();
+mix.disableNotifications();
 
 // Mix JS Files
 mix.js([
