@@ -13,9 +13,10 @@
 
         <title>@yield('title')</title>
 
-        <link rel="apple-touch-icon-precomposed" href="{{ asset('assets/images/favicons/favicon.png') }}">
-        <link rel="shortcut icon" href="{{ asset('assets/images/favicons/favicon.ico') }}">
-        <link rel="icon" href="{{ asset('assets/images/favicons/favicon.ico') }}">
+        <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+        <link href="https://dreamteam-survey.s3.eu-central-1.amazonaws.com/images/logo/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <link href="https://dreamteam-survey.s3.eu-central-1.amazonaws.com/images/logo/favicon/favicon.svg" rel="icon" type="image/svg+xml" sizes="any">
+        <link href="https://dreamteam-survey.s3.eu-central-1.amazonaws.com/images/logo/favicon/favicon.png" rel="icon" type="image/png" sizes="any">
 
         @include('components.styles')
 
@@ -29,14 +30,12 @@
 		{{-- animsition-overlay start --}}
 		<main class="animsition-overlay" data-animsition-overlay="true">
 
-            @section('message')
-                {{-- Messages --}}
-            @show
+            @include('components.messages')
 
             @yield('content')
 
         </main>{{-- animsition-overlay end --}}
-
+        
         @include('components.footer')
         @include('components.scripts')
     </body>

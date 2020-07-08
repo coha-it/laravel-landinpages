@@ -13,6 +13,7 @@ require('laravel-mix-purgecss');
  */
 
 // Disable Notifications
+mix.disableSuccessNotifications();
 mix.disableNotifications();
 
 // Mix JS Files
@@ -31,10 +32,14 @@ mix.js([
 if (mix.inProduction()) {
     mix
         .styles([
+            'public/assets/font-awesome-5/fontawesome.min.css',
+            'public/assets/font-awesome-5/regular.min.css',
+            'public/assets/font-awesome-5/brands.min.css',
+            'public/assets/font-awesome-5/solid.min.css',
             'public/assets/css/loaders/loader-pulse.css',
             'public/assets/css/theme.css',
             'public/dist/css/custom.css',
-             /* And so on and so on */
+            /* And so on and so on */
           ],
           'public/assets/css/combined.min.css'
         )

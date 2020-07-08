@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Dreamteam Survey - Impressum')
+@section('title', 'Impressum | Dreamteam Survey')
+
+@if(env('APP_UNDER_CONSTRUCTION'))
+    @section('header', false)
+    @section('footer', false)
+@endif
 
 @section('content')
     {{-- page-head start --}}
@@ -9,6 +14,13 @@
         <div class="flex-min-height-inner">
             {{-- container start --}}
             <div class="container top-bottom-padding-120">
+
+                @if(env('APP_UNDER_CONSTRUCTION'))
+                    <p>
+                        <a href="{{ url()->previous() }}" class="btn btn-sm btn-outline-dark fade-page">Zurück</a>
+                    </p>
+                @endif
+
                 <h2 class="overlay-loading2 tr-delay03 medium-title gold-color">Dreamteam Survey</h2>
                 <h3 class="large-title-bold text-color-4">
                     <span class="overlay-loading2 overlay-light-bg-1">Impressum </span><br>
