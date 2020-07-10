@@ -35,7 +35,7 @@
             @yield('content')
 
         </main>{{-- animsition-overlay end --}}
-        
+
         @include('components.footer')
         @include('components.scripts')
     </body>
