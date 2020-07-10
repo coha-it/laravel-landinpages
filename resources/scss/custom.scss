@@ -30,4 +30,25 @@
     100% {transform: scaleY(1);}
 }
 
+
+.coha_shadow {
+
+    &:before {
+        background: rgba(0, 0, 0, 0.12);
+        width: 95%;
+        height: 95%;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 6%;
+        filter: blur(15px);
+        z-index: -1;
+    }
+
+    &.coha_rounded {
+        border-radius: 10%;
+    }
+}
+
 /* purgecss end ignore */
