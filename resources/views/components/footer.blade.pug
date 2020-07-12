@@ -24,12 +24,12 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
                   a.nav-link.fade-page.px-0.py-2(href='https://app.dreamteam-survey.de/auth') Login
                li.nav-item.mr-3.mr-md-0.disabled
                   a.nav-link.fade-page.px-0.py-2.disabled(href='#')
-                     | iOS 
+                     | iOS
                      .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;') Bald Verfüg.
 
                li.nav-item.mr-3.mr-md-0.disabled
                   a.nav-link.fade-page.px-0.py-2.disabled(href='#')
-                     | Android 
+                     | Android
                      .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;') Bald Verfüg.
 
          .col.mt-4.mt-md-0.mt-lg-5.mt-xl-0.order-lg-4.order-xl-3
@@ -47,9 +47,10 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             h5 Kontakt
             .card.card-body.bg-white
                p Treten Sie mit uns in Kontakt und holen Sie sich Ihr individuelles Angebot
-               form(data-form-email='', novalidate='', action='/forms/mailchimp.php')
+               form(data-form-email='', novalidate='', action='/contact' onsubmit='submitForm(this)')
+                  | @include('components.parts.token')
                   .d-flex.flex-column.flex-sm-row.form-group
-                     input.form-control.mr-sm-2.mb-2.mb-sm-0.w-auto.flex-grow-1(name='email', placeholder='E-Mail Adresse', type='email', required='')
+                     input.email-input.form-control.mr-sm-2.mb-2.mb-sm-0.w-auto.flex-grow-1(name='email', placeholder='E-Mail Adresse', type='email', required='')
                      button.btn.btn-primary.btn-loading(type='submit', data-loading-text='Sending')
                         // Icon for loading animation
                         svg.icon.bg-white(width='24px', height='24px', viewBox='0 0 24 24', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
@@ -59,7 +60,7 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
                                  polygon(points='0 0 24 0 24 24 0 24', opacity='0')
                               path(d='M12,4 L12,6 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,10.9603196 17.7360885,9.96126435 17.2402578,9.07513926 L18.9856052,8.09853149 C19.6473536,9.28117708 20,10.6161442 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z', fill='#000000', fill-rule='nonzero', transform='translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) ')
                         span Kontakt
-                  div(data-recaptcha='', data-sitekey='INSERT_YOUR_RECAPTCHA_V2_SITEKEY_HERE', data-size='invisible', data-badge='bottomleft')
+                  | @include('components.parts.recaptcha')
                   .d-none.alert.alert-success.w-100(role='alert', data-success-message='')
                      | Thanks, a member of our team will be in touch shortly.
                   .d-none.alert.alert-danger.w-100(role='alert', data-error-message='')
@@ -74,9 +75,9 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
                .text-muted
                   | © 2020 Corporate Happiness
                   br
-                  | ® Diese Seite ist geschützt durch reCAPTCHA und Teil von Google's 
+                  | ® Diese Seite ist geschützt durch reCAPTCHA und Teil von Google's
                   a(href='https://www.google.com/policies/privacy/', target='_blank') Datenschutz-Bestimmungen
-                  |  und 
+                  |  und
                   a(href='https://policies.google.com/terms', target='_blank') Nutzungsbedingungen
          .col-auto.mt-3.mt-lg-0
             ul.list-unstyled.d-flex.mb-0

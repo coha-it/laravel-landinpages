@@ -51,6 +51,10 @@
 
 @endif
 
+<!-- Test -->
+<script type="text/javascript" src="{{ asset('dist/js/app.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/public_custom.js') }}"></script>
+
 <!-- Removes page load animation when window is finished loading -->
 <script type="text/javascript">
     window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});

@@ -68,8 +68,6 @@ if (mix.inProduction()) {
             'public/assets/js/twitterFetcher_min.js',
             'public/assets/js/typed.min.js',
             'public/assets/js/theme.js',
-
-            // and so on and so on
           ],
           'public/assets/js/combined.min.js'
         )

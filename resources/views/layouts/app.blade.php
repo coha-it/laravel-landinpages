@@ -20,6 +20,9 @@
 
         @include('components.styles')
 
+        <!-- Google Recaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 	</head>
 	<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
 

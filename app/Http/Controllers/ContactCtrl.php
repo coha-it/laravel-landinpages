@@ -3,10 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\App;
+
 use App\Contact;
+use App\Http\Requests\ReCaptchataTestFormRequest;
 
 class ContactCtrl extends Controller
 {
+
+	public function store(ReCaptchataTestFormRequest $request){
+        // Send Mail
+        $this->sendEmail([
+            'email' => $request->email,
+            'type' => 'Kontaktanfrage'
+        ]);
+
+        // Return Success
+        return ['message' => 'Success!'];
+    }
+
     public function sendContactForm(Request $req) {
 
         // Into Database
@@ -15,14 +31,11 @@ class ContactCtrl extends Controller
         // Varify Data
         $data = $this->validateData($req)['data'];
 
-        // Add Data
-        $data['timestamp'] = now()->toDateTimeString();
-
         // Send Email
         $this->sendEmail($data);
 
         // Redirect or get View
-        if (\App::environment(['local'])) {
+        if (App::environment(['local'])) {
             return $this->view($data);
         } else {
             return $this->redirect();
@@ -42,18 +55,17 @@ class ContactCtrl extends Controller
         $subject = $data['type'];
         $body    = $this->buildMessage($data);
 
-        \Mail::raw($body, function ($message) use ($subject) {
-            $message->from('info@corporate-happiness.de', 'Krisen-Ernie');
-            $message->subject("Krisen-Ernie Formular: ".trans('values.'.$subject));
+        // Add Data
+        $data['timestamp'] = now()->toDateTimeString();
 
-            // Receiver
-            if (\App::environment(['local'])) {
-                // The environment is either local OR staging...
-                $message->to('it@corporate-happiness.de');
-            } else {
-                // Its Production / Live
-                $message->to('info@corporate-happiness.de');
-            }
+        Mail::raw($body, function ($message) use ($subject) {
+            $message->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'));
+            $message->subject(env('APP_NAME') . ': Kontaktformular');
+            $dev = App::environment(['local']);
+
+            $message->to(
+                $dev ? env('MAIL_TO_DEVELOPMENT') : env('MAIL_TO_PRODUCTION')
+            );
         });
     }
 

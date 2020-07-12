@@ -31,8 +31,7 @@ if (env('APP_UNDER_CONSTRUCTION'))
     Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
 
     // Contact form
-    Route::post('/send-contact-form', 'ContactCtrl@sendContactForm')->name('scf');
-    Route::get( '/send-contact-form', 'PageCtrl@thanks');
+    Route::post('contact','ContactCtrl@store');
 
     // Route::get('/danke',        'PageCtrl@thanks');
     // Route::get('/thanks',       'PageCtrl@thanks');

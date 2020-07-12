@@ -30,6 +30,15 @@
     100% {transform: scaleY(1);}
 }
 
+.fade_left {
+    animation: fade_left 550ms cubic-bezier(0.12, 0.56, 0.65, 0.96) forwards;
+}
+
+@keyframes fade_left {
+    0%   {transform: translateX(5%); opacity: 0;}
+    100% {transform: translateX(0%);}
+}
+
 
 .coha_shadow {
 
