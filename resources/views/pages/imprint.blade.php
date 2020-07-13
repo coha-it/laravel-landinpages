@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Impressum | Dreamteam Survey')
+@section('title', 'Impressum | '.env('APP_NAME'))
 
 @if(env('APP_UNDER_CONSTRUCTION'))
     @section('header', false)
