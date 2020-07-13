@@ -8,4 +8,16 @@ input(placeholder=_('test'))
 
 p Der Test: @lang('test') .
 
+
+
+h5 Locales:
+
+//- span @foreach($config('app.locales'):
+each locale in [1,2,3]
+   p= 'locale: ' + locale + '. '
+
+//- span @foreach($config('app.locales'):
+each locale in config('app.locales')
+   p= 'locale: ' + locale + '. '
+
 @endsection

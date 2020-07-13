@@ -1,5 +1,6 @@
 /* purgecss start ignore */
 
+@import './flags/flags';
 
 ::-moz-selection { background: #3ea4ab; color: #333; }
 ::selection { background: #3ea4ab; color: #333; }
@@ -8,9 +9,6 @@
 .unclickable {
     pointer-events: none;
 }
-
-
-
 
 .rotate_in {
     animation: rotate_in 1000ms cubic-bezier(0.29, 0.74, 0.68, 0.93) forwards;
