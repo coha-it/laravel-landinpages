@@ -51,14 +51,13 @@ class ContactCtrl extends Controller
     }
 
     protected function sendEmail ($data) {
-        // Build and Send
-        $subject = $data['type'];
-        $body    = $this->buildMessage($data);
-
         // Add Data
         $data['timestamp'] = now()->toDateTimeString();
 
-        Mail::raw($body, function ($message) use ($subject) {
+        // Data to Body
+        $body    = $this->buildMessage($data);
+
+        Mail::raw($body, function ($message) {
             $message->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'));
             $message->subject(env('APP_NAME') . ': Kontaktformular');
             $dev = App::environment(['local']);
