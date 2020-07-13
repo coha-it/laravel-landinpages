@@ -6,6 +6,10 @@
 ::selection { background: #3ea4ab; color: #333; }
 
 
+.navbar-light .navbar-toggler {
+    outline: 0 !important;
+}
+
 .unclickable {
     pointer-events: none;
 }
