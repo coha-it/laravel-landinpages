@@ -15,6 +15,9 @@
 Route::get('/impressum',    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
 Route::get('/imprint',      'PageCtrl@imprint');
 
+// Only on Local
+Route::get('test', 'PageCtrl@test')->middleware('local');
+
 
 if (env('APP_UNDER_CONSTRUCTION'))
 {
@@ -37,7 +40,6 @@ if (env('APP_UNDER_CONSTRUCTION'))
     // Route::get('/thanks',       'PageCtrl@thanks');
     // Route::get('/thank-you',    'PageCtrl@thanks');
 }
-
 
 
 

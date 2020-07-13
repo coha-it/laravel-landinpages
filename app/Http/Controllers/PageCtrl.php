@@ -24,4 +24,7 @@ class PageCtrl extends Controller
     function thanks () {
         return view('pages.thanks');
     }
+    function test () {
+        return view('pages.test', ['name' => 'Alex']);
+    }
 }
