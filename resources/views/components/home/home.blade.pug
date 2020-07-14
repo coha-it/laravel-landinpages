@@ -70,8 +70,8 @@ section.bg-light.o-hidden.pb-0
       .row.section-title.justify-content-center.text-center
          .col-md-9.col-lg-8.col-xl-7
             h3.display-4
-               | Unsere&nbsp;
-               mark(data-aos="highlight-text" data-aos-delay="200") Methode
+               =__('our') + ' '
+               mark(data-aos="highlight-text" data-aos-delay="200")=__('method')
 
 section.bg-light.o-hidden.pt-0
    .container
@@ -313,7 +313,7 @@ section
               h4.mb-0 Schritt 1:
               h5.text-reset Fragenkatalog
               p Sie erhalten von uns im Vorfeld einen Fragenkatalog, der sich in vielen unserer Projekte bewährt hat. Selbstverständlich diskutieren wir mit Ihnen gemeinsam, inwieweit wir die Fragen für Ihr Unternehmen abändern oder ergänzen.
-              a(href='#') Create one now
+              a(href='#')=__('request_offer_now')
           li.d-flex.align-items-start.my-4.my-md-5
             .rounded-circle.p-3.p-sm-4.d-flex.align-items-center.justify-content-center.bg-success
               .position-absolute.text-white.h5.mb-0 2

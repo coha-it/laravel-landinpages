@@ -3,7 +3,7 @@
 footer.bg-primary-3.text-white.links-white.pb-4.footer-1
    .container
       .row
-         .col-xl-auto.mr-xl-5.col-md-3.mb-4.mb-md-0
+         .col-xl-auto.col-12.col-sm-6.mr-xl-5.col-md-3.mb-4.mb-md-0
             h5 Seiten
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
@@ -17,16 +17,17 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
                   a.nav-link.fade-page.px-0.py-2(href=route('imprint')) Impressum
-         .col-xl-auto.mr-xl-5.col-md-3
+         .col-xl-auto.col-12.col-sm-6.mr-xl-5.col-md-3
             h5 App
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
                   a.nav-link.fade-page.px-0.py-2(href='https://app.dreamteam-survey.de/auth') Login
+            ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0.disabled
                   a.nav-link.fade-page.px-0.py-2.disabled
                      | iOS
                      .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;') Bald Verfüg.
-
+            ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0.disabled
                   a.nav-link.fade-page.px-0.py-2.disabled
                      | Android
@@ -59,7 +60,7 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
                               g
                                  polygon(points='0 0 24 0 24 24 0 24', opacity='0')
                               path(d='M12,4 L12,6 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,10.9603196 17.7360885,9.96126435 17.2402578,9.07513926 L18.9856052,8.09853149 C19.6473536,9.28117708 20,10.6161442 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z', fill='#000000', fill-rule='nonzero', transform='translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) ')
-                        span Kontakt
+                        span=__('request_btn_1')
                   | @include('components.parts.recaptcha')
                   .d-none.alert.alert-success.w-100(role='alert', data-success-message='')
                      | Thanks, a member of our team will be in touch shortly.
