@@ -28,18 +28,22 @@
 
         @include('components.loader')
 
-        @include('components.header')
+        @if(!env('APP_UNDER_CONSTRUCTION'))
+            @include('components.header')
+        @endif
 
 		{{-- animsition-overlay start --}}
 		<main class="animsition-overlay" data-animsition-overlay="true">
-
             @include('components.messages')
 
             @yield('content')
 
         </main>{{-- animsition-overlay end --}}
 
-        @include('components.footer')
+        @if(!env('APP_UNDER_CONSTRUCTION'))
+            @include('components.footer')
+        @endif
+
         @include('components.scripts')
     </body>
 </html>
