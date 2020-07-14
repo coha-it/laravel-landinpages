@@ -14,13 +14,10 @@ class ContactCtrl extends Controller
 
 	public function store(ReCaptchataTestFormRequest $request){
         // Send Mail
-        $this->sendEmail([
+        return $this->sendEmail([
             'email' => $request->email,
             'type' => 'Kontaktanfrage'
         ]);
-
-        // Return Success
-        return ['message' => 'Success!'];
     }
 
     public function sendContactForm(Request $req) {
@@ -51,21 +48,37 @@ class ContactCtrl extends Controller
     }
 
     protected function sendEmail ($data) {
-        // Add Data
-        $data['timestamp'] = now()->toDateTimeString();
 
-        // Data to Body
-        $body    = $this->buildMessage($data);
 
-        Mail::raw($body, function ($message) {
-            $message->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'));
-            $message->subject(env('APP_NAME') . ': Kontaktformular');
-            $dev = App::environment(['local']);
+        // Build Response
+        $response = (object) [];
 
-            $message->to(
-                $dev ? env('MAIL_TO_DEVELOPMENT') : env('MAIL_TO_PRODUCTION')
-            );
-        });
+        try {
+            // Add Data
+            $data['timestamp'] = now()->toDateTimeString();
+
+            // Data to Body
+            $body    = $this->buildMessage($data);
+
+            Mail::raw($body, function ($message) {
+                $message->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'));
+                $message->subject(env('APP_NAME') . ': Kontaktformular');
+                $dev = App::environment(['local']);
+
+                $message->to(
+                    $dev ? env('MAIL_TO_DEVELOPMENT') : env('MAIL_TO_PRODUCTION')
+                );
+            });
+
+            $response->status = 'success';
+            $response->message = __('mail.subscription.success');
+        } catch (\Throwable $th) {
+            $response->status = 'error';
+            $response->message = __('mail.subscription.error');
+        }
+
+        // Return Success
+        return json_encode($response);
     }
 
     protected function buildMessage ($data) {
