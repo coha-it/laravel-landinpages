@@ -85,4 +85,15 @@ hr {
     }
 }
 
+// Animation for Input
+.coha_email_animated {
+    animation: coha_email_animated 1.75s ease-out forwards;
+}
+
+@keyframes coha_email_animated {
+  12%    {box-shadow: 0 0px 50px -15px #009b72; transform: scale(1.05);}
+  35%   {transform: scale(1);}
+  100%  {}
+}
+
 /* purgecss end ignore */
