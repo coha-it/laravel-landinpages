@@ -44,6 +44,8 @@
             @include('components.footer')
         @endif
 
+        @include('cookieConsent::index')
+
         @include('components.scripts')
     </body>
 </html>

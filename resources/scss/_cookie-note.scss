@@ -1,0 +1,25 @@
+// Cookie Notes Beautify
+.cookie-inner {
+    background: #fff;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 12px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09) !important;
+}
+
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    z-index: 999;
+}
+
+.cookie-consent__agree,
+.cookie-consent__message {
+    margin: 2px 6px;
+}
