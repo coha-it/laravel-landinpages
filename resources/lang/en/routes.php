@@ -11,5 +11,6 @@ return [
 
     'imprint' => 'imprint',
     'lang' => 'language',
-    'contact' => 'contact'
+    'contact' => 'contact',
+    'privacy' => 'privacy'
 ];
