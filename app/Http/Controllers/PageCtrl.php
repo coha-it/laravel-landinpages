@@ -15,6 +15,9 @@ class PageCtrl extends Controller
     function imprint () {
         return view('pages.imprint');
     }
+    function privacy () {
+        return view('pages.privacy');
+    }
     function contact () {
         return view('contact', ['type' => 'contact']);
     }

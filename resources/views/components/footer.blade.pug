@@ -11,9 +11,9 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             //- ul.nav.flex-row.flex-md-column
             //-    li.nav-item.mr-3.mr-md-0
             //-       a.nav-link.fade-page.px-0.py-2(href='/') Kontakt
-            //- ul.nav.flex-row.flex-md-column
-            //-    li.nav-item.mr-3.mr-md-0
-            //-       a.nav-link.fade-page.px-0.py-2(href='/') Datenschutz
+            ul.nav.flex-row.flex-md-column
+               li.nav-item.mr-3.mr-md-0
+                  a.nav-link.fade-page.px-0.py-2(href=route('privacy')) Datenschutz
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
                   a.nav-link.fade-page.px-0.py-2(href=route('imprint')) Impressum
@@ -68,7 +68,11 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
                   .text-small.text-muted Ihre Daten bleiben vertraulich und werden keinem 3. Unternehmen oder 3. Person mitgeteilt
       .row
          .col
-            hr
+            hr.invisible.half-size
+            .text-center
+              a.coha_big_mail(href='mailto:'+env('APP_DISPLAY_EMAIL', 'info@corporate-happiness.de'))
+                | {{ env('APP_DISPLAY_EMAIL', 'info@corporate-happiness.de') }}
+            hr.half-size
       .row
          .col
             .d-flex.align-items-center.justify-content-center

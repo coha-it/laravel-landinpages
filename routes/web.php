@@ -17,6 +17,7 @@
 
     // CMS
     Route::get(__('routes.imprint'),    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
+    Route::get(__('routes.privacy'),    'PageCtrl@privacy')->name('privacy'); // Imprints - Impressum
 
     // Language Switcher
     Route::get(__('routes.lang').'/{locale}', 'LanguageCtrl@switch')->name('lang_switch');
@@ -36,7 +37,7 @@
         // Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
 
         // Contact form
-        Route::post(__('routes.lang'),'ContactCtrl@store')->name('contact');
+        Route::post(__('routes.contact'),'ContactCtrl@store')->name('contact');
 
         // Route::get('/danke',        'PageCtrl@thanks');
         // Route::get('/thanks',       'PageCtrl@thanks');
