@@ -12,17 +12,14 @@
 */
 
 
-
-
-    // CMS
-    Route::get('/impressum',    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
-    Route::get('/imprint',      'PageCtrl@imprint');
-
     // Only on Local
     Route::get('test', 'PageCtrl@test')->middleware('local');
 
+    // CMS
+    Route::get(__('routes.imprint'),    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
+
     // Language Switcher
-    Route::get('lang/{locale}', 'LanguageCtrl@switch');
+    Route::get(__('routes.lang').'/{locale}', 'LanguageCtrl@switch')->name('lang_switch');
 
     if (env('APP_UNDER_CONSTRUCTION'))
     {
@@ -34,12 +31,12 @@
 
         // Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
         // Route::get('/contact',      'PageCtrl@contact');
-        Route::get('/anmelden',     'PageCtrl@register')->name('register'); // Register - Anmelden
-        Route::get('/register',     'PageCtrl@register');
-        Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
+        // Route::get('/anmelden',     'PageCtrl@register')->name('register'); // Register - Anmelden
+        // Route::get('/register',     'PageCtrl@register');
+        // Route::get('/danke',        'PageCtrl@thanks')->name('thanks');
 
         // Contact form
-        Route::post('contact','ContactCtrl@store');
+        Route::post(__('routes.lang'),'ContactCtrl@store')->name('contact');
 
         // Route::get('/danke',        'PageCtrl@thanks');
         // Route::get('/thanks',       'PageCtrl@thanks');

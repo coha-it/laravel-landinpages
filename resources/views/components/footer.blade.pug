@@ -7,28 +7,28 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             h5 Seiten
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
-                  a.nav-link.fade-page.px-0.py-2(href='/') Startseite
+                  a.nav-link.fade-page.px-0.py-2(href=route('home')) Startseite
+            //- ul.nav.flex-row.flex-md-column
+            //-    li.nav-item.mr-3.mr-md-0
+            //-       a.nav-link.fade-page.px-0.py-2(href='/') Kontakt
+            //- ul.nav.flex-row.flex-md-column
+            //-    li.nav-item.mr-3.mr-md-0
+            //-       a.nav-link.fade-page.px-0.py-2(href='/') Datenschutz
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
-                  a.nav-link.fade-page.px-0.py-2(href='/') Kontakt
-            ul.nav.flex-row.flex-md-column
-               li.nav-item.mr-3.mr-md-0
-                  a.nav-link.fade-page.px-0.py-2(href='/') Datenschutz
-            ul.nav.flex-row.flex-md-column
-               li.nav-item.mr-3.mr-md-0
-                  a.nav-link.fade-page.px-0.py-2(href='/') Impressum
+                  a.nav-link.fade-page.px-0.py-2(href=route('imprint')) Impressum
          .col-xl-auto.mr-xl-5.col-md-3
             h5 App
             ul.nav.flex-row.flex-md-column
                li.nav-item.mr-3.mr-md-0
                   a.nav-link.fade-page.px-0.py-2(href='https://app.dreamteam-survey.de/auth') Login
                li.nav-item.mr-3.mr-md-0.disabled
-                  a.nav-link.fade-page.px-0.py-2.disabled(href='#')
+                  a.nav-link.fade-page.px-0.py-2.disabled
                      | iOS
                      .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;') Bald Verfüg.
 
                li.nav-item.mr-3.mr-md-0.disabled
-                  a.nav-link.fade-page.px-0.py-2.disabled(href='#')
+                  a.nav-link.fade-page.px-0.py-2.disabled
                      | Android
                      .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;') Bald Verfüg.
 
@@ -37,7 +37,7 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             ul.list-unstyled.d-flex.flex-wrap
                li.col-12.col-lg-6.col-xl-12.px-0
                   .row.my-2.my-md-3
-                     a.col-5(href='#')
+                     a.col-5(href='https://www.corporate-happiness.de/blog/wie-koennen-wir-gluecklich-er-werden-das-perma-modell-von-martin-seligman' target='_blank')
                         img.rounded.img-fluid.hover-fade-out(src='https://www.corporate-happiness.de/media/image/74/64/09/5-coha-team.jpg', alt='blog.1.image')
                      .col
                         a.h6(href='https://www.corporate-happiness.de/blog/wie-koennen-wir-gluecklich-er-werden-das-perma-modell-von-martin-seligman' target='blank')
@@ -47,7 +47,7 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
             h5 Kontakt
             .card.card-body.bg-white
                p Treten Sie mit uns in Kontakt und holen Sie sich Ihr individuelles Angebot
-               form(data-form-email='', novalidate='', action='/contact' onsubmit='submitForm(this)')
+               form(data-form-email='', novalidate='', action=route('contact') onsubmit='submitForm(this)')
                   | @include('components.parts.token')
                   .d-flex.flex-column.flex-sm-row.form-group
                      input.email-input.form-control.mr-sm-2.mb-2.mb-sm-0.w-auto.flex-grow-1(name='email', placeholder='E-Mail Adresse', type='email', required='')
@@ -72,14 +72,18 @@ footer.bg-primary-3.text-white.links-white.pb-4.footer-1
       .row
          .col
             .d-flex.align-items-center.justify-content-center
-               .coha_flags
+               .coha.flags
                   each locale in config('app.locales')
-                     a.coha_flag(
-                        class=locale + (locale==config('app.locale') ? ' active' : null)
-                        href='/lang/'+locale
-                        alt=__('switch_language') + ': ' +__(locale)
-                        title=__('switch_language') + ': ' +__(locale)
-                     )
+                    .flag.wrapper(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title=(locale==config('app.locale') ? __('active_language') : __('switch_language') ) +': ' +__(locale)
+                    )
+                        a.flag.inner(
+                           class=locale + (locale==config('app.locale') ? ' active' : null)
+                           href=route('lang_switch', locale)
+                           alt=__('switch_language') + ': ' +__(locale)
+                        )
 
       .row.flex-column.flex-lg-row.align-items-center.justify-content-center.justify-content-lg-between.text-center.text-lg-left
          .col-auto

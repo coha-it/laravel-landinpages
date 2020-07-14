@@ -1,31 +1,38 @@
 // Import Flags
 
-.coha_flags {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.coha_flag {
-    display: flex;
-    min-width: 50px;
-    min-height: 30px;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-    margin: 5px 10px;
-    background-position: center !important;
-    border-radius: 8%;
-
-    &.active {
-        pointer-events: none;
-        opacity: .35;
-        filter: grayscale(.5);
+.coha {
+    &.flags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
- 
-    @import './de';
-    @import './en';
 
+    .flag {
+
+        &.wrapper {
+            margin: 5px 10px;
+        }
+
+        .inner {
+            display: flex;
+            min-width: 50px;
+            min-height: 30px;
+            align-content: center;
+            align-self: center;
+            justify-content: center;
+            margin: auto;
+            background-position: center !important;
+            border-radius: 8%;
+
+            &.active {
+                pointer-events: none;
+                opacity: .35;
+                filter: grayscale(.5);
+            }
+
+            @import './de';
+            @import './en';
+
+        }
+    }
 }
-
-

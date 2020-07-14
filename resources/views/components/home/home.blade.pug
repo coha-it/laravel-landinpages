@@ -17,7 +17,7 @@ section.bg-light.o-hidden.pt-5.pb-0
                p.lead
                   =__('mab_subtext')
                .mt-4.mt-lg-5
-                  form(data-form-email novalidate action='/contact' method='POST')
+                  form(data-form-email novalidate action=route('contact') method='POST')
                      | @include('components.parts.token')
                      .d-flex.flex-column.flex-sm-row.form-group
                         input.email-input.form-control.form-control-lg.mr-sm-2.mb-2.mb-sm-0.h-100(name='email' placeholder=__('email') type='email' required='')
