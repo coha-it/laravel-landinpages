@@ -79,7 +79,7 @@
 
 <!-- Test -->
 <script src="{{ asset('dist/js/app.js') }}" async defer></script>
-<script src="{{ asset('js/public_custom.js') }}" async defer></script>
+<script src="{{ asset('js/public_custom.js') }}"></script>
 
 <!-- Removes page load animation when window is finished loading -->
 <script type="text/javascript">
