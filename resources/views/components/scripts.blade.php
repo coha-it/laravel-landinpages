@@ -113,10 +113,7 @@ var coha_init_lazyload = function () {
     win.scroll();
 }
 
-if (document.readyState === 'complete') {
-    // The page is fully loaded
-    coha_init_lazyload();
-}
+coha_init_lazyload();
 
-    window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
 </script>
