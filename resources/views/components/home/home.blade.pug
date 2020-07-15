@@ -35,11 +35,12 @@ section.bg-light.o-hidden.pt-5.pb-0
                         | Thanks, a member of our team will be in touch shortly.
                      .d-none.alert.alert-danger.w-100(role='alert' data-error-message='')
                         | Please fill all fields correctly.
-                  .alert.rounded-lg.bg-secondary.d-inline-flex.align-items-center
-                     .badge.badge-pill.badge-success Beta
-                     .mx-3
-                        | Launch v1.0 am&nbsp;
-                        span.font-weight-bold 01.08.20
+                  if !production
+                    .alert.rounded-lg.bg-secondary.d-inline-flex.align-items-center
+                       .badge.badge-pill.badge-success Beta
+                       .mx-3
+                          | Launch v1.0 am&nbsp;
+                          span.font-weight-bold 01.08.20
          .col
             .row.justify-content-center(data-jarallax-element='-50')
                .coha_shadow.coha_rounded.col-10.col-sm-8.col-md-7.col-lg-9.col-xl-9(data-aos='zoom-in' data-aos-delay='250')
