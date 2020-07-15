@@ -60,316 +60,316 @@
     return Constructor;
   }
 
-  var mrCountdown = function ($) {
-    /**
-     * Check for countdown dependency
-     * countdown - https://github.com/hilios/jQuery.countdown/
-     */
-    if (typeof $.fn.countdown !== 'function') {
-      throw new Error('mrCountdown requires jquery.countdown.js (https://github.com/hilios/jQuery.countdown/)');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//   var mrCountdown = function ($) {
+//     /**
+//      * Check for countdown dependency
+//      * countdown - https://github.com/hilios/jQuery.countdown/
+//      */
+//     if (typeof $.fn.countdown !== 'function') {
+//       throw new Error('mrCountdown requires jquery.countdown.js (https://github.com/hilios/jQuery.countdown/)');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrCountdown';
-    var VERSION = '1.1.0';
-    var DATA_KEY = 'mr.countdown';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
-    };
-    var Default = {
-      DAYS_TEXT: 'days',
-      ELAPSED: 'Timer Done',
-      Y_FMT: '%Y',
-      MTHS_FMT: '%m',
-      W_FMT: '%w',
-      D_FMT: '%D',
-      H_FMT: '%H',
-      MINS_FMT: '%M',
-      S_FMT: '%S',
-      Y_LABEL_FMT: '%!Y:Year,Years;',
-      MTHS_LABEL_FMT: '%!m:Month,Months;',
-      W_LABEL_FMT: '%!w:Week,Weeks;',
-      D_LABEL_FMT: '%!d:Day,Days;',
-      H_LABEL_FMT: '%!H:Hour,Hours;',
-      MINS_LABEL_FMT: '%!M:Minute,Minutes;',
-      S_LABEL_FMT: '%!S:Second,Seconds;'
-    };
-    var CSS = {
-      D_NONE: 'd-none'
-    };
-    var Selector = {
-      COUNTDOWN: '[data-countdown-date]',
-      ACTIVE: '[data-active-state]',
-      ELAPSED: '[data-elapsed-state]',
-      DATE_ATTR: 'data-countdown-date',
-      DAYS_TEXT_ATTR: 'data-days-text',
-      DATE_FORMAT_ATTR: 'data-date-format',
-      DATE_FALLBACK_ATTR: 'data-date-fallback',
-      Y_EL: '[data-years]',
-      MTHS_EL: '[data-months]',
-      W_EL: '[data-weeks]',
-      D_EL: '[data-days]',
-      H_EL: '[data-hours]',
-      MINS_EL: '[data-minutes]',
-      S_EL: '[data-seconds]',
-      Y_LABEL_EL: '[data-years-label]',
-      MTHS_LABEL_EL: '[data-months-label]',
-      W_LABEL_EL: '[data-weeks-label]',
-      D_LABEL_EL: '[data-days-label]',
-      H_LABEL_EL: '[data-hours-label]',
-      MINS_LABEL_EL: '[data-minutes-label]',
-      S_LABEL_EL: '[data-seconds-label]'
-    };
-    var Options = {
-      FORMAT: 'format',
-      DETAILED: 'detailed'
-    };
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     var NAME = 'mrCountdown';
+//     var VERSION = '1.1.0';
+//     var DATA_KEY = 'mr.countdown';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
+//     };
+//     var Default = {
+//       DAYS_TEXT: 'days',
+//       ELAPSED: 'Timer Done',
+//       Y_FMT: '%Y',
+//       MTHS_FMT: '%m',
+//       W_FMT: '%w',
+//       D_FMT: '%D',
+//       H_FMT: '%H',
+//       MINS_FMT: '%M',
+//       S_FMT: '%S',
+//       Y_LABEL_FMT: '%!Y:Year,Years;',
+//       MTHS_LABEL_FMT: '%!m:Month,Months;',
+//       W_LABEL_FMT: '%!w:Week,Weeks;',
+//       D_LABEL_FMT: '%!d:Day,Days;',
+//       H_LABEL_FMT: '%!H:Hour,Hours;',
+//       MINS_LABEL_FMT: '%!M:Minute,Minutes;',
+//       S_LABEL_FMT: '%!S:Second,Seconds;'
+//     };
+//     var CSS = {
+//       D_NONE: 'd-none'
+//     };
+//     var Selector = {
+//       COUNTDOWN: '[data-countdown-date]',
+//       ACTIVE: '[data-active-state]',
+//       ELAPSED: '[data-elapsed-state]',
+//       DATE_ATTR: 'data-countdown-date',
+//       DAYS_TEXT_ATTR: 'data-days-text',
+//       DATE_FORMAT_ATTR: 'data-date-format',
+//       DATE_FALLBACK_ATTR: 'data-date-fallback',
+//       Y_EL: '[data-years]',
+//       MTHS_EL: '[data-months]',
+//       W_EL: '[data-weeks]',
+//       D_EL: '[data-days]',
+//       H_EL: '[data-hours]',
+//       MINS_EL: '[data-minutes]',
+//       S_EL: '[data-seconds]',
+//       Y_LABEL_EL: '[data-years-label]',
+//       MTHS_LABEL_EL: '[data-months-label]',
+//       W_LABEL_EL: '[data-weeks-label]',
+//       D_LABEL_EL: '[data-days-label]',
+//       H_LABEL_EL: '[data-hours-label]',
+//       MINS_LABEL_EL: '[data-minutes-label]',
+//       S_LABEL_EL: '[data-seconds-label]'
+//     };
+//     var Options = {
+//       FORMAT: 'format',
+//       DETAILED: 'detailed'
+//     };
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
-    var Countdown =
-    /*#__PURE__*/
-    function () {
-      function Countdown(element) {
-        // The current countdown element
-        this.element = element;
-        var $element = $(element);
-        this.date = $element.attr(Selector.DATE_ATTR);
-        this.daysText = $element.attr(Selector.DAYS_TEXT_ATTR) || Default.DAYS_TEXT;
-        this.countdownText = "%D " + this.daysText + " %H:%M:%S";
-        this.dateFormat = $element.attr(Selector.DATE_FORMAT_ATTR) || this.countdownText;
-        this.fallback = $element.attr(Selector.DATE_FALLBACK_ATTR) || Default.ELAPSED; // Options for detailed mode
+//     var Countdown =
+//     /*#__PURE__*/
+//     function () {
+//       function Countdown(element) {
+//         // The current countdown element
+//         this.element = element;
+//         var $element = $(element);
+//         this.date = $element.attr(Selector.DATE_ATTR);
+//         this.daysText = $element.attr(Selector.DAYS_TEXT_ATTR) || Default.DAYS_TEXT;
+//         this.countdownText = "%D " + this.daysText + " %H:%M:%S";
+//         this.dateFormat = $element.attr(Selector.DATE_FORMAT_ATTR) || this.countdownText;
+//         this.fallback = $element.attr(Selector.DATE_FALLBACK_ATTR) || Default.ELAPSED; // Options for detailed mode
 
-        this.detailed = this.element.getAttribute("data-" + Options.DETAILED) !== null;
+//         this.detailed = this.element.getAttribute("data-" + Options.DETAILED) !== null;
 
-        if (this.detailed) {
-          this.years = {
-            show: $element.find(Selector.Y_EL).length,
-            element: $element.find(Selector.Y_EL),
-            format: $element.find(Selector.Y_EL).data(Options.FORMAT) || Default.Y_FMT,
-            label: {
-              show: $element.find(Selector.Y_LABEL_EL).length,
-              element: $element.find(Selector.Y_LABEL_EL),
-              format: $element.find(Selector.Y_LABEL_EL).data(Options.FORMAT) || Default.Y_LABEL_FMT
-            }
-          };
-          this.months = {
-            show: $element.find(Selector.MTHS_EL).length,
-            element: $element.find(Selector.MTHS_EL),
-            format: $element.find(Selector.MTHS_EL).data(Options.FORMAT) || Default.MTHS_FMT,
-            label: {
-              show: $element.find(Selector.MTHS_LABEL_EL).length,
-              element: $element.find(Selector.MTHS_LABEL_EL),
-              format: $element.find(Selector.MTHS_LABEL_EL).data(Options.FORMAT) || Default.MTHS_LABEL_FMT
-            }
-          };
-          this.weeks = {
-            show: $element.find(Selector.W_EL).length,
-            element: $element.find(Selector.W_EL),
-            format: $element.find(Selector.W_EL).data(Options.FORMAT) || Default.W_FMT,
-            label: {
-              show: $element.find(Selector.W_LABEL_EL).length,
-              element: $element.find(Selector.W_LABEL_EL),
-              format: $element.find(Selector.W_LABEL_EL).data(Options.FORMAT) || Default.W_LABEL_FMT
-            }
-          };
-          this.days = {
-            show: $element.find(Selector.D_EL).length,
-            element: $element.find(Selector.D_EL),
-            format: $element.find(Selector.D_EL).data(Options.FORMAT) || Default.D_FMT,
-            label: {
-              show: $element.find(Selector.D_LABEL_EL).length,
-              element: $element.find(Selector.D_LABEL_EL),
-              format: $element.find(Selector.D_LABEL_EL).data(Options.FORMAT) || Default.D_LABEL_FMT
-            }
-          };
-          this.hours = {
-            show: $element.find(Selector.H_EL).length,
-            element: $element.find(Selector.H_EL),
-            format: $element.find(Selector.H_EL).data(Options.FORMAT) || Default.H_FMT,
-            label: {
-              show: $element.find(Selector.H_LABEL_EL).length,
-              element: $element.find(Selector.H_LABEL_EL),
-              format: $element.find(Selector.H_LABEL_EL).data(Options.FORMAT) || Default.H_LABEL_FMT
-            }
-          };
-          this.minutes = {
-            show: $element.find(Selector.MINS_EL).length,
-            element: $element.find(Selector.MINS_EL),
-            format: $element.find(Selector.MINS_EL).data(Options.FORMAT) || Default.MINS_FMT,
-            label: {
-              show: $element.find(Selector.MINS_LABEL_EL).length,
-              element: $element.find(Selector.MINS_LABEL_EL),
-              format: $element.find(Selector.MINS_LABEL_EL).data(Options.FORMAT) || Default.MINS_LABEL_FMT
-            }
-          };
-          this.seconds = {
-            show: $element.find(Selector.S_EL).length,
-            element: $element.find(Selector.S_EL),
-            format: $element.find(Selector.S_EL).data(Options.FORMAT) || Default.S_FMT,
-            label: {
-              show: $element.find(Selector.S_LABEL_EL).length,
-              element: $element.find(Selector.S_LABEL_EL),
-              format: $element.find(Selector.S_LABEL_EL).data(Options.FORMAT) || Default.S_LABEL_FMT
-            }
-          };
-        }
+//         if (this.detailed) {
+//           this.years = {
+//             show: $element.find(Selector.Y_EL).length,
+//             element: $element.find(Selector.Y_EL),
+//             format: $element.find(Selector.Y_EL).data(Options.FORMAT) || Default.Y_FMT,
+//             label: {
+//               show: $element.find(Selector.Y_LABEL_EL).length,
+//               element: $element.find(Selector.Y_LABEL_EL),
+//               format: $element.find(Selector.Y_LABEL_EL).data(Options.FORMAT) || Default.Y_LABEL_FMT
+//             }
+//           };
+//           this.months = {
+//             show: $element.find(Selector.MTHS_EL).length,
+//             element: $element.find(Selector.MTHS_EL),
+//             format: $element.find(Selector.MTHS_EL).data(Options.FORMAT) || Default.MTHS_FMT,
+//             label: {
+//               show: $element.find(Selector.MTHS_LABEL_EL).length,
+//               element: $element.find(Selector.MTHS_LABEL_EL),
+//               format: $element.find(Selector.MTHS_LABEL_EL).data(Options.FORMAT) || Default.MTHS_LABEL_FMT
+//             }
+//           };
+//           this.weeks = {
+//             show: $element.find(Selector.W_EL).length,
+//             element: $element.find(Selector.W_EL),
+//             format: $element.find(Selector.W_EL).data(Options.FORMAT) || Default.W_FMT,
+//             label: {
+//               show: $element.find(Selector.W_LABEL_EL).length,
+//               element: $element.find(Selector.W_LABEL_EL),
+//               format: $element.find(Selector.W_LABEL_EL).data(Options.FORMAT) || Default.W_LABEL_FMT
+//             }
+//           };
+//           this.days = {
+//             show: $element.find(Selector.D_EL).length,
+//             element: $element.find(Selector.D_EL),
+//             format: $element.find(Selector.D_EL).data(Options.FORMAT) || Default.D_FMT,
+//             label: {
+//               show: $element.find(Selector.D_LABEL_EL).length,
+//               element: $element.find(Selector.D_LABEL_EL),
+//               format: $element.find(Selector.D_LABEL_EL).data(Options.FORMAT) || Default.D_LABEL_FMT
+//             }
+//           };
+//           this.hours = {
+//             show: $element.find(Selector.H_EL).length,
+//             element: $element.find(Selector.H_EL),
+//             format: $element.find(Selector.H_EL).data(Options.FORMAT) || Default.H_FMT,
+//             label: {
+//               show: $element.find(Selector.H_LABEL_EL).length,
+//               element: $element.find(Selector.H_LABEL_EL),
+//               format: $element.find(Selector.H_LABEL_EL).data(Options.FORMAT) || Default.H_LABEL_FMT
+//             }
+//           };
+//           this.minutes = {
+//             show: $element.find(Selector.MINS_EL).length,
+//             element: $element.find(Selector.MINS_EL),
+//             format: $element.find(Selector.MINS_EL).data(Options.FORMAT) || Default.MINS_FMT,
+//             label: {
+//               show: $element.find(Selector.MINS_LABEL_EL).length,
+//               element: $element.find(Selector.MINS_LABEL_EL),
+//               format: $element.find(Selector.MINS_LABEL_EL).data(Options.FORMAT) || Default.MINS_LABEL_FMT
+//             }
+//           };
+//           this.seconds = {
+//             show: $element.find(Selector.S_EL).length,
+//             element: $element.find(Selector.S_EL),
+//             format: $element.find(Selector.S_EL).data(Options.FORMAT) || Default.S_FMT,
+//             label: {
+//               show: $element.find(Selector.S_LABEL_EL).length,
+//               element: $element.find(Selector.S_LABEL_EL),
+//               format: $element.find(Selector.S_LABEL_EL).data(Options.FORMAT) || Default.S_LABEL_FMT
+//             }
+//           };
+//         }
 
-        this.initCountdown();
-      } // getters
-
-
-      var _proto = Countdown.prototype;
-
-      _proto.initCountdown = function initCountdown() {
-        var _this = this;
-
-        var element = $(this.element);
-
-        if (this.detailed) {
-          element.countdown(this.date, function (event) {
-            if (!event.elapsed) {
-              if (_this.years.show) {
-                _this.years.element.text(event.strftime(_this.years.format));
-              }
-
-              if (_this.years.label.show) {
-                _this.years.label.element.text(event.strftime(_this.years.label.format));
-              }
-
-              if (_this.months.show) {
-                _this.months.element.text(event.strftime(_this.months.format));
-              }
-
-              if (_this.months.label.show) {
-                _this.months.label.element.text(event.strftime(_this.months.label.format));
-              }
-
-              if (_this.weeks.show) {
-                _this.weeks.element.text(event.strftime(_this.weeks.format));
-              }
-
-              if (_this.weeks.label.show) {
-                _this.weeks.label.element.text(event.strftime(_this.weeks.label.format));
-              }
-
-              if (_this.days.show) {
-                _this.days.element.text(event.strftime(_this.days.format));
-              }
-
-              if (_this.days.label.show) {
-                _this.days.label.element.text(event.strftime(_this.days.label.format));
-              }
-
-              if (_this.hours.show) {
-                _this.hours.element.text(event.strftime(_this.hours.format));
-              }
-
-              if (_this.hours.label.show) {
-                _this.hours.label.element.text(event.strftime(_this.hours.label.format));
-              }
-
-              if (_this.minutes.show) {
-                _this.minutes.element.text(event.strftime(_this.minutes.format));
-              }
-
-              if (_this.minutes.label.show) {
-                _this.minutes.label.element.text(event.strftime(_this.minutes.label.format));
-              }
-
-              if (_this.seconds.show) {
-                _this.seconds.element.text(event.strftime(_this.seconds.format));
-              }
-
-              if (_this.seconds.label.show) {
-                _this.seconds.label.element.text(event.strftime(_this.seconds.label.format));
-              }
-            } else {
-              // If the countdown has elapsed (event.elapsed):
-              element.find(Selector.ELAPSED).removeClass(CSS.D_NONE);
-              element.find(Selector.ACTIVE).addClass(CSS.D_NONE);
-            }
-          });
-        } else {
-          $(this.element).countdown(this.date, function (event) {
-            if (event.elapsed) {
-              element.text(_this.fallback);
-            } else {
-              element.text(event.strftime(_this.dateFormat));
-            }
-          });
-        }
-      };
-
-      Countdown.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachCountdown() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new Countdown(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
-
-      _createClass(Countdown, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return Countdown;
-    }(); // END Class definition
-
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//         this.initCountdown();
+//       } // getters
 
 
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var cdownsOnPage = $.makeArray($(Selector.COUNTDOWN));
-      /* eslint-disable no-plusplus */
+//       var _proto = Countdown.prototype;
 
-      for (var i = cdownsOnPage.length; i--;) {
-        var $countdown = $(cdownsOnPage[i]);
-        Countdown.jQueryInterface.call($countdown, $countdown.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+//       _proto.initCountdown = function initCountdown() {
+//         var _this = this;
 
-    /* eslint-disable no-param-reassign */
+//         var element = $(this.element);
 
-    $.fn[NAME] = Countdown.jQueryInterface;
-    $.fn[NAME].Constructor = Countdown;
+//         if (this.detailed) {
+//           element.countdown(this.date, function (event) {
+//             if (!event.elapsed) {
+//               if (_this.years.show) {
+//                 _this.years.element.text(event.strftime(_this.years.format));
+//               }
 
-    $.fn[NAME].noConflict = function CountdownNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Countdown.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//               if (_this.years.label.show) {
+//                 _this.years.label.element.text(event.strftime(_this.years.label.format));
+//               }
+
+//               if (_this.months.show) {
+//                 _this.months.element.text(event.strftime(_this.months.format));
+//               }
+
+//               if (_this.months.label.show) {
+//                 _this.months.label.element.text(event.strftime(_this.months.label.format));
+//               }
+
+//               if (_this.weeks.show) {
+//                 _this.weeks.element.text(event.strftime(_this.weeks.format));
+//               }
+
+//               if (_this.weeks.label.show) {
+//                 _this.weeks.label.element.text(event.strftime(_this.weeks.label.format));
+//               }
+
+//               if (_this.days.show) {
+//                 _this.days.element.text(event.strftime(_this.days.format));
+//               }
+
+//               if (_this.days.label.show) {
+//                 _this.days.label.element.text(event.strftime(_this.days.label.format));
+//               }
+
+//               if (_this.hours.show) {
+//                 _this.hours.element.text(event.strftime(_this.hours.format));
+//               }
+
+//               if (_this.hours.label.show) {
+//                 _this.hours.label.element.text(event.strftime(_this.hours.label.format));
+//               }
+
+//               if (_this.minutes.show) {
+//                 _this.minutes.element.text(event.strftime(_this.minutes.format));
+//               }
+
+//               if (_this.minutes.label.show) {
+//                 _this.minutes.label.element.text(event.strftime(_this.minutes.label.format));
+//               }
+
+//               if (_this.seconds.show) {
+//                 _this.seconds.element.text(event.strftime(_this.seconds.format));
+//               }
+
+//               if (_this.seconds.label.show) {
+//                 _this.seconds.label.element.text(event.strftime(_this.seconds.label.format));
+//               }
+//             } else {
+//               // If the countdown has elapsed (event.elapsed):
+//               element.find(Selector.ELAPSED).removeClass(CSS.D_NONE);
+//               element.find(Selector.ACTIVE).addClass(CSS.D_NONE);
+//             }
+//           });
+//         } else {
+//           $(this.element).countdown(this.date, function (event) {
+//             if (event.elapsed) {
+//               element.text(_this.fallback);
+//             } else {
+//               element.text(event.strftime(_this.dateFormat));
+//             }
+//           });
+//         }
+//       };
+
+//       Countdown.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachCountdown() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
+
+//           if (!data) {
+//             data = new Countdown(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
+
+//       _createClass(Countdown, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return Countdown;
+//     }(); // END Class definition
+
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    return Countdown;
-  }(jQuery$1);
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var cdownsOnPage = $.makeArray($(Selector.COUNTDOWN));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = cdownsOnPage.length; i--;) {
+//         var $countdown = $(cdownsOnPage[i]);
+//         Countdown.jQueryInterface.call($countdown, $countdown.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = Countdown.jQueryInterface;
+//     $.fn[NAME].Constructor = Countdown;
+
+//     $.fn[NAME].noConflict = function CountdownNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return Countdown.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return Countdown;
+//   }(jQuery$1);
 
   var __assign=undefined&&undefined.__assign||function(){return (__assign=Object.assign||function(t){for(var i,a=1,s=arguments.length;a<s;a++)for(var n in i=arguments[a])Object.prototype.hasOwnProperty.call(i,n)&&(t[n]=i[n]);return t}).apply(this,arguments)},CountUp=function(){function t(t,i,a){var s=this;this.target=t,this.endVal=i,this.options=a,this.version="2.0.4",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:""},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.count=function(t){s.startTime||(s.startTime=t);var i=t-s.startTime;s.remaining=s.duration-i,s.useEasing?s.countDown?s.frameVal=s.startVal-s.easingFn(i,0,s.startVal-s.endVal,s.duration):s.frameVal=s.easingFn(i,s.startVal,s.endVal-s.startVal,s.duration):s.countDown?s.frameVal=s.startVal-(s.startVal-s.endVal)*(i/s.duration):s.frameVal=s.startVal+(s.endVal-s.startVal)*(i/s.duration),s.countDown?s.frameVal=s.frameVal<s.endVal?s.endVal:s.frameVal:s.frameVal=s.frameVal>s.endVal?s.endVal:s.frameVal,s.frameVal=Math.round(s.frameVal*s.decimalMult)/s.decimalMult,s.printValue(s.frameVal),i<s.duration?s.rAF=requestAnimationFrame(s.count):null!==s.finalEndVal?s.update(s.finalEndVal):s.callback&&s.callback();},this.formatNumber=function(t){var i,a,n,e,r,o=t<0?"-":"";if(i=Math.abs(t).toFixed(s.options.decimalPlaces),n=(a=(i+="").split("."))[0],e=a.length>1?s.options.decimal+a[1]:"",s.options.useGrouping){r="";for(var l=0,h=n.length;l<h;++l)0!==l&&l%3==0&&(r=s.options.separator+r),r=n[h-l-1]+r;n=r;}return s.options.numerals&&s.options.numerals.length&&(n=n.replace(/[0-9]/g,function(t){return s.options.numerals[+t]}),e=e.replace(/[0-9]/g,function(t){return s.options.numerals[+t]})),o+s.options.prefix+n+e+s.options.suffix},this.easeOutExpo=function(t,i,a,s){return a*(1-Math.pow(2,-10*t/s))*1024/1023+i},this.options=__assign({},this.defaults,a),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(i),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.decimalMult=Math.pow(10,this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el="string"==typeof t?document.getElementById(t):t,this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined";}return t.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var i=t-this.startVal;if(Math.abs(i)>this.options.smartEasingThreshold){this.finalEndVal=t;var a=this.countDown?1:-1;this.endVal=t+a*this.options.smartEasingAmount,this.duration=this.duration/2;}else this.endVal=t,this.finalEndVal=null;this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing;},t.prototype.start=function(t){this.error||(this.callback=t,this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal));},t.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused;},t.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal);},t.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,this.finalEndVal||this.resetDuration(),this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count));},t.prototype.printValue=function(t){var i=this.formattingFn(t);"INPUT"===this.el.tagName?this.el.value=i:"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=i:this.el.innerHTML=i;},t.prototype.ensureNumber=function(t){return "number"==typeof t&&!isNaN(t)},t.prototype.validateValue=function(t){var i=Number(t);return this.ensureNumber(i)?i:(this.error="[CountUp] invalid start or end value: "+t,null)},t.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration;},t}();
 
@@ -4495,216 +4495,216 @@
     return FormEmail;
   }(jQuery$1);
 
-  var mrIonRangeSlider = function ($) {
-    /**
-     * Check for Ion rangeSlider dependency
-     * https://github.com/IonDen/ion.rangeSlider
-     */
-    if (typeof $.fn.ionRangeSlider !== 'function') {
-      throw new Error('mrIonRangeSlider requires ion.rangeSlider.js (https://github.com/IonDen/ion.rangeSlider)');
-    } // Check mrUtil is present and correct version
+//   var mrIonRangeSlider = function ($) {
+//     /**
+//      * Check for Ion rangeSlider dependency
+//      * https://github.com/IonDen/ion.rangeSlider
+//      */
+//     if (typeof $.fn.ionRangeSlider !== 'function') {
+//       throw new Error('mrIonRangeSlider requires ion.rangeSlider.js (https://github.com/IonDen/ion.rangeSlider)');
+//     } // Check mrUtil is present and correct version
 
 
-    if (!(mrUtil && mrUtil.version >= '1.2.0')) {
-      throw new Error('mrUtil >= version 1.2.0 is required.');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//     if (!(mrUtil && mrUtil.version >= '1.2.0')) {
+//       throw new Error('mrUtil >= version 1.2.0 is required.');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrIonRangeSlider';
-    var VERSION = '1.0.0';
-    var DATA_KEY = 'mr.ionRangeSlider';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var ION_RANGE_SLIDER_KEY = 'ionRangeSlider';
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      CHANGE: 'input'
-    };
-    var Selector = {
-      DATA_ATTR: 'ion-rangeslider',
-      DATA_ION_RANGESLIDER: '[data-ion-rangeslider]',
-      INPUT: 'INPUT',
-      TEXT: 'text'
-    };
-    var Options = {
-      SKIN_DEFAULT: 'theme'
-    };
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     var NAME = 'mrIonRangeSlider';
+//     var VERSION = '1.0.0';
+//     var DATA_KEY = 'mr.ionRangeSlider';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var ION_RANGE_SLIDER_KEY = 'ionRangeSlider';
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
+//       CHANGE: 'input'
+//     };
+//     var Selector = {
+//       DATA_ATTR: 'ion-rangeslider',
+//       DATA_ION_RANGESLIDER: '[data-ion-rangeslider]',
+//       INPUT: 'INPUT',
+//       TEXT: 'text'
+//     };
+//     var Options = {
+//       SKIN_DEFAULT: 'theme'
+//     };
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
-    var IonRangeSlider =
-    /*#__PURE__*/
-    function () {
-      function IonRangeSlider(element) {
-        var $element = $(element);
-        this.options = $element.data();
-        this.element = element;
-        this.fromElement = null;
-        this.toElement = null;
-        this.unitElement = null;
-        this.initRangeSlider();
-      } // getters
-
-
-      var _proto = IonRangeSlider.prototype;
-
-      _proto.initRangeSlider = function initRangeSlider() {
-        var options = this.options;
-
-        if (options.fromSelector) {
-          this.fromElement = document.querySelectorAll(options.fromSelector);
-          this.setFromUpdateEvent(this.fromElement);
-        }
-
-        if (options.toSelector) {
-          this.toElement = document.querySelectorAll(options.toSelector);
-          this.setToUpdateEvent(this.toElement);
-        }
-
-        if (options.unitSelector && options.unitSingle && options.unitPlural) {
-          this.unitElement = document.querySelectorAll(options.unitSelector);
-        }
-
-        $(this.element).ionRangeSlider({
-          skin: Options.SKIN_DEFAULT,
-          onStart: mrUtil.getFuncFromString(options.onStart),
-          onFinish: mrUtil.getFuncFromString(options.onFinish),
-          onChange: this.handleChange,
-          scope: this,
-          onUpdate: mrUtil.getFuncFromString(options.onUpdate)
-        });
-        this.rangeSlider = $(this.element).data(ION_RANGE_SLIDER_KEY);
-      } // HandleChange then also calls the user's callback
-      ;
-
-      _proto.handleChange = function handleChange(data) {
-        if (this.fromElement && this.fromElement.length > 0) {
-          mrIonRangeSlider.updateValue(this.fromElement, data.from_value || data.from);
-        }
-
-        if (this.toElement && this.toElement.length > 0) {
-          mrIonRangeSlider.updateValue(this.toElement, data.to_value || data.to);
-        }
-
-        if (this.unitElement && this.unitElement.length > 0) {
-          var value = parseInt(data.from_value, 10) || data.value;
-          mrIonRangeSlider.updateValue(this.unitElement, value > 1 ? this.options.unitPlural : this.options.unitSingle);
-        }
-
-        var userChangeFunction = mrUtil.getFuncFromString(this.options.onChange);
-
-        if (userChangeFunction) {
-          userChangeFunction(data);
-        }
-      } // Takes a collection of "To" elements and attaches
-      // a change event handler to update the rangeslider when user inputs a value
-      ;
-
-      _proto.setToUpdateEvent = function setToUpdateEvent(collection) {
-        var _this = this;
-
-        mrUtil.forEach(collection, function (index, element) {
-          if (element.tagName.toUpperCase() === Selector.INPUT && element.type === Selector.TEXT) {
-            element.addEventListener(Event.CHANGE, function () {
-              _this.rangeSlider.update({
-                to: element.value
-              });
-            });
-          }
-        });
-      } // Takes a collection of "From" elements and attaches
-      // a change event handler to update the rangeslider when user inputs a value
-      ;
-
-      _proto.setFromUpdateEvent = function setFromUpdateEvent(collection) {
-        var _this2 = this;
-
-        mrUtil.forEach(collection, function (index, element) {
-          if (element.tagName.toUpperCase() === Selector.INPUT && element.type === Selector.TEXT) {
-            element.addEventListener(Event.CHANGE, function () {
-              _this2.rangeSlider.update({
-                from: element.value
-              });
-            });
-          }
-        });
-      };
-
-      IonRangeSlider.updateValue = function updateValue(collection, value) {
-        mrUtil.forEach(collection, function (index, element) {
-          var updateElement = element; // If element is an input, set the value instead of textContent
-
-          var updateMethod = element.tagName.toUpperCase() === Selector.INPUT ? 'value' : 'textContent';
-          updateElement[updateMethod] = value;
-        });
-      };
-
-      IonRangeSlider.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachIonRangeSlider() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new IonRangeSlider(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
-
-      _createClass(IonRangeSlider, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return IonRangeSlider;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//     var IonRangeSlider =
+//     /*#__PURE__*/
+//     function () {
+//       function IonRangeSlider(element) {
+//         var $element = $(element);
+//         this.options = $element.data();
+//         this.element = element;
+//         this.fromElement = null;
+//         this.toElement = null;
+//         this.unitElement = null;
+//         this.initRangeSlider();
+//       } // getters
 
 
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var ionRangeSliderElements = $.makeArray($(Selector.DATA_ION_RANGESLIDER));
-      /* eslint-disable no-plusplus */
+//       var _proto = IonRangeSlider.prototype;
 
-      for (var i = ionRangeSliderElements.length; i--;) {
-        var $ionRangeSlider = $(ionRangeSliderElements[i]);
-        IonRangeSlider.jQueryInterface.call($ionRangeSlider, $ionRangeSlider.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+//       _proto.initRangeSlider = function initRangeSlider() {
+//         var options = this.options;
 
-    /* eslint-disable no-param-reassign */
+//         if (options.fromSelector) {
+//           this.fromElement = document.querySelectorAll(options.fromSelector);
+//           this.setFromUpdateEvent(this.fromElement);
+//         }
 
-    $.fn[NAME] = IonRangeSlider.jQueryInterface;
-    $.fn[NAME].Constructor = IonRangeSlider;
+//         if (options.toSelector) {
+//           this.toElement = document.querySelectorAll(options.toSelector);
+//           this.setToUpdateEvent(this.toElement);
+//         }
 
-    $.fn[NAME].noConflict = function IonRangeSliderNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return IonRangeSlider.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//         if (options.unitSelector && options.unitSingle && options.unitPlural) {
+//           this.unitElement = document.querySelectorAll(options.unitSelector);
+//         }
+
+//         $(this.element).ionRangeSlider({
+//           skin: Options.SKIN_DEFAULT,
+//           onStart: mrUtil.getFuncFromString(options.onStart),
+//           onFinish: mrUtil.getFuncFromString(options.onFinish),
+//           onChange: this.handleChange,
+//           scope: this,
+//           onUpdate: mrUtil.getFuncFromString(options.onUpdate)
+//         });
+//         this.rangeSlider = $(this.element).data(ION_RANGE_SLIDER_KEY);
+//       } // HandleChange then also calls the user's callback
+//       ;
+
+//       _proto.handleChange = function handleChange(data) {
+//         if (this.fromElement && this.fromElement.length > 0) {
+//           mrIonRangeSlider.updateValue(this.fromElement, data.from_value || data.from);
+//         }
+
+//         if (this.toElement && this.toElement.length > 0) {
+//           mrIonRangeSlider.updateValue(this.toElement, data.to_value || data.to);
+//         }
+
+//         if (this.unitElement && this.unitElement.length > 0) {
+//           var value = parseInt(data.from_value, 10) || data.value;
+//           mrIonRangeSlider.updateValue(this.unitElement, value > 1 ? this.options.unitPlural : this.options.unitSingle);
+//         }
+
+//         var userChangeFunction = mrUtil.getFuncFromString(this.options.onChange);
+
+//         if (userChangeFunction) {
+//           userChangeFunction(data);
+//         }
+//       } // Takes a collection of "To" elements and attaches
+//       // a change event handler to update the rangeslider when user inputs a value
+//       ;
+
+//       _proto.setToUpdateEvent = function setToUpdateEvent(collection) {
+//         var _this = this;
+
+//         mrUtil.forEach(collection, function (index, element) {
+//           if (element.tagName.toUpperCase() === Selector.INPUT && element.type === Selector.TEXT) {
+//             element.addEventListener(Event.CHANGE, function () {
+//               _this.rangeSlider.update({
+//                 to: element.value
+//               });
+//             });
+//           }
+//         });
+//       } // Takes a collection of "From" elements and attaches
+//       // a change event handler to update the rangeslider when user inputs a value
+//       ;
+
+//       _proto.setFromUpdateEvent = function setFromUpdateEvent(collection) {
+//         var _this2 = this;
+
+//         mrUtil.forEach(collection, function (index, element) {
+//           if (element.tagName.toUpperCase() === Selector.INPUT && element.type === Selector.TEXT) {
+//             element.addEventListener(Event.CHANGE, function () {
+//               _this2.rangeSlider.update({
+//                 from: element.value
+//               });
+//             });
+//           }
+//         });
+//       };
+
+//       IonRangeSlider.updateValue = function updateValue(collection, value) {
+//         mrUtil.forEach(collection, function (index, element) {
+//           var updateElement = element; // If element is an input, set the value instead of textContent
+
+//           var updateMethod = element.tagName.toUpperCase() === Selector.INPUT ? 'value' : 'textContent';
+//           updateElement[updateMethod] = value;
+//         });
+//       };
+
+//       IonRangeSlider.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachIonRangeSlider() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
+
+//           if (!data) {
+//             data = new IonRangeSlider(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
+
+//       _createClass(IonRangeSlider, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return IonRangeSlider;
+//     }();
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    return IonRangeSlider;
-  }(jQuery$1);
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var ionRangeSliderElements = $.makeArray($(Selector.DATA_ION_RANGESLIDER));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = ionRangeSliderElements.length; i--;) {
+//         var $ionRangeSlider = $(ionRangeSliderElements[i]);
+//         IonRangeSlider.jQueryInterface.call($ionRangeSlider, $ionRangeSlider.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = IonRangeSlider.jQueryInterface;
+//     $.fn[NAME].Constructor = IonRangeSlider;
+
+//     $.fn[NAME].noConflict = function IonRangeSliderNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return IonRangeSlider.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return IonRangeSlider;
+//   }(jQuery$1);
 
   var mrIsotope = function ($) {
     /**
@@ -5730,7 +5730,7 @@
   })(jQuery$1);
 
   //
-  Plyr.setup('[data-provider],.plyr');
+//   Plyr.setup('[data-provider],.plyr');
 
   //
 
@@ -5744,7 +5744,7 @@
   })(jQuery$1);
 
   //
-  Prism.highlightAll();
+//   Prism.highlightAll();
 
   var mrReadingPosition = function ($) {
     /**
@@ -7269,199 +7269,199 @@
     }
   });
 
-  var mrTwitterFetcher = function ($) {
-    /**
-     * Check for twitterFetcher dependency
-     * twitterFetcher - https://github.com/jasonmayes/Twitter-Post-Fetcher
-     */
-    if (typeof twitterFetcher === 'undefined') {
-      throw new Error('mrTwitterFetcher requires twitterFetcher.js (https://github.com/jasonmayes/Twitter-Post-Fetcher)');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//   var mrTwitterFetcher = function ($) {
+//     /**
+//      * Check for twitterFetcher dependency
+//      * twitterFetcher - https://github.com/jasonmayes/Twitter-Post-Fetcher
+//      */
+//     if (typeof twitterFetcher === 'undefined') {
+//       throw new Error('mrTwitterFetcher requires twitterFetcher.js (https://github.com/jasonmayes/Twitter-Post-Fetcher)');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrTwitterFetcher';
-    var VERSION = '1.0.0';
-    var DATA_KEY = 'mr.twitterFetcher';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      RESIZE: "resize" + EVENT_KEY,
-      READY: "ready" + EVENT_KEY,
-      APPEND: "tweetAppended" + EVENT_KEY
-    };
-    var Selector = {
-      DATA_ATTR: 'twitter-fetcher',
-      DATA_TWITTER_FETCHER: '[data-twitter-fetcher]',
-      DATA_TWITTER: 'data-twitter',
-      USER: '.user',
-      TWEET: '.tweet',
-      TIME_POSTED: '.timePosted',
-      INTERACT: '.interact'
-    };
-    var Defaults = {
-      USERNAME: 'twitter',
-      MAX_TWEETS: 6
-    };
-    var Options = {
-      USERNAME: 'username',
-      MAX_TWEETS: 'max-tweets',
-      FLICKITY: 'flickity',
-      SLIDER: 'twitterFlickity',
-      ISOTOPE: 'isotope'
-    };
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     var NAME = 'mrTwitterFetcher';
+//     var VERSION = '1.0.0';
+//     var DATA_KEY = 'mr.twitterFetcher';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
+//       RESIZE: "resize" + EVENT_KEY,
+//       READY: "ready" + EVENT_KEY,
+//       APPEND: "tweetAppended" + EVENT_KEY
+//     };
+//     var Selector = {
+//       DATA_ATTR: 'twitter-fetcher',
+//       DATA_TWITTER_FETCHER: '[data-twitter-fetcher]',
+//       DATA_TWITTER: 'data-twitter',
+//       USER: '.user',
+//       TWEET: '.tweet',
+//       TIME_POSTED: '.timePosted',
+//       INTERACT: '.interact'
+//     };
+//     var Defaults = {
+//       USERNAME: 'twitter',
+//       MAX_TWEETS: 6
+//     };
+//     var Options = {
+//       USERNAME: 'username',
+//       MAX_TWEETS: 'max-tweets',
+//       FLICKITY: 'flickity',
+//       SLIDER: 'twitterFlickity',
+//       ISOTOPE: 'isotope'
+//     };
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
-    var TwitterFetcher =
-    /*#__PURE__*/
-    function () {
-      function TwitterFetcher(element) {
-        var $element = $(element);
-        this.element = element;
-        this.element.id = "tweets-" + new Date().getTime();
-        this.username = $element.data(Options.USERNAME).replace('@', '') || Defaults.USERNAME;
-        this.maxTweets = parseInt($element.data(Options.MAX_TWEETS), 10) || Defaults.MAX_TWEETS; // Check if data-twitter-slider is options object, plain attribute or not present.
+//     var TwitterFetcher =
+//     /*#__PURE__*/
+//     function () {
+//       function TwitterFetcher(element) {
+//         var $element = $(element);
+//         this.element = element;
+//         this.element.id = "tweets-" + new Date().getTime();
+//         this.username = $element.data(Options.USERNAME).replace('@', '') || Defaults.USERNAME;
+//         this.maxTweets = parseInt($element.data(Options.MAX_TWEETS), 10) || Defaults.MAX_TWEETS; // Check if data-twitter-slider is options object, plain attribute or not present.
 
-        this.slider = this.element.getAttribute(Selector.DATA_TWITTER + "-" + Options.FLICKITY) !== null;
-        this.slider = this.slider && typeof $element.data(Options.SLIDER) === 'object' ? $element.data(Options.SLIDER) : this.slider; // Check if data-twitter-isotope is present.
+//         this.slider = this.element.getAttribute(Selector.DATA_TWITTER + "-" + Options.FLICKITY) !== null;
+//         this.slider = this.slider && typeof $element.data(Options.SLIDER) === 'object' ? $element.data(Options.SLIDER) : this.slider; // Check if data-twitter-isotope is present.
 
-        this.isotope = this.element.getAttribute(Selector.DATA_TWITTER + "-" + Options.ISOTOPE) !== null;
-        this.initTwitterFeed();
-      } // getters
-
-
-      var _proto = TwitterFetcher.prototype;
-
-      _proto.initTwitterFeed = function initTwitterFeed() {
-        var _this = this;
-
-        this.config = {
-          profile: {
-            screenName: this.username
-          },
-          domId: this.element.id,
-          maxTweets: this.maxTweets,
-          enableLinks: true,
-          showUser: true,
-          showTime: true,
-          dateFunction: '',
-          showRetweet: false,
-          customCallback: function customCallback(tweets) {
-            var $element = $(_this.element);
-            var html;
-            var template = $element.children().first().detach();
-            var x = tweets.length;
-            var n = 0;
-
-            while (n < x) {
-              var tweetContent = $('<div>').append($(tweets[n]));
-              var templateClone = template.clone();
-              templateClone.find(Selector.TWEET).html(tweetContent.find(Selector.TWEET).html());
-              templateClone.find(Selector.USER).html(tweetContent.find(Selector.USER).html());
-              templateClone.find(Selector.TIME_POSTED).html(tweetContent.find(Selector.TIME_POSTED).html());
-              templateClone.find(Selector.INTERACT).html(tweetContent.find(Selector.INTERACT).html());
-              $element.append(templateClone);
-              n += 1; // Fire an event when each tweet is added to the div
-
-              var appendEvent = $.Event(Event.APPEND);
-              appendEvent.appendedElement = templateClone;
-              appendEvent.mrTwitterFetcher = _this;
-              $(_this.element).trigger(appendEvent);
-            }
-
-            if (_this.slider === true || typeof _this.slider === 'object') {
-              // Check for Flickity dependency
-              if (typeof Flickity === 'undefined') {
-                throw new Error('mrTwitterFetcher requires flickity.js (https://github.com/metafizzy/flickity)');
-              } else {
-                $element.data('flickity', new Flickity(_this.element, _this.slider));
-              }
-            } else if (_this.isotope === true) {
-              // Check for Isotope dependency
-              if (typeof Isotope === 'undefined') {
-                throw new Error('mrTwitterFetcher requires isotope.js (https://github.com/metafizzy/isotope)');
-              } else {
-                $(_this.element).mrIsotope();
-              }
-            } // Fire an event for tweets ready
+//         this.isotope = this.element.getAttribute(Selector.DATA_TWITTER + "-" + Options.ISOTOPE) !== null;
+//         this.initTwitterFeed();
+//       } // getters
 
 
-            var readyEvent = $.Event(Event.READY);
-            readyEvent.mrTwitterFetcher = _this;
-            $(_this.element).trigger(readyEvent);
-            return html;
-          }
-        };
-        twitterFetcher.fetch(this.config);
-      };
+//       var _proto = TwitterFetcher.prototype;
 
-      TwitterFetcher.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachTwitterFetcher() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
+//       _proto.initTwitterFeed = function initTwitterFeed() {
+//         var _this = this;
 
-          if (!data) {
-            data = new TwitterFetcher(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
+//         this.config = {
+//           profile: {
+//             screenName: this.username
+//           },
+//           domId: this.element.id,
+//           maxTweets: this.maxTweets,
+//           enableLinks: true,
+//           showUser: true,
+//           showTime: true,
+//           dateFunction: '',
+//           showRetweet: false,
+//           customCallback: function customCallback(tweets) {
+//             var $element = $(_this.element);
+//             var html;
+//             var template = $element.children().first().detach();
+//             var x = tweets.length;
+//             var n = 0;
 
-      _createClass(TwitterFetcher, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
+//             while (n < x) {
+//               var tweetContent = $('<div>').append($(tweets[n]));
+//               var templateClone = template.clone();
+//               templateClone.find(Selector.TWEET).html(tweetContent.find(Selector.TWEET).html());
+//               templateClone.find(Selector.USER).html(tweetContent.find(Selector.USER).html());
+//               templateClone.find(Selector.TIME_POSTED).html(tweetContent.find(Selector.TIME_POSTED).html());
+//               templateClone.find(Selector.INTERACT).html(tweetContent.find(Selector.INTERACT).html());
+//               $element.append(templateClone);
+//               n += 1; // Fire an event when each tweet is added to the div
 
-      return TwitterFetcher;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//               var appendEvent = $.Event(Event.APPEND);
+//               appendEvent.appendedElement = templateClone;
+//               appendEvent.mrTwitterFetcher = _this;
+//               $(_this.element).trigger(appendEvent);
+//             }
 
-
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var twitterFetcherElements = $.makeArray($(Selector.DATA_TWITTER_FETCHER));
-      /* eslint-disable no-plusplus */
-
-      for (var i = twitterFetcherElements.length; i--;) {
-        var $twitterFetcher = $(twitterFetcherElements[i]);
-        TwitterFetcher.jQueryInterface.call($twitterFetcher, $twitterFetcher.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
-
-    /* eslint-disable no-param-reassign */
-
-    $.fn[NAME] = TwitterFetcher.jQueryInterface;
-    $.fn[NAME].Constructor = TwitterFetcher;
-
-    $.fn[NAME].noConflict = function TwitterFetcherNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return TwitterFetcher.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//             if (_this.slider === true || typeof _this.slider === 'object') {
+//               // Check for Flickity dependency
+//               if (typeof Flickity === 'undefined') {
+//                 throw new Error('mrTwitterFetcher requires flickity.js (https://github.com/metafizzy/flickity)');
+//               } else {
+//                 $element.data('flickity', new Flickity(_this.element, _this.slider));
+//               }
+//             } else if (_this.isotope === true) {
+//               // Check for Isotope dependency
+//               if (typeof Isotope === 'undefined') {
+//                 throw new Error('mrTwitterFetcher requires isotope.js (https://github.com/metafizzy/isotope)');
+//               } else {
+//                 $(_this.element).mrIsotope();
+//               }
+//             } // Fire an event for tweets ready
 
 
-    return TwitterFetcher;
-  }(jQuery$1);
+//             var readyEvent = $.Event(Event.READY);
+//             readyEvent.mrTwitterFetcher = _this;
+//             $(_this.element).trigger(readyEvent);
+//             return html;
+//           }
+//         };
+//         twitterFetcher.fetch(this.config);
+//       };
+
+//       TwitterFetcher.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachTwitterFetcher() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
+
+//           if (!data) {
+//             data = new TwitterFetcher(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
+
+//       _createClass(TwitterFetcher, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return TwitterFetcher;
+//     }();
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
+
+
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var twitterFetcherElements = $.makeArray($(Selector.DATA_TWITTER_FETCHER));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = twitterFetcherElements.length; i--;) {
+//         var $twitterFetcher = $(twitterFetcherElements[i]);
+//         TwitterFetcher.jQueryInterface.call($twitterFetcher, $twitterFetcher.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = TwitterFetcher.jQueryInterface;
+//     $.fn[NAME].Constructor = TwitterFetcher;
+
+//     $.fn[NAME].noConflict = function TwitterFetcherNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return TwitterFetcher.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return TwitterFetcher;
+//   }(jQuery$1);
 
   var mrTypedText = function ($) {
     /**
@@ -7598,12 +7598,12 @@
     }
   })();
 
-  exports.mrCountdown = mrCountdown;
-  exports.mrCountup = mrCountup;
+//   exports.mrCountdown = mrCountdown;
+//   exports.mrCountup = mrCountup;
   exports.mrDropdownGrid = mrDropdownGrid;
   exports.mrFlatpickr = mrFlatpickr;
   exports.mrFormEmail = mrFormEmail;
-  exports.mrIonRangeSlider = mrIonRangeSlider;
+//   exports.mrIonRangeSlider = mrIonRangeSlider;
   exports.mrIsotope = mrIsotope;
   exports.mrMaps = mrMaps;
   exports.mrMapsStyle = mrMapStyle;
@@ -7611,7 +7611,7 @@
   exports.mrReadingPosition = mrReadingPosition;
   exports.mrSmoothScroll = mrSmoothScroll;
   exports.mrSticky = mrSticky;
-  exports.mrTwitterFetcher = mrTwitterFetcher;
+//   exports.mrTwitterFetcher = mrTwitterFetcher;
   exports.mrTypedText = mrTypedText;
   exports.mrUtil = mrUtil;
 
