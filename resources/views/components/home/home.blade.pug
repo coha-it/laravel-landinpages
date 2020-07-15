@@ -50,20 +50,32 @@ section.bg-light.o-hidden.pt-5.pb-0
 
 section.bg-primary-3.text-white
    .container
-      .row.text-center
-         .col-md-4.mb-5.mb-lg-0
-            img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/kyan.svg' alt='Kyan company logo' data-inject-svg='')
+
+      if env('APP_ENV') === 'production'
+        .row.justify-content-center.text-center(style='margin: -2.5rem 0')
+          .col-12.col-lg-7.col-md-8.mb-5.mb-lg-0
+            img(
+                src=url('assets/img/custom/logos/corporate-happiness-logo.svg')
+                style='filter: grayscale(1) brightness(1.2);opacity: .75;width: 200px;padding: 20px;'
+            )
             .px-xl-4
-               | &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS
-               | landscape.&rdquo;
-         .col-md-4.mb-5.mb-lg-0
-            img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/goldline.svg' alt='Goldline company logo' data-inject-svg='')
-            .px-xl-4
-               | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
-         .col-md-4.mb-5.mb-lg-0
-            img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/aven.svg' alt='Aven company logo' data-inject-svg='')
-            .px-xl-4
-               | &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
+              | &quot;Wir unterst&uuml;tzen Menschen und Organisationen in ihrem Wunsch nach mehr Erf&uuml;llung und Erfolg. Dabei begleiten wir sie auf ihrem Weg zu ungeahntem Wachstum.
+              | Unsere einzigartige Methodik, auf der Grundlage wissenschaftlicher Erkenntnisse, sichert die Freisetzung bisher unentdeckter Selbstentfaltungskr&auml;fte.&quot;
+      else
+          .row.text-center
+             .col-md-4.mb-5.mb-lg-0
+                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/kyan.svg' alt='Kyan company logo' data-inject-svg='')
+                .px-xl-4
+                   | &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS
+                   | landscape.&rdquo;
+             .col-md-4.mb-5.mb-lg-0
+                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/goldline.svg' alt='Goldline company logo' data-inject-svg='')
+                .px-xl-4
+                   | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
+             .col-md-4.mb-5.mb-lg-0
+                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/aven.svg' alt='Aven company logo' data-inject-svg='')
+                .px-xl-4
+                   | &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
 
 section.bg-light.o-hidden.pb-0
    .container
@@ -228,10 +240,11 @@ section.bg-light.o-hidden
                       mark(data-aos='highlight-text' data-aos-delay='250') Befragungen
                     p
                       | Anonyme, webbasierte Mitarbeiterbefragungen stellen ein sehr effizientes Instrument dar, um eine ehrliche Meinung der Mitarbeiter über den Arbeitsplatz, Vorgesetzten, Teamklima sowie das Unternehmen als Ganzes zu erfahren.
-                    .mt-4
-                      .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                        img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-4.jpg' alt='Harvey Derwent avatar image')
-                        .text-dark.mb-0 &ldquo;We are working at almost twice the capacity&rdquo;
+                    if !production
+                        .mt-4
+                          .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-4.jpg' alt='Harvey Derwent avatar image')
+                            .text-dark.mb-0 &ldquo;We are working at almost twice the capacity&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                     img.img-fluid(
                         src='assets/img/custom/anonym-laptop_t.jpg'
@@ -254,10 +267,11 @@ section.bg-light.o-hidden
                       mark(data-aos='highlight-text' data-aos-delay='250') Analysen
                     p
                       | Im Rahmen unserer anonymen Mitarbeiterbefragung werden von uns quantitative und qualitative Aussagen von Mitarbeitern Ihres Unternehmens erhoben und analysiert.​
-                    .mt-4
-                      .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                        img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-1.jpg' alt='Harvey Derwent avatar image')
-                        .text-dark.mb-0 &ldquo;Jumpstart increases productivity.&rdquo;
+                    if !production
+                        .mt-4
+                          .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-1.jpg' alt='Harvey Derwent avatar image')
+                            .text-dark.mb-0 &ldquo;Jumpstart increases productivity.&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                     //-   img.img-fluid.rounded.shadow.border(src='assets/img/desktop-app/desktop-app-1.jpg' alt='Screenshot')
                     img.rotate_in(
@@ -280,10 +294,11 @@ section.bg-light.o-hidden
                       | .
                     p
                       | Wir passen unseren bewährten Fragebogen gerne nach Ihren Wünschen an, führen die Befragung für Sie als unabhängiger Dienstleister durch, besprechen mit Ihnen die Ergebnisse und geben Ihnen konkrete Handlungsempfehlungen sowohl für die Kommunikation der Ergebnisse als auch für die zu ergreifenden Maßnahmen zur Optimierung.​
-                    .mt-4
-                      .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                        img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/female-4.jpg' alt='Ashley Mance avatar image')
-                        .text-dark.mb-0 &ldquo;Jumpstart is a dream come true.&rdquo;
+                    if !production
+                        .mt-4
+                          .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/female-4.jpg' alt='Ashley Mance avatar image')
+                            .text-dark.mb-0 &ldquo;Jumpstart is a dream come true.&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                   img.img-fluid.rounded.shadow.border.fade_left(src='assets/img/custom/edit-surveys_t.jpg' alt='Screenshot')
 

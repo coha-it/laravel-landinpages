@@ -10,7 +10,10 @@ class PageCtrl extends Controller
         return view('pages.coming-soon');
     }
     function home () {
-        return view('pages.home', ['type' => 'register']);
+        return view('pages.home', [
+            'production' => env('APP_ENV') === 'production',
+            'type' => 'register'
+        ]);
     }
     function imprint () {
         return view('pages.imprint');
