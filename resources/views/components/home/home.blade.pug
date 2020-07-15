@@ -44,7 +44,7 @@ section.bg-light.o-hidden.pt-5.pb-0
          .col
             .row.justify-content-center(data-jarallax-element='-50')
                .coha_shadow.coha_rounded.col-10.col-sm-8.col-md-7.col-lg-9.col-xl-9(data-aos='zoom-in' data-aos-delay='250')
-                  img.img-fluid(src="https://dreamteam-survey.s3.eu-central-1.amazonaws.com/landingpage/images/stock_2.png" alt='Screenshot')
+                  img.img-fluid(data-src=url("https://dreamteam-survey.s3.eu-central-1.amazonaws.com/landingpage/images/stock_2.png") alt='Screenshot')
    .w-50.h-50.bottom.right.position-absolute(data-aos='zoom-in' data-aos-delay='500')
       .blob.h-100.w-100.bottom.right.bg-warning.opacity-90
    .divider.divider-bottom.bg-primary-3.mt-5
@@ -56,7 +56,7 @@ section.bg-primary-3.text-white
         .row.justify-content-center.text-center(style='margin: -2.5rem 0')
           .col-12.col-lg-7.col-md-8.mb-5.mb-lg-0
             img(
-                src=url('assets/img/custom/logos/corporate-happiness-logo.svg')
+                data-src=asset('assets/img/custom/logos/corporate-happiness-logo.svg')
                 style='filter: grayscale(1) brightness(1.2);opacity: .75;width: 200px;padding: 20px;'
             )
             .px-xl-4
@@ -65,16 +65,16 @@ section.bg-primary-3.text-white
       else
           .row.text-center
              .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/kyan.svg' alt='Kyan company logo' data-inject-svg='')
+                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/kyan.svg') alt='Kyan company logo' data-inject-svg='')
                 .px-xl-4
                    | &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS
                    | landscape.&rdquo;
              .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/goldline.svg' alt='Goldline company logo' data-inject-svg='')
+                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/goldline.svg') alt='Goldline company logo' data-inject-svg='')
                 .px-xl-4
                    | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
              .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(src='assets/img/logos/brand/aven.svg' alt='Aven company logo' data-inject-svg='')
+                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/aven.svg') alt='Aven company logo' data-inject-svg='')
                 .px-xl-4
                    | &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
 
@@ -90,9 +90,9 @@ section.bg-light.o-hidden.pt-0
    .container
       .row.align-items-center.justify-content-around.text-center.text-lg-left
          .col-md-9.col-lg-6.col-xl-5.order-lg-1(data-aos='fade-in')
-            img.img-fluid.rounded.shadow(src='assets/img/custom/survey-tablet-1k-x-1k_t.jpg' alt='Image')
+            img.img-fluid.rounded.shadow(data-src=asset('assets/img/custom/survey-tablet-1k-x-1k_t.jpg') alt='Image')
             img.position-absolute.p-0.col-4.col-xl-5.border.border-white.border-thick.rounded-circle.top.left.shadow-lg.mt-5.ml-n5.ml-lg-n3.ml-xl-n5.d-none.d-md-block(
-                src='assets/img/custom/compuser-software-500x500_t.jpg'
+                data-src=asset('assets/img/custom/compuser-software-500x500_t.jpg')
                 alt='Image'
                 data-jarallax-element='-24 0'
             )
@@ -105,22 +105,22 @@ section.bg-light.o-hidden.pt-0
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='100')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
-                        img.m-2.icon.icon-xs.bg-success(src='assets/img/icons/interface/icon-check.svg', alt='Binoculars icon', data-inject-svg='')
+                        img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Binoculars icon', data-inject-svg='')
                      h6.mb-0.ml-3 Anonym
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='200')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
-                        img.m-2.icon.icon-xs.bg-success(src='assets/img/icons/interface/icon-check.svg', alt='Layouts icon', data-inject-svg='')
+                        img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Layouts icon', data-inject-svg='')
                      h6.mb-0.ml-3 Sicher
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='300')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
-                        img.m-2.icon.icon-xs.bg-success(src='assets/img/icons/interface/icon-check.svg', alt='Box icon', data-inject-svg='')
+                        img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Box icon', data-inject-svg='')
                      h6.mb-0.ml-3 Skalierbar
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='400')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
-                        img.m-2.icon.icon-xs.bg-success(src='assets/img/icons/interface/icon-check.svg', alt='Lightning icon', data-inject-svg='')
+                        img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Lightning icon', data-inject-svg='')
                      h6.mb-0.ml-3 Modern
             //- a.lead(href='#') Kontakt
 
@@ -139,7 +139,7 @@ section.bg-light.o-hidden.pt-0
                    .my-4(data-aos='fade-left' data-aos-delay='200')
                       .d-flex
                          .mr-3.mr-md-4
-                            img.icon.bg-primary(src='assets/img/icons/theme/design/select.svg' alt='Selection interface icon' data-inject-svg='')
+                            img.icon.bg-primary(data-src=asset('assets/img/icons/theme/design/select.svg') alt='Selection interface icon' data-inject-svg='')
                          div
                             h5 Analysen & Empfehlungen
                             div
@@ -147,7 +147,7 @@ section.bg-light.o-hidden.pt-0
                    .my-4(data-aos='fade-left' data-aos-delay='100')
                       .d-flex
                          .mr-3.mr-md-4
-                            img.icon.bg-primary(src='assets/img/icons/theme/general/shield-check.svg' alt='Bookmark icon' data-inject-svg='')
+                            img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/shield-check.svg') alt='Bookmark icon' data-inject-svg='')
                          div
                             h5 Individuelle Unterstützung
                             div
@@ -155,9 +155,9 @@ section.bg-light.o-hidden.pt-0
                 // a.lead(href='#' data-aos='fade-left' data-aos-delay='100') Kontakt
 
          .col-md-9.col-lg-5(data-aos='fade-in')
-            img.img-fluid.rounded.shadow(src='assets/img/custom/analytics-1_t.jpg', alt='Image' style='transform: rotateY(-180deg)')
+            img.img-fluid.rounded.shadow(data-src=asset('assets/img/custom/analytics-1_t.jpg'), alt='Image' style='transform: rotateY(-180deg)')
             img.position-absolute.p-0.col-4.col-xl-5.border.border-white.border-thick.rounded-circle.bottom.right.shadow-lg.mt-5.mr-n5.mr-lg-n3.mr-xl-n5.d-none.d-md-block(
-                src='assets/img/custom/survey-stats-pen-500x500_t.jpg'
+                data-src=asset('assets/img/custom/survey-stats-pen-500x500_t.jpg')
                 alt='Image'
                 data-jarallax-element='-24 0'
                 style='margin-bottom: -70px !important'
@@ -176,38 +176,38 @@ section.o-hidden
     .row
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='100')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/general/half-heart.svg' alt='Lightning icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/half-heart.svg') alt='Lightning icon' data-inject-svg='')
           h5.mt-4 Zufriedenheit
           div
             | Den Grad der Arbeitszufriedenheit - Sie gewinnen einen Einblick in das Betriebsklima und die Unternehmenskultur. ​
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='300')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/general/search.svg' alt='Bookmark icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/search.svg') alt='Bookmark icon' data-inject-svg='')
           h5.mt-4 Hinweise
           div
             | Detaillierte Hinweise, z.B. zu den Arbeitsbedingungen oder der Arbeitsplatzgestaltung etc.​
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='500')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/design/select.svg' alt='Selection interface icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/design/select.svg') alt='Selection interface icon' data-inject-svg='')
           h5.mt-4 Schwachstellen
           div
             | Schwachpunkte und Handlungschancen.​
 
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='100')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/general/user.svg' alt='Bookmark icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/user.svg') alt='Bookmark icon' data-inject-svg='')
           h5.mt-4 Kommunikation
           div
             |  Wie die Kommunikation zwischen Führungskräften und Mitarbeitern optimiert werden kann.​
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='300')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/electric/fan.svg' alt='Bookmark icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/electric/fan.svg') alt='Bookmark icon' data-inject-svg='')
           h5.mt-4 Das Maß an Verbundenheit
           div
             | mit Ihrem Unternehmen - Sie erhalten Rückschlüsse auf Ihre Arbeitgeberattraktivität.
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='500')
         div
-          img.icon.bg-primary(src='assets/img/icons/theme/communication/chat-5.svg' alt='Bookmark icon' data-inject-svg='')
+          img.icon.bg-primary(data-src=asset('assets/img/icons/theme/communication/chat-5.svg') alt='Bookmark icon' data-inject-svg='')
           h5.mt-4 Feedback/Rückmeldung
           div
             | über Ihre personalwirtschaftlichen Maßnahmen.​
@@ -244,22 +244,22 @@ section.bg-light.o-hidden
                     if !production
                         .mt-4
                           .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-4.jpg' alt='Harvey Derwent avatar image')
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(data-src='assets/img/avatars/male-4.jpg' alt='Harvey Derwent avatar image')
                             .text-dark.mb-0 &ldquo;We are working at almost twice the capacity&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                     img.img-fluid(
-                        src='assets/img/custom/anonym-laptop_t.jpg'
+                        data-src='assets/img/custom/anonym-laptop_t.jpg'
                         alt='Image'
                         data-jarallax-element='-12 0'
                     )
                     .position-absolute.p-0.col-4.col-xl-5.top.left.mt-5.mr-n5.mr-lg-n3.mr-xl-n5.d-md-block(style='margin-top: -10% !important')
                         img.shadow-lg(
-                            src='assets/img/custom/anonym-smartphone_t.png'
+                            data-src='assets/img/custom/anonym-smartphone_t.png'
                             alt='Image'
                             data-jarallax-element='-24 0'
                             style='width: 70%'
                         )
-                    //-   img.img-fluid.rounded.shadow.border(src='assets/img/custom/anonym-app_t.jpg' alt='Screenshot')
+                    //-   img.img-fluid.rounded.shadow.border(data-src='assets/img/custom/anonym-app_t.jpg' alt='Screenshot')
             #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
               .row.align-items-center.justify-content-around
                 .col-lg-6.col-xl-5.text-center.text-lg-left.mb-4.mb-md-5.mb-lg-0
@@ -271,18 +271,18 @@ section.bg-light.o-hidden
                     if !production
                         .mt-4
                           .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/male-1.jpg' alt='Harvey Derwent avatar image')
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(data-src='assets/img/avatars/male-1.jpg' alt='Harvey Derwent avatar image')
                             .text-dark.mb-0 &ldquo;Jumpstart increases productivity.&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
-                    //-   img.img-fluid.rounded.shadow.border(src='assets/img/desktop-app/desktop-app-1.jpg' alt='Screenshot')
+                    //-   img.img-fluid.rounded.shadow.border(data-src='assets/img/desktop-app/desktop-app-1.jpg' alt='Screenshot')
                     img.rotate_in(
                         data-jarallax-element='-24 0'
-                        src='assets/img/custom/svgs/pichart-shadow.svg'
+                        data-src='assets/img/custom/svgs/pichart-shadow.svg'
                         style="max-width: 350px;     max-height: 50vw;"
                     )
                     img.scale_up.position-absolute.bottom.left(
                         data-jarallax-element='-48 0'
-                        src='assets/img/custom/svgs/charts-shadow.svg'
+                        data-src='assets/img/custom/svgs/charts-shadow.svg'
                         style="max-width: 450px; margin: 0px 0px -6% 38%"
                     )
             #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
@@ -298,10 +298,10 @@ section.bg-light.o-hidden
                     if !production
                         .mt-4
                           .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
-                            img.avatar.avatar-sm.flex-shrink-0.mr-3(src='assets/img/avatars/female-4.jpg' alt='Ashley Mance avatar image')
+                            img.avatar.avatar-sm.flex-shrink-0.mr-3(data-src='assets/img/avatars/female-4.jpg' alt='Ashley Mance avatar image')
                             .text-dark.mb-0 &ldquo;Jumpstart is a dream come true.&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
-                  img.img-fluid.rounded.shadow.border.fade_left(src='assets/img/custom/edit-surveys_t.jpg' alt='Screenshot')
+                  img.img-fluid.rounded.shadow.border.fade_left(data-src='assets/img/custom/edit-surveys_t.jpg' alt='Screenshot')
 
 .divider.divider-top.bg-light.transform-flip-x
 
@@ -315,9 +315,9 @@ section
           | Beispielhaftes Muster für eine Befragung zur Mitarbeiterzufriedenheit​
     .row.align-items-center.justify-content-around
       .col-md-9.col-lg-5(data-aos='fade-in')
-        img.img-fluid.rounded.shadow(src='assets/img/custom/step-by-step_t.jpg' alt='Image')
+        img.img-fluid.rounded.shadow(data-src='assets/img/custom/step-by-step_t.jpg' alt='Image')
         img.position-absolute.p-0.col-4.col-xl-5.border.border-white.border-thick.top.left.shadow-lg.mt-5.ml-n5.ml-lg-n3.ml-xl-n5.d-none.d-md-block(
-            src='assets/img/custom/step-by-step-zoom_t.jpg' alt='Image' data-jarallax-element='-20 0'
+            data-src='assets/img/custom/step-by-step-zoom_t.jpg' alt='Image' data-jarallax-element='-20 0'
             style='border-radius: 10%;'
         )
       .col-md-9.col-lg-7.col-xl-6.mt-4.mt-md-5.mt-lg-0
@@ -360,33 +360,33 @@ section.bg-primary-3.text-white
       .col.d-flex.flex-wrap.justify-content-center
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/navigation/double-check.svg' alt='Binoculars icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/navigation/double-check.svg' alt='Binoculars icon' data-inject-svg='')
             h5.mb-0 Evaluierung der Mitarbeiterzufriedenheit​
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/design/select.svg' alt='Layouts icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/design/select.svg' alt='Layouts icon' data-inject-svg='')
             h5.mb-0 Back-to-the office Befragung​
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/shopping/box-2.svg' alt='Box icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/shopping/box-2.svg' alt='Box icon' data-inject-svg='')
             h5.mb-0 Fusionen
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/navigation/route.svg' alt='Lightning icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/navigation/route.svg' alt='Lightning icon' data-inject-svg='')
             h5.mb-0 Umstrukturierungen​
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/tools/hummer.svg' alt='Bookmark icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/tools/hummer.svg' alt='Bookmark icon' data-inject-svg='')
             h5.mb-0 Produktentwicklungen
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/electric/fan.svg' alt='Selection interface icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/electric/fan.svg' alt='Selection interface icon' data-inject-svg='')
             h5.mb-0 Nutzung von Schwarmintelligenz​
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/media/equalizer.svg' alt='Fire icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/media/equalizer.svg' alt='Fire icon' data-inject-svg='')
             h5.mb-0 Basisdemokratische Mitarbeiterbeteiligung​
         .m-2.text-dark
           .media.rounded.align-items-center.pl-3.pr-4.pl-md-4.pr-md-5.py-2.bg-white.text-dark
-            img.icon.mr-3.bg-primary(src='assets/img/icons/theme/general/user.svg' alt='Sushi icon' data-inject-svg='')
+            img.icon.mr-3.bg-primary(data-src='assets/img/icons/theme/general/user.svg' alt='Sushi icon' data-inject-svg='')
             h5.mb-0 Gemeinsame Gestaltung von Entscheidungsprozessen​
