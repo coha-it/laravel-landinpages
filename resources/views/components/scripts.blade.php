@@ -43,11 +43,13 @@
     {{-- <script type="text/javascript" src="{{ asset('assets/js/ion.rangeSlider.min.js') }}"></script> --}}
 
     <!-- Isotope (masonry layouts and filtering) -->
-    <script type="text/javascript" src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script> --}}
+
     <!-- jarallax (parallax effect and video backgrounds) -->
     <script type="text/javascript" src="{{ asset('assets/js/jarallax.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/jarallax-video.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('assets/js/jarallax-video.min.js') }}"></script> --}}
     <script type="text/javascript" src="{{ asset('assets/js/jarallax-element.min.js') }}"></script>
+
     <!-- jQuery Countdown (displays countdown text to a specified date) -->
     {{-- <script type="text/javascript" src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script> --}}
 
@@ -63,7 +65,7 @@
     <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
     <script type="text/javascript" src="{{ asset('assets/js/scrollMonitor.js') }}"></script>
     <!-- Smooth scroll (animation to links in-page)-->
-    <script type="text/javascript" src="{{ asset('assets/js/smooth-scroll.polyfills.min.js') }}"></script>
+    {{-- <script type="text/javascript" src="{{ asset('assets/js/smooth-scroll.polyfills.min.js') }}"></script> --}}
     <!-- SVGInjector (replaces img tags with SVG code to allow easy inclusion of SVGs with the benefit of inheriting colors and styles)-->
     <script type="text/javascript" src="{{ asset('assets/js/svg-injector.umd.production.js') }}"></script>
     <!-- TwitterFetcher (displays a feed of tweets from a specified account)-->

@@ -373,167 +373,167 @@
 
   var __assign=undefined&&undefined.__assign||function(){return (__assign=Object.assign||function(t){for(var i,a=1,s=arguments.length;a<s;a++)for(var n in i=arguments[a])Object.prototype.hasOwnProperty.call(i,n)&&(t[n]=i[n]);return t}).apply(this,arguments)},CountUp=function(){function t(t,i,a){var s=this;this.target=t,this.endVal=i,this.options=a,this.version="2.0.4",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:""},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.count=function(t){s.startTime||(s.startTime=t);var i=t-s.startTime;s.remaining=s.duration-i,s.useEasing?s.countDown?s.frameVal=s.startVal-s.easingFn(i,0,s.startVal-s.endVal,s.duration):s.frameVal=s.easingFn(i,s.startVal,s.endVal-s.startVal,s.duration):s.countDown?s.frameVal=s.startVal-(s.startVal-s.endVal)*(i/s.duration):s.frameVal=s.startVal+(s.endVal-s.startVal)*(i/s.duration),s.countDown?s.frameVal=s.frameVal<s.endVal?s.endVal:s.frameVal:s.frameVal=s.frameVal>s.endVal?s.endVal:s.frameVal,s.frameVal=Math.round(s.frameVal*s.decimalMult)/s.decimalMult,s.printValue(s.frameVal),i<s.duration?s.rAF=requestAnimationFrame(s.count):null!==s.finalEndVal?s.update(s.finalEndVal):s.callback&&s.callback();},this.formatNumber=function(t){var i,a,n,e,r,o=t<0?"-":"";if(i=Math.abs(t).toFixed(s.options.decimalPlaces),n=(a=(i+="").split("."))[0],e=a.length>1?s.options.decimal+a[1]:"",s.options.useGrouping){r="";for(var l=0,h=n.length;l<h;++l)0!==l&&l%3==0&&(r=s.options.separator+r),r=n[h-l-1]+r;n=r;}return s.options.numerals&&s.options.numerals.length&&(n=n.replace(/[0-9]/g,function(t){return s.options.numerals[+t]}),e=e.replace(/[0-9]/g,function(t){return s.options.numerals[+t]})),o+s.options.prefix+n+e+s.options.suffix},this.easeOutExpo=function(t,i,a,s){return a*(1-Math.pow(2,-10*t/s))*1024/1023+i},this.options=__assign({},this.defaults,a),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(i),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.decimalMult=Math.pow(10,this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el="string"==typeof t?document.getElementById(t):t,this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined";}return t.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var i=t-this.startVal;if(Math.abs(i)>this.options.smartEasingThreshold){this.finalEndVal=t;var a=this.countDown?1:-1;this.endVal=t+a*this.options.smartEasingAmount,this.duration=this.duration/2;}else this.endVal=t,this.finalEndVal=null;this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing;},t.prototype.start=function(t){this.error||(this.callback=t,this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal));},t.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused;},t.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal);},t.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,this.finalEndVal||this.resetDuration(),this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count));},t.prototype.printValue=function(t){var i=this.formattingFn(t);"INPUT"===this.el.tagName?this.el.value=i:"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=i:this.el.innerHTML=i;},t.prototype.ensureNumber=function(t){return "number"==typeof t&&!isNaN(t)},t.prototype.validateValue=function(t){var i=Number(t);return this.ensureNumber(i)?i:(this.error="[CountUp] invalid start or end value: "+t,null)},t.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration;},t}();
 
-  var mrCountup = function ($) {
-    /**
-     * Check for scrollMonitor dependency
-     * scrollMonitor - https://github.com/stutrek/scrollMonitor
-     */
-    if (typeof scrollMonitor === 'undefined') {
-      throw new Error('mrCountup requires scrollMonitor.js (https://github.com/stutrek/scrollMonitor)');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//   var mrCountup = function ($) {
+//     /**
+//      * Check for scrollMonitor dependency
+//      * scrollMonitor - https://github.com/stutrek/scrollMonitor
+//      */
+//     if (typeof scrollMonitor === 'undefined') {
+//       throw new Error('mrCountup requires scrollMonitor.js (https://github.com/stutrek/scrollMonitor)');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrCountup';
-    var VERSION = '1.1.0';
-    var DATA_KEY = 'mr.countup';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var Options = {
-      START: 'start',
-      END: 'end',
-      DURATION: 'duration',
-      GROUPING: 'grouping',
-      SEPARATOR: 'separator',
-      DECIMAL_CHARACTER: 'decimal-character',
-      DECIMAL_PLACES: 'decimal-places',
-      PREFIX: 'prefix',
-      SUFFIX: 'suffix',
-      EASING: 'easing'
-    };
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      RESIZE: "resize" + EVENT_KEY
-    };
-    var Selector = {
-      DATA_ATTR: 'countup',
-      DATA_COUNTUP: '[data-countup]'
-    };
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     var NAME = 'mrCountup';
+//     var VERSION = '1.1.0';
+//     var DATA_KEY = 'mr.countup';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var Options = {
+//       START: 'start',
+//       END: 'end',
+//       DURATION: 'duration',
+//       GROUPING: 'grouping',
+//       SEPARATOR: 'separator',
+//       DECIMAL_CHARACTER: 'decimal-character',
+//       DECIMAL_PLACES: 'decimal-places',
+//       PREFIX: 'prefix',
+//       SUFFIX: 'suffix',
+//       EASING: 'easing'
+//     };
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
+//       RESIZE: "resize" + EVENT_KEY
+//     };
+//     var Selector = {
+//       DATA_ATTR: 'countup',
+//       DATA_COUNTUP: '[data-countup]'
+//     };
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
-    var Countup =
-    /*#__PURE__*/
-    function () {
-      function Countup(element) {
-        var $element = $(element); // Grab data-attributes
+//     var Countup =
+//     /*#__PURE__*/
+//     function () {
+//       function Countup(element) {
+//         var $element = $(element); // Grab data-attributes
 
-        this.start = parseFloat($element.data(Options.START), 10) || 0;
-        this.end = parseFloat($element.data(Options.END), 10) || parseFloat($element.text(), 10);
-        this.duration = parseFloat($element.data(Options.DURATION), 10) || 2.5;
-        this.grouping = $element.data(Options.GROUPING) === true || false;
-        this.separator = $element.data(Options.SEPARATOR) || ',';
-        this.decimalCharacter = $element.data(Options.DECIMAL_CHARACTER) || '.';
-        this.decimalPlaces = parseInt($element.data(Options.DECIMAL_PLACES), 10) || 0;
-        this.prefix = $element.data(Options.PREFIX) || '';
-        this.suffix = $element.data(Options.SUFFIX) || ''; // the easing data attribute will only disable easing if false is specified. Defaults to true.
+//         this.start = parseFloat($element.data(Options.START), 10) || 0;
+//         this.end = parseFloat($element.data(Options.END), 10) || parseFloat($element.text(), 10);
+//         this.duration = parseFloat($element.data(Options.DURATION), 10) || 2.5;
+//         this.grouping = $element.data(Options.GROUPING) === true || false;
+//         this.separator = $element.data(Options.SEPARATOR) || ',';
+//         this.decimalCharacter = $element.data(Options.DECIMAL_CHARACTER) || '.';
+//         this.decimalPlaces = parseInt($element.data(Options.DECIMAL_PLACES), 10) || 0;
+//         this.prefix = $element.data(Options.PREFIX) || '';
+//         this.suffix = $element.data(Options.SUFFIX) || ''; // the easing data attribute will only disable easing if false is specified. Defaults to true.
 
-        var easing = $element.data(Options.EASING);
-        this.easing = easing === false ? easing : true;
-        this.element = element;
-        this.initWatcher(element);
-        this.startCounting();
-      } // getters
-
-
-      var _proto = Countup.prototype;
-
-      _proto.initWatcher = function initWatcher(element) {
-        var _this = this;
-
-        this.CountUp = new CountUp(element, this.end, {
-          startVal: this.start,
-          decimalPlaces: this.decimalPlaces,
-          duration: this.duration,
-          useEasing: this.easing,
-          useGrouping: this.grouping,
-          separator: this.separator,
-          decimal: this.decimalCharacter,
-          prefix: this.prefix,
-          suffix: this.suffix
-        });
-        var watcher = scrollMonitor.create(element);
-        this.watcher = watcher;
-        watcher.stateChange(function () {
-          _this.startCounting();
-        });
-      };
-
-      _proto.startCounting = function startCounting() {
-        if (this.watcher.isFullyInViewport) {
-          if (!this.CountUp.error) {
-            this.CountUp.start();
-          } else {
-            throw new Error(this.CountUp.error);
-          }
-        }
-      };
-
-      Countup.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachCountup() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new Countup(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
-
-      _createClass(Countup, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return Countup;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//         var easing = $element.data(Options.EASING);
+//         this.easing = easing === false ? easing : true;
+//         this.element = element;
+//         this.initWatcher(element);
+//         this.startCounting();
+//       } // getters
 
 
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var countupElements = $.makeArray($(Selector.DATA_COUNTUP));
-      /* eslint-disable no-plusplus */
+//       var _proto = Countup.prototype;
 
-      for (var i = countupElements.length; i--;) {
-        var $countup = $(countupElements[i]);
-        Countup.jQueryInterface.call($countup, $countup.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+//       _proto.initWatcher = function initWatcher(element) {
+//         var _this = this;
 
-    /* eslint-disable no-param-reassign */
+//         this.CountUp = new CountUp(element, this.end, {
+//           startVal: this.start,
+//           decimalPlaces: this.decimalPlaces,
+//           duration: this.duration,
+//           useEasing: this.easing,
+//           useGrouping: this.grouping,
+//           separator: this.separator,
+//           decimal: this.decimalCharacter,
+//           prefix: this.prefix,
+//           suffix: this.suffix
+//         });
+//         var watcher = scrollMonitor.create(element);
+//         this.watcher = watcher;
+//         watcher.stateChange(function () {
+//           _this.startCounting();
+//         });
+//       };
 
-    $.fn[NAME] = Countup.jQueryInterface;
-    $.fn[NAME].Constructor = Countup;
+//       _proto.startCounting = function startCounting() {
+//         if (this.watcher.isFullyInViewport) {
+//           if (!this.CountUp.error) {
+//             this.CountUp.start();
+//           } else {
+//             throw new Error(this.CountUp.error);
+//           }
+//         }
+//       };
 
-    $.fn[NAME].noConflict = function CountupNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Countup.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//       Countup.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachCountup() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
+
+//           if (!data) {
+//             data = new Countup(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
+
+//       _createClass(Countup, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return Countup;
+//     }();
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    return Countup;
-  }(jQuery$1);
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var countupElements = $.makeArray($(Selector.DATA_COUNTUP));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = countupElements.length; i--;) {
+//         var $countup = $(countupElements[i]);
+//         Countup.jQueryInterface.call($countup, $countup.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = Countup.jQueryInterface;
+//     $.fn[NAME].Constructor = Countup;
+
+//     $.fn[NAME].noConflict = function CountupNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return Countup.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return Countup;
+//   }(jQuery$1);
 
   //
 
@@ -3800,114 +3800,114 @@
   }));
   });
 
-  var mrFlatpickr = function ($) {
-    /**
-     * Check for flatpickr dependency
-     */
-    if (typeof flatpickr === 'undefined') {
-      throw new Error('mrFlatpickr requires flatpickr.js (https://github.com/flatpickr/flatpickr)');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//   var mrFlatpickr = function ($) {
+//     /**
+//      * Check for flatpickr dependency
+//      */
+//     if (typeof flatpickr === 'undefined') {
+//       throw new Error('mrFlatpickr requires flatpickr.js (https://github.com/flatpickr/flatpickr)');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrFlatpickr';
-    var VERSION = '1.0.0';
-    var DATA_KEY = 'mr.flatpickr';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
-    };
-    var Selector = {
-      FLATPICKR: '[data-flatpickr]'
-    };
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     var NAME = 'mrFlatpickr';
+//     var VERSION = '1.0.0';
+//     var DATA_KEY = 'mr.flatpickr';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY
+//     };
+//     var Selector = {
+//       FLATPICKR: '[data-flatpickr]'
+//     };
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
-    var Flatpickr =
-    /*#__PURE__*/
-    function () {
-      function Flatpickr(element) {
-        // The current flatpickr element
-        this.element = element; // const $element = $(element);
+//     var Flatpickr =
+//     /*#__PURE__*/
+//     function () {
+//       function Flatpickr(element) {
+//         // The current flatpickr element
+//         this.element = element; // const $element = $(element);
 
-        this.initflatpickr();
-      } // getters
-
-
-      var _proto = Flatpickr.prototype;
-
-      _proto.initflatpickr = function initflatpickr() {
-        var options = $(this.element).data();
-        this.instance = flatpickr(this.element, options);
-      };
-
-      Flatpickr.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachFlatpickr() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new Flatpickr(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
-
-      _createClass(Flatpickr, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return Flatpickr;
-    }(); // END Class definition
-
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//         this.initflatpickr();
+//       } // getters
 
 
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var pickers = $.makeArray($(Selector.FLATPICKR));
-      /* eslint-disable no-plusplus */
+//       var _proto = Flatpickr.prototype;
 
-      for (var i = pickers.length; i--;) {
-        var $flatpickr = $(pickers[i]);
-        Flatpickr.jQueryInterface.call($flatpickr, $flatpickr.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+//       _proto.initflatpickr = function initflatpickr() {
+//         var options = $(this.element).data();
+//         this.instance = flatpickr(this.element, options);
+//       };
 
-    /* eslint-disable no-param-reassign */
+//       Flatpickr.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachFlatpickr() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
 
-    $.fn[NAME] = Flatpickr.jQueryInterface;
-    $.fn[NAME].Constructor = Flatpickr;
+//           if (!data) {
+//             data = new Flatpickr(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
 
-    $.fn[NAME].noConflict = function flatpickrNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return Flatpickr.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//       _createClass(Flatpickr, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return Flatpickr;
+//     }(); // END Class definition
+
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    return Flatpickr;
-  }(jQuery$1);
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var pickers = $.makeArray($(Selector.FLATPICKR));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = pickers.length; i--;) {
+//         var $flatpickr = $(pickers[i]);
+//         Flatpickr.jQueryInterface.call($flatpickr, $flatpickr.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = Flatpickr.jQueryInterface;
+//     $.fn[NAME].Constructor = Flatpickr;
+
+//     $.fn[NAME].noConflict = function flatpickrNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return Flatpickr.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return Flatpickr;
+//   }(jQuery$1);
 
   //
 
@@ -4706,296 +4706,296 @@
 //     return IonRangeSlider;
 //   }(jQuery$1);
 
-  var mrIsotope = function ($) {
-    /**
-     * Check for isotope dependency
-     * isotope - https://github.com/metafizzy/isotope
-     */
-    if (typeof Isotope$1 === 'undefined') {
-      throw new Error('mrIsotope requires isotope.pkgd.js (https://github.com/metafizzy/isotope)');
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Constants
-     * ------------------------------------------------------------------------
-     */
+//   var mrIsotope = function ($) {
+//     /**
+//      * Check for isotope dependency
+//      * isotope - https://github.com/metafizzy/isotope
+//      */
+//     if (typeof Isotope$1 === 'undefined') {
+//       throw new Error('mrIsotope requires isotope.pkgd.js (https://github.com/metafizzy/isotope)');
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Constants
+//      * ------------------------------------------------------------------------
+//      */
 
 
-    var NAME = 'mrIsotope';
-    var VERSION = '1.0.0';
-    var DATA_KEY = 'mr.isotope';
-    var EVENT_KEY = "." + DATA_KEY;
-    var DATA_API_KEY = '.data-api';
-    var JQUERY_NO_CONFLICT = $.fn[NAME];
-    var Css = {
-      ACTIVE: 'active'
-    };
-    var Event = {
-      LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
-      FILTER_CLICK: 'click touchstart',
-      SORTER_CLICK: 'click touchstart'
-    };
-    var Options = {
-      DEFAULT_LAYOUT: 'masonry',
-      ORIGINAL_ORDER: 'original-order'
-    };
-    var Selector = {
-      FILTER_INITIALISED: '.js-filter-inited',
-      DATA_ATTR: 'isotope',
-      ISOTOPE_ID: 'data-isotope-id',
-      DATA_ISOTOPE_COLLECTION: '[data-isotope-collection]',
-      DATA_ISOTOPE_ITEM: '[data-isotope-item]',
-      DATA_ISOTOPE_FILTERS: '[data-isotope-filters]',
-      DATA_ISOTOPE_SORTERS: '[data-isotope-sorters]',
-      CATEGORY: 'data-category',
-      FILTER: 'data-filter',
-      SORTER: 'data-sort',
-      PRIMARY_SORTER: 'data-primary-sort',
-      SECOND_SORTER: 'data-secondary-sort',
-      SORT_SELECTOR: 'data-sort-selector',
-      DATA_CATEGORY: '[data-category]',
-      SORT_ASCENDING: 'data-sort-ascending',
-      FILTER_ALL: '*'
-    }; // returns a selector string for filterable elements matching the provided category
+//     var NAME = 'mrIsotope';
+//     var VERSION = '1.0.0';
+//     var DATA_KEY = 'mr.isotope';
+//     var EVENT_KEY = "." + DATA_KEY;
+//     var DATA_API_KEY = '.data-api';
+//     var JQUERY_NO_CONFLICT = $.fn[NAME];
+//     var Css = {
+//       ACTIVE: 'active'
+//     };
+//     var Event = {
+//       LOAD_DATA_API: "load" + EVENT_KEY + DATA_API_KEY,
+//       FILTER_CLICK: 'click touchstart',
+//       SORTER_CLICK: 'click touchstart'
+//     };
+//     var Options = {
+//       DEFAULT_LAYOUT: 'masonry',
+//       ORIGINAL_ORDER: 'original-order'
+//     };
+//     var Selector = {
+//       FILTER_INITIALISED: '.js-filter-inited',
+//       DATA_ATTR: 'isotope',
+//       ISOTOPE_ID: 'data-isotope-id',
+//       DATA_ISOTOPE_COLLECTION: '[data-isotope-collection]',
+//       DATA_ISOTOPE_ITEM: '[data-isotope-item]',
+//       DATA_ISOTOPE_FILTERS: '[data-isotope-filters]',
+//       DATA_ISOTOPE_SORTERS: '[data-isotope-sorters]',
+//       CATEGORY: 'data-category',
+//       FILTER: 'data-filter',
+//       SORTER: 'data-sort',
+//       PRIMARY_SORTER: 'data-primary-sort',
+//       SECOND_SORTER: 'data-secondary-sort',
+//       SORT_SELECTOR: 'data-sort-selector',
+//       DATA_CATEGORY: '[data-category]',
+//       SORT_ASCENDING: 'data-sort-ascending',
+//       FILTER_ALL: '*'
+//     }; // returns a selector string for filterable elements matching the provided category
 
-    function getCategoryFilter(filterBy) {
-      return filterBy && filterBy !== Selector.FILTER_ALL ? "[" + Selector.CATEGORY + "*=\"" + filterBy + "\"]" : Selector.FILTER_ALL;
-    } // returns a nodelist of all filter links matching the provided isotope ID
-
-
-    function getFilters(isotopeId, exclude) {
-      var excludeSelector = exclude ? ":not(" + exclude + ")" : '';
-      var filters = document.querySelectorAll(Selector.DATA_ISOTOPE_FILTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.FILTER + "]" + excludeSelector);
-      return filters;
-    } // returns a nodelist of all sorter links matching the provided isotope ID
+//     function getCategoryFilter(filterBy) {
+//       return filterBy && filterBy !== Selector.FILTER_ALL ? "[" + Selector.CATEGORY + "*=\"" + filterBy + "\"]" : Selector.FILTER_ALL;
+//     } // returns a nodelist of all filter links matching the provided isotope ID
 
 
-    function getSorters(isotopeId) {
-      return document.querySelectorAll(Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "][" + Selector.SORT_SELECTOR + "],\n      " + Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "][" + Selector.PRIMARY_SORTER + "][" + Selector.SECOND_SORTER + "]");
-    } // returns a nodelist of all sorter links matching the provided sort value
+//     function getFilters(isotopeId, exclude) {
+//       var excludeSelector = exclude ? ":not(" + exclude + ")" : '';
+//       var filters = document.querySelectorAll(Selector.DATA_ISOTOPE_FILTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.FILTER + "]" + excludeSelector);
+//       return filters;
+//     } // returns a nodelist of all sorter links matching the provided isotope ID
 
 
-    function getSorter(isotopeId, sortValue) {
-      return document.querySelectorAll(Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "=\"" + sortValue + "\"]");
-    } // returns a nodelist of all filter links matching the provided filter value
+//     function getSorters(isotopeId) {
+//       return document.querySelectorAll(Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "][" + Selector.SORT_SELECTOR + "],\n      " + Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "][" + Selector.PRIMARY_SORTER + "][" + Selector.SECOND_SORTER + "]");
+//     } // returns a nodelist of all sorter links matching the provided sort value
 
 
-    function getFilter(isotopeId, filter) {
-      return document.querySelectorAll(Selector.DATA_ISOTOPE_FILTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.FILTER + "=\"" + filter + "\"]");
-    } // sets active class of provided elements on or off
+//     function getSorter(isotopeId, sortValue) {
+//       return document.querySelectorAll(Selector.DATA_ISOTOPE_SORTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.SORTER + "=\"" + sortValue + "\"]");
+//     } // returns a nodelist of all filter links matching the provided filter value
 
 
-    function toggleActive(filters, active) {
-      if (filters) {
-        mrUtil.forEach(filters, function (index, filter) {
-          if (filter && typeof filter.classList !== typeof undefined) {
-            if (active) {
-              filter.classList.add(Css.ACTIVE);
-            } else {
-              filter.classList.remove(Css.ACTIVE);
-            }
-          }
-        });
-      }
-    }
-    /**
-     * ------------------------------------------------------------------------
-     * Class Definition
-     * ------------------------------------------------------------------------
-     */
+//     function getFilter(isotopeId, filter) {
+//       return document.querySelectorAll(Selector.DATA_ISOTOPE_FILTERS + "[" + Selector.ISOTOPE_ID + "=\"" + isotopeId + "\"] [" + Selector.FILTER + "=\"" + filter + "\"]");
+//     } // sets active class of provided elements on or off
 
 
-    var IsotopeWrapper =
-    /*#__PURE__*/
-    function () {
-      function IsotopeWrapper(element) {
-        var $element = $(element);
-        var attributes = $element.data();
-        this.element = element;
-        this.attributes = attributes;
-        this.filters = {};
-        this.sorters = {};
-        this.activeFilter = null;
-        this.activeSorter = null;
-        this.isotope = null;
-        this.options = {};
-        this.options.getSortData = {};
-        this.options.sortAscending = {};
-        this.initIsotope();
-        this.initSorters();
-        this.initFilters();
-      } // getters
+//     function toggleActive(filters, active) {
+//       if (filters) {
+//         mrUtil.forEach(filters, function (index, filter) {
+//           if (filter && typeof filter.classList !== typeof undefined) {
+//             if (active) {
+//               filter.classList.add(Css.ACTIVE);
+//             } else {
+//               filter.classList.remove(Css.ACTIVE);
+//             }
+//           }
+//         });
+//       }
+//     }
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Class Definition
+//      * ------------------------------------------------------------------------
+//      */
 
 
-      var _proto = IsotopeWrapper.prototype;
-
-      _proto.initFilters = function initFilters() {
-        var _this = this;
-
-        // Get all filter links
-        var filters = getFilters(this.attributes.isotopeId, Selector.FILTER_INITIALISED);
-        mrUtil.forEach(filters, function (index, filter) {
-          var filterValue = filter.attributes[Selector.FILTER] && filter.attributes[Selector.FILTER].value; // Find all other filters matching this value to be de/activated on click
-
-          _this.filters[filterValue] = getFilter(_this.attributes.isotopeId, filterValue); // Set up filter click event
-
-          $(filter).on(Event.FILTER_CLICK, function (event) {
-            if (event.preventDefault) {
-              event.preventDefault();
-            } // Activate appropriate links
-
-
-            toggleActive(_this.activeFilter, false);
-            toggleActive(_this.filters[filterValue], true);
-            _this.activeFilter = filters; // Get selectorified filter value unless value is '*' (* does not need to be a selector)
-
-            _this.options.filter = filterValue === '*' ? filterValue : getCategoryFilter(filterValue); // Update isotope with current filter settings
-
-            _this.isotope.arrange(_this.options);
-          }); // Add FILTER_INITIALISED class
-          // just to make distinguishing old and new filters easier
-
-          filter.classList.add(Selector.FILTER_INITIALISED);
-        });
-      };
-
-      _proto.initSorters = function initSorters() {
-        var _this2 = this;
-
-        // Get all sorters linked to current isotope-id
-        var sorters = getSorters(this.attributes.isotopeId);
-        var defaultSort = this.attributes.defaultSort || Options.ORIGINAL_ORDER;
-        mrUtil.forEach(sorters, function (index, sorter) {
-          // Get options from attributes
-          // Done this way for brevity (previous way was too wordy)
-          var sa = sorter.attributes;
-          var ss = sa[Selector.SORTER];
-          var ssel = sa[Selector.SORT_SELECTOR];
-          var asc = sa[Selector.SORT_ASCENDING];
-          var pri = sa[Selector.PRIMARY_SORTER];
-          var sec = sa[Selector.SECOND_SORTER]; // Extract options from attributes
-
-          var sortValue = ss && ss.value;
-          var sortSelector = ssel && ssel.value; // If secondSort is set, pass in an array rather than a single sort value
-
-          var arraySort = pri && pri.value && sec && sec.value ? [pri.value, sec.value] : null;
-          var sortAscending = !(asc && asc.value && asc.value === 'false'); // Store list of other sorters matching this value to be de/activated on click
-
-          _this2.sorters[sortValue] = getSorter(_this2.attributes.isotopeId, sortValue); // Set up sorters click event for this one sorter
-
-          $(sorter).on(Event.SORTER_CLICK, function (event) {
-            if (event.preventDefault) {
-              event.preventDefault();
-            } // Switch active class on sorter links
+//     var IsotopeWrapper =
+//     /*#__PURE__*/
+//     function () {
+//       function IsotopeWrapper(element) {
+//         var $element = $(element);
+//         var attributes = $element.data();
+//         this.element = element;
+//         this.attributes = attributes;
+//         this.filters = {};
+//         this.sorters = {};
+//         this.activeFilter = null;
+//         this.activeSorter = null;
+//         this.isotope = null;
+//         this.options = {};
+//         this.options.getSortData = {};
+//         this.options.sortAscending = {};
+//         this.initIsotope();
+//         this.initSorters();
+//         this.initFilters();
+//       } // getters
 
 
-            toggleActive(_this2.activeSorter, false);
-            toggleActive(_this2.sorters[sortValue], true);
-            _this2.activeSorter = _this2.sorters[sortValue]; // Pass in the arraySort (primary/secondary) array if it exists
-            // otherwise use clicked sortValue
+//       var _proto = IsotopeWrapper.prototype;
 
-            _this2.options.sortBy = arraySort || sortValue; // Update isotope with curent options
+//       _proto.initFilters = function initFilters() {
+//         var _this = this;
 
-            _this2.isotope.arrange(_this2.options);
-          }); // Set sortAscending object with current sortAscending value
+//         // Get all filter links
+//         var filters = getFilters(this.attributes.isotopeId, Selector.FILTER_INITIALISED);
+//         mrUtil.forEach(filters, function (index, filter) {
+//           var filterValue = filter.attributes[Selector.FILTER] && filter.attributes[Selector.FILTER].value; // Find all other filters matching this value to be de/activated on click
 
-          _this2.options.sortAscending[sortValue] = sortAscending; // Only set sortData in isotope if this is a unique sorting ID, not for
-          // array sorts (primary/secondary) as they simply use an array to
-          // reference existing sort configs
+//           _this.filters[filterValue] = getFilter(_this.attributes.isotopeId, filterValue); // Set up filter click event
 
-          if (sortValue !== Options.ORIGINAL_ORDER && !arraySort) {
-            // Set the sort object in isotope options (will be reinitialised later)
-            // Won't be added as a new sortData entry if secondSort is active
-            _this2.options.getSortData[sortValue] = sortSelector;
-          }
-        }); // Set sorting order to default if it exists
-
-        this.options.sortBy = defaultSort; // Set default sorter to active
-
-        this.activeSorter = getSorter(this.attributes.isotopeId, defaultSort);
-        toggleActive(this.activeSorter, true); // Update isotope with collected sorter data
-
-        this.isotope.updateSortData(); // Update isotope with current sort options
-
-        this.isotope.arrange(this.options);
-      };
-
-      _proto.initIsotope = function initIsotope() {
-        // Get hash filter from URL
-        var hashFilter = window.location.hash.replace('#', '');
-        hashFilter = hashFilter !== '' && !this.attributes.ignoreHash ? hashFilter : null; // Determine default filter
-
-        var defaultFilter = hashFilter || this.attributes.defaultFilter || Selector.FILTER_ALL;
-        var defaultFilterSelector = getCategoryFilter(defaultFilter); // Default to true, unless found to be explicitly false
-
-        var defaultSortAscending = !this.attributes.sortAscending === false; // Setup initial config
-
-        this.options.itemSelector = Selector.DATA_ISOTOPE_ITEM;
-        this.options.layoutMode = this.attributes.layoutMode || Options.DEFAULT_LAYOUT;
-        this.options.filter = defaultFilterSelector;
-        this.options.sortAscending[Options.ORIGINAL_ORDER] = defaultSortAscending;
-        this.isotope = new Isotope$1(this.element, this.options);
-        this.activeFilter = getFilter(this.attributes.isotopeId, defaultFilter);
-        toggleActive(this.activeFilter, true);
-      };
-
-      IsotopeWrapper.jQueryInterface = function jQueryInterface() {
-        return this.each(function jqEachIsotope() {
-          var $element = $(this);
-          var data = $element.data(DATA_KEY);
-
-          if (!data) {
-            data = new IsotopeWrapper(this);
-            $element.data(DATA_KEY, data);
-          }
-        });
-      };
-
-      _createClass(IsotopeWrapper, null, [{
-        key: "VERSION",
-        get: function get() {
-          return VERSION;
-        }
-      }]);
-
-      return IsotopeWrapper;
-    }();
-    /**
-     * ------------------------------------------------------------------------
-     * Initialise by data attribute
-     * ------------------------------------------------------------------------
-     */
+//           $(filter).on(Event.FILTER_CLICK, function (event) {
+//             if (event.preventDefault) {
+//               event.preventDefault();
+//             } // Activate appropriate links
 
 
-    $(window).on(Event.LOAD_DATA_API, function () {
-      var isotopeElements = $.makeArray($(Selector.DATA_ISOTOPE_COLLECTION));
-      /* eslint-disable no-plusplus */
+//             toggleActive(_this.activeFilter, false);
+//             toggleActive(_this.filters[filterValue], true);
+//             _this.activeFilter = filters; // Get selectorified filter value unless value is '*' (* does not need to be a selector)
 
-      for (var i = isotopeElements.length; i--;) {
-        var $isotope = $(isotopeElements[i]);
-        IsotopeWrapper.jQueryInterface.call($isotope, $isotope.data());
-      }
-    });
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+//             _this.options.filter = filterValue === '*' ? filterValue : getCategoryFilter(filterValue); // Update isotope with current filter settings
 
-    /* eslint-disable no-param-reassign */
+//             _this.isotope.arrange(_this.options);
+//           }); // Add FILTER_INITIALISED class
+//           // just to make distinguishing old and new filters easier
 
-    $.fn[NAME] = IsotopeWrapper.jQueryInterface;
-    $.fn[NAME].Constructor = IsotopeWrapper;
+//           filter.classList.add(Selector.FILTER_INITIALISED);
+//         });
+//       };
 
-    $.fn[NAME].noConflict = function IsotopeWrapperNoConflict() {
-      $.fn[NAME] = JQUERY_NO_CONFLICT;
-      return IsotopeWrapper.jQueryInterface;
-    };
-    /* eslint-enable no-param-reassign */
+//       _proto.initSorters = function initSorters() {
+//         var _this2 = this;
+
+//         // Get all sorters linked to current isotope-id
+//         var sorters = getSorters(this.attributes.isotopeId);
+//         var defaultSort = this.attributes.defaultSort || Options.ORIGINAL_ORDER;
+//         mrUtil.forEach(sorters, function (index, sorter) {
+//           // Get options from attributes
+//           // Done this way for brevity (previous way was too wordy)
+//           var sa = sorter.attributes;
+//           var ss = sa[Selector.SORTER];
+//           var ssel = sa[Selector.SORT_SELECTOR];
+//           var asc = sa[Selector.SORT_ASCENDING];
+//           var pri = sa[Selector.PRIMARY_SORTER];
+//           var sec = sa[Selector.SECOND_SORTER]; // Extract options from attributes
+
+//           var sortValue = ss && ss.value;
+//           var sortSelector = ssel && ssel.value; // If secondSort is set, pass in an array rather than a single sort value
+
+//           var arraySort = pri && pri.value && sec && sec.value ? [pri.value, sec.value] : null;
+//           var sortAscending = !(asc && asc.value && asc.value === 'false'); // Store list of other sorters matching this value to be de/activated on click
+
+//           _this2.sorters[sortValue] = getSorter(_this2.attributes.isotopeId, sortValue); // Set up sorters click event for this one sorter
+
+//           $(sorter).on(Event.SORTER_CLICK, function (event) {
+//             if (event.preventDefault) {
+//               event.preventDefault();
+//             } // Switch active class on sorter links
 
 
-    return IsotopeWrapper;
-  }(jQuery$1);
+//             toggleActive(_this2.activeSorter, false);
+//             toggleActive(_this2.sorters[sortValue], true);
+//             _this2.activeSorter = _this2.sorters[sortValue]; // Pass in the arraySort (primary/secondary) array if it exists
+//             // otherwise use clicked sortValue
+
+//             _this2.options.sortBy = arraySort || sortValue; // Update isotope with curent options
+
+//             _this2.isotope.arrange(_this2.options);
+//           }); // Set sortAscending object with current sortAscending value
+
+//           _this2.options.sortAscending[sortValue] = sortAscending; // Only set sortData in isotope if this is a unique sorting ID, not for
+//           // array sorts (primary/secondary) as they simply use an array to
+//           // reference existing sort configs
+
+//           if (sortValue !== Options.ORIGINAL_ORDER && !arraySort) {
+//             // Set the sort object in isotope options (will be reinitialised later)
+//             // Won't be added as a new sortData entry if secondSort is active
+//             _this2.options.getSortData[sortValue] = sortSelector;
+//           }
+//         }); // Set sorting order to default if it exists
+
+//         this.options.sortBy = defaultSort; // Set default sorter to active
+
+//         this.activeSorter = getSorter(this.attributes.isotopeId, defaultSort);
+//         toggleActive(this.activeSorter, true); // Update isotope with collected sorter data
+
+//         this.isotope.updateSortData(); // Update isotope with current sort options
+
+//         this.isotope.arrange(this.options);
+//       };
+
+//       _proto.initIsotope = function initIsotope() {
+//         // Get hash filter from URL
+//         var hashFilter = window.location.hash.replace('#', '');
+//         hashFilter = hashFilter !== '' && !this.attributes.ignoreHash ? hashFilter : null; // Determine default filter
+
+//         var defaultFilter = hashFilter || this.attributes.defaultFilter || Selector.FILTER_ALL;
+//         var defaultFilterSelector = getCategoryFilter(defaultFilter); // Default to true, unless found to be explicitly false
+
+//         var defaultSortAscending = !this.attributes.sortAscending === false; // Setup initial config
+
+//         this.options.itemSelector = Selector.DATA_ISOTOPE_ITEM;
+//         this.options.layoutMode = this.attributes.layoutMode || Options.DEFAULT_LAYOUT;
+//         this.options.filter = defaultFilterSelector;
+//         this.options.sortAscending[Options.ORIGINAL_ORDER] = defaultSortAscending;
+//         this.isotope = new Isotope$1(this.element, this.options);
+//         this.activeFilter = getFilter(this.attributes.isotopeId, defaultFilter);
+//         toggleActive(this.activeFilter, true);
+//       };
+
+//       IsotopeWrapper.jQueryInterface = function jQueryInterface() {
+//         return this.each(function jqEachIsotope() {
+//           var $element = $(this);
+//           var data = $element.data(DATA_KEY);
+
+//           if (!data) {
+//             data = new IsotopeWrapper(this);
+//             $element.data(DATA_KEY, data);
+//           }
+//         });
+//       };
+
+//       _createClass(IsotopeWrapper, null, [{
+//         key: "VERSION",
+//         get: function get() {
+//           return VERSION;
+//         }
+//       }]);
+
+//       return IsotopeWrapper;
+//     }();
+//     /**
+//      * ------------------------------------------------------------------------
+//      * Initialise by data attribute
+//      * ------------------------------------------------------------------------
+//      */
+
+
+//     $(window).on(Event.LOAD_DATA_API, function () {
+//       var isotopeElements = $.makeArray($(Selector.DATA_ISOTOPE_COLLECTION));
+//       /* eslint-disable no-plusplus */
+
+//       for (var i = isotopeElements.length; i--;) {
+//         var $isotope = $(isotopeElements[i]);
+//         IsotopeWrapper.jQueryInterface.call($isotope, $isotope.data());
+//       }
+//     });
+//     /**
+//      * ------------------------------------------------------------------------
+//      * jQuery
+//      * ------------------------------------------------------------------------
+//      */
+
+//     /* eslint-disable no-param-reassign */
+
+//     $.fn[NAME] = IsotopeWrapper.jQueryInterface;
+//     $.fn[NAME].Constructor = IsotopeWrapper;
+
+//     $.fn[NAME].noConflict = function IsotopeWrapperNoConflict() {
+//       $.fn[NAME] = JQUERY_NO_CONFLICT;
+//       return IsotopeWrapper.jQueryInterface;
+//     };
+//     /* eslint-enable no-param-reassign */
+
+
+//     return IsotopeWrapper;
+//   }(jQuery$1);
 
   //
 
@@ -5973,13 +5973,13 @@
 
   //
 
-  var mrSmoothScroll = function ($) {
-    var smoothScroll = new SmoothScroll('a[data-smooth-scroll]', {
-      speedAsDuration: true,
-      offset: $('body').attr('data-smooth-scroll-offset') || 0
-    });
-    return smoothScroll;
-  }(jQuery$1);
+//   var mrSmoothScroll = function ($) {
+//     var smoothScroll = new SmoothScroll('a[data-smooth-scroll]', {
+//       speedAsDuration: true,
+//       offset: $('body').attr('data-smooth-scroll-offset') || 0
+//     });
+//     return smoothScroll;
+//   }(jQuery$1);
 
   var mrSticky = function ($) {
     /**
@@ -7601,15 +7601,15 @@
 //   exports.mrCountdown = mrCountdown;
 //   exports.mrCountup = mrCountup;
   exports.mrDropdownGrid = mrDropdownGrid;
-  exports.mrFlatpickr = mrFlatpickr;
+//   exports.mrFlatpickr = mrFlatpickr;
   exports.mrFormEmail = mrFormEmail;
 //   exports.mrIonRangeSlider = mrIonRangeSlider;
-  exports.mrIsotope = mrIsotope;
+//   exports.mrIsotope = mrIsotope;
   exports.mrMaps = mrMaps;
   exports.mrMapsStyle = mrMapStyle;
   exports.mrOverlayNav = mrOverlayNav;
   exports.mrReadingPosition = mrReadingPosition;
-  exports.mrSmoothScroll = mrSmoothScroll;
+//   exports.mrSmoothScroll = mrSmoothScroll;
   exports.mrSticky = mrSticky;
 //   exports.mrTwitterFetcher = mrTwitterFetcher;
   exports.mrTypedText = mrTypedText;
