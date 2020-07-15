@@ -108,12 +108,13 @@ var coha_lazyload_on_scroll = function() {
 
 // Lazy Load on Scroll Init
 var coha_init_lazyload = function () {
-    let win = $(window);
+    let win = jQuery(window);
     win.scroll(coha_lazyload_on_scroll);
     win.scroll();
 }
 
-coha_init_lazyload();
-
-window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+window.addEventListener("load",function(){
+    document.querySelector('body').classList.add('loaded');
+    coha_init_lazyload();
+});
 </script>
