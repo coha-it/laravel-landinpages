@@ -61,34 +61,3 @@ var coha_click_contact_form = function() {
 }
 
 
-// Lazy Load on Scroll
-var coha_lazyload_on_scroll = function() {
-    let win = $(window);
-    let imgs = $('img');
-    let win_scroll_top = win.scrollTop();
-    let win_height = win.height();
-
-    $.each(imgs, function() {
-        let img = $(this);
-        let img_top = img.offset().top;
-
-        if (
-            img.attr('data-src') &&
-            img_top < (win_scroll_top + win_height + 100)
-         ) {
-            var source = img.data('src');
-            img.attr('src', source);
-            img.removeAttr('data-src');
-        }
-    })
-}
-
-// Lazy Load on Scroll Init
-var coha_init_lazyload = function () {
-    let win = $(window);
-    win.scroll(coha_lazyload_on_scroll);
-    win.scroll();
-}
-
-coha_init_lazyload();
-
