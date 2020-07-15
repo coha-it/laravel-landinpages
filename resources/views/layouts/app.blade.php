@@ -20,20 +20,6 @@
 
         @include('components.styles')
 
-        <!-- Google Recaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-        @if(env('GOOGLE_ANALYTICS_ENABLED', false) && env('GOOGLE_ANALYTICS_TRACKING_ID'))
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18710254-3"></script>
-            <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', "{{ env('GOOGLE_ANALYTICS_TRACKING_ID') }}");
-            </script>
-        @endif
-
 	</head>
 	<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
 
