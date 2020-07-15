@@ -14,7 +14,7 @@
 
 {{-- scripts --}}
 @if(App::environment('production'))
-	<script src="{{ mix('assets/js/combined.min.js') }}"></script>
+	<script async defer src="{{ mix('assets/js/combined.min.js') }}"></script>
 @else
 
     <!-- Required vendor scripts (Do not remove) -->
@@ -78,8 +78,8 @@
 @endif
 
 <!-- Test -->
-<script type="text/javascript" src="{{ asset('dist/js/app.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/public_custom.js') }}"></script>
+<script type="text/javascript" async defer src="{{ asset('dist/js/app.js') }}"></script>
+<script type="text/javascript" async defer src="{{ asset('js/public_custom.js') }}"></script>
 
 <!-- Removes page load animation when window is finished loading -->
 <script type="text/javascript">
