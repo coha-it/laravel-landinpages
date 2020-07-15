@@ -4,7 +4,6 @@
 @if(App::environment('production'))
 	<link href="{{ mix('assets/css/combined.min.css') }}" rel="stylesheet" type="text/css">
 @else
-
     <!-- Font Awesome 5 -->
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/font-awesome-5/fontawesome.min.css') }}" />
     <link rel="stylesheet" type="text/css" media="all" href="{{ asset('assets/font-awesome-5/regular.min.css') }}" />
