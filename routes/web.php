@@ -22,12 +22,13 @@
     // Language Switcher
     Route::get(__('routes.lang').'/{locale}', 'LanguageCtrl@switch')->name('lang_switch');
 
-    if (env('APP_UNDER_CONSTRUCTION'))
-    {
-        Route::get('/', 'PageCtrl@comingSoon');
-    } else {
-        Route::get('/',  'PageCtrl@home')->name('home');
 
+    Route::middleware('under.construction')->group(function () {
+        Route::get(__('routes.under-construction'), 'PageCtrl@comingSoon')->name('coming_soon');
+    });
+
+    Route::middleware('not.under.construction')->group(function () {
+        Route::get('/',  'PageCtrl@home')->name('home');
         // view('pages.coming-soon')
 
         // Route::get('/kontakt',      'PageCtrl@contact')->name('contact'); // Contact - Kontakt
@@ -42,10 +43,6 @@
         // Route::get('/danke',        'PageCtrl@thanks');
         // Route::get('/thanks',       'PageCtrl@thanks');
         // Route::get('/thank-you',    'PageCtrl@thanks');
-    }
-
-
-
-
+    });
 
 
