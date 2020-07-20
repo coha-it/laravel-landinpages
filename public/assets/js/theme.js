@@ -7258,16 +7258,16 @@
 
   var from_1 = path.Array.from;
 
-  //
-  svgInjector.SVGInjector(document.querySelectorAll('[data-inject-svg]'), {
-    afterEach: function afterEach(err, svg) {
-      if (typeof jarallax === 'function') {
-        svg.dispatchEvent(new CustomEvent('injected.mr.SVGInjector', {
-          bubbles: true
-        }));
-      }
-    }
-  });
+  // TMP in Scripts.blade.php
+//   svgInjector.SVGInjector(document.querySelectorAll('[data-inject-svg]'), {
+//     afterEach: function afterEach(err, svg) {
+//       if (typeof jarallax === 'function') {
+//         svg.dispatchEvent(new CustomEvent('injected.mr.SVGInjector', {
+//           bubbles: true
+//         }));
+//       }
+//     }
+//   });
 
 //   var mrTwitterFetcher = function ($) {
 //     /**
