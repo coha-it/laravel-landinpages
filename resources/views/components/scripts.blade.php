@@ -1,16 +1,3 @@
-<!-- Google Recaptcha -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-@if(env('GOOGLE_ANALYTICS_ENABLED', false) && env('GOOGLE_ANALYTICS_TRACKING_ID'))
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async defer src="https://www.googletagmanager.com/gtag/js?id=UA-18710254-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', "{{ env('GOOGLE_ANALYTICS_TRACKING_ID') }}");
-    </script>
-@endif
 
 {{-- scripts --}}
 @if(App::environment('production'))
@@ -83,38 +70,51 @@
 
 <!-- Removes page load animation when window is finished loading -->
 <script type="text/javascript">
+    // Lazy Load on Scroll
+    var coha_lazyload_on_scroll = function() {
+        let win = $(window);
+        let imgs = $('img');
+        let win_scroll_top = win.scrollTop();
+        let win_height = win.height();
 
-// Lazy Load on Scroll
-var coha_lazyload_on_scroll = function() {
-    let win = $(window);
-    let imgs = $('img');
-    let win_scroll_top = win.scrollTop();
-    let win_height = win.height();
+        $.each(imgs, function() {
+            let img = $(this);
+            let img_top = img.offset().top;
 
-    $.each(imgs, function() {
-        let img = $(this);
-        let img_top = img.offset().top;
+            // If they've reached
+            if(img_top < (win_scroll_top + win_height + 100)) {
 
-        if (
-            img.attr('data-src') &&
-            img_top < (win_scroll_top + win_height + 100)
-         ) {
-            var source = img.data('src');
-            img.attr('src', source);
-            img.removeAttr('data-src');
-        }
-    })
-}
+                // If they've got data-src
+                if ( img.attr('data-src'))
+                {
+                        var source = img.data('src');
+                        img.attr('src', source);
+                        img.removeAttr('data-src');
+                }
 
-// Lazy Load on Scroll Init
-var coha_init_lazyload = function () {
-    let win = jQuery(window);
-    win.scroll(coha_lazyload_on_scroll);
-    win.scroll();
-}
-
-window.addEventListener("load",function(){
-    document.querySelector('body').classList.add('loaded');
-    coha_init_lazyload();
-});
+                // If Inject SVG
+                if( typeof img.attr('data-inject-svg') !== typeof undefined) {
+                    SVGInjector.SVGInjector(img, {
+                        afterEach: function afterEach(err, svg) {
+                            if (typeof jarallax === 'function') {
+                                svg.dispatchEvent(new CustomEvent('injected.mr.SVGInjector', {
+                                bubbles: true
+                                }));
+                            }
+                        }
+                    });
+                }
+            }
+        })
+    }
+    // Lazy Load on Scroll Init
+    var coha_init_lazyload = function () {
+        let win = jQuery(window);
+        win.scroll(coha_lazyload_on_scroll);
+        win.scroll();
+    }
+    window.addEventListener("load",function(){
+        document.querySelector('body').classList.add('loaded');
+        coha_init_lazyload();
+    });
 </script>
