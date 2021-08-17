@@ -894,7 +894,7 @@
 
       _proto.getContentElement = function getContentElement() {
         if (!this.content) {
-          if (this.parent && this.container) {
+          if (this.parent) {
             this.content = this.container.querySelector(Selector.CONTENT);
           }
         }
@@ -917,11 +917,9 @@
       };
 
       _proto.getSubmenus = function getSubmenus() {
-        if (this.content) {
-          var children = this.content.querySelectorAll(Selector.DATA_TOGGLE);
-          this.isParent = children.length !== 0;
-          return children;
-        }
+        var children = this.content.querySelectorAll(Selector.DATA_TOGGLE);
+        this.isParent = children.length !== 0;
+        return children;
       };
 
       _proto.addEventListeners = function addEventListeners() {

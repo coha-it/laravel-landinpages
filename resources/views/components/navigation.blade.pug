@@ -10,6 +10,7 @@
           img.navbar-toggler-close.icon.icon-sm(alt='Navbar Toggler Close Icon' data-inject-svg='' src='assets/img/icons/interface/icon-x.svg')
       #navigation-menu.collapse.navbar-collapse.order-3.order-lg-2.justify-content-lg-end
         ul.navbar-nav.my-3.my-lg-0
+          li.nav-item @include('components.flags-nav')
           li.nav-item
             a.nav-link.nav-item(aria-haspopup='true' data-toggle='dropdown-grid' href='/' role='button')
               =__('nav_homepage')

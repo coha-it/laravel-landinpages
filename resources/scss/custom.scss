@@ -7,6 +7,10 @@
 ::selection { background: #3ea4ab; color: #333; }
 
 
+.navbar-nav {
+    align-items: center;
+}
+
 .navbar-light .navbar-toggler {
     outline: 0 !important;
 }
@@ -99,6 +103,10 @@ hr {
 
 .hidden {
     display: none;
+}
+
+.tooltip .arrow {
+    margin: 0 10px;
 }
 
 /* purgecss end ignore */
