@@ -2,7 +2,11 @@
   nav.navbar.navbar-expand-lg.navbar-light(data-sticky='top')
     .container
       a.navbar-brand.navbar-brand-dynamic-color.fade-page(href='/')
-        img(alt='Jumpstart' src=asset('assets/img/custom/logos/logo.svg') Xdata-inject-svg style='width: 206px;')
+        img(
+          alt=config('app.name', 'Dreamteam Survey')
+          src=asset('assets/img/custom/logos/logo.svg')
+          data-inject-svg
+        )
       .d-flex.align-items-center.order-lg-3
         button.btn.btn-primary.ml-lg-4.mr-3.mr-md-4.mr-lg-0.d-none.d-sm-block.order-lg-3(onclick='coha_click_contact_form()')=__('request_btn_1')
         button.navbar-toggler(aria-expanded='false' aria-label='Toggle navigation' data-target='.navbar-collapse' data-toggle='collapse' type='button')
@@ -10,7 +14,7 @@
           img.navbar-toggler-close.icon.icon-sm(alt='Navbar Toggler Close Icon' data-inject-svg='' src='assets/img/icons/interface/icon-x.svg')
       #navigation-menu.collapse.navbar-collapse.order-3.order-lg-2.justify-content-lg-end
         ul.navbar-nav.my-3.my-lg-0
-          li.nav-item @include('components.flags-nav')
+          //- li.nav-item @include('components.flags-nav')
           li.nav-item
             a.nav-link.nav-item(aria-haspopup='true' data-toggle='dropdown-grid' href='/' role='button')
               =__('nav_homepage')
@@ -28,6 +32,26 @@
                     a.dropdown-item.fade-page.disabled(href='#')
                       =__('nav_android')
                       .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;')=__('badge_soon')
+          li.nav-item
+            .dropdown
+              a.dropdown-toggle.nav-link.nav-item.arrow-bottom(aria-expanded='false' aria-haspopup='true' data-toggle='dropdown-grid' href='#' role='button')
+                =strtoupper(config('app.locale'))
+              .row.dropdown-menu
+                .col-auto(data-dropdown-content='')
+                  .dropdown-grid-menu
+                    //- a.dropdown-item.fade-page(href='https://app.dreamteam-survey.de/auth') Login
+
+                    each locale in config('app.locales')
+                      a.dropdown-item.fade-page(
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title=(locale==config('app.locale') ? __('active_language') : __('switch_language') ) +': ' +__(locale)
+                        href=route('lang_switch', locale)
+                        class=(locale==config('app.locale') ? ' active disabled ' : '')
+                      )=__(locale)
+                        if locale==config('app.locale')
+                          .badge.badge-pill.badge-secondary(style='font-size: .75em;float: right; margin-left: 10px;')=__('badge_current')
+
           //- li.nav-item
           //-   .dropdown
           //-     a.dropdown-toggle.nav-link.nav-item.arrow-bottom(aria-expanded='false' aria-haspopup='true' data-toggle='dropdown-grid' href='#' role='button') Support
