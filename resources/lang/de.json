@@ -13,10 +13,10 @@
     "badge_soon": "Bald Verfüg.",
     "nav_ios": "iOS",
     "nav_android": "Android",
+    "nav_language": "Sprache",
     "active_language": "Aktuelle Sprache",
     "our": "Unsere",
     "method": "Methode",
-
-    "teststring": "teststring",
-    "launch_at": "Launch v1.0 am"
+    "launch_at": "Launch v1.0 am",
+    "badge_current": "aktuell"
 }

@@ -1,0 +1,12 @@
+.coha-flags
+   each locale in config('app.locales')
+     .flag.wrapper(
+         data-toggle="tooltip"
+         data-placement="top"
+         title=(locale==config('app.locale') ? __('active_language') : __('switch_language') ) +': ' +__(locale)
+     )
+         a.flag.inner(
+            class=locale + (locale==config('app.locale') ? ' active' : '')
+            href=route('lang_switch', locale)
+            alt=__('switch_language') + ': ' +__(locale)
+         )

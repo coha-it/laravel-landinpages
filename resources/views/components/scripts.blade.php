@@ -82,7 +82,7 @@
             let img_top = img.offset().top;
 
             // If they've reached
-            if(img_top < (win_scroll_top + win_height + 100)) {
+            if(img_top < (win_scroll_top + win_height + 350)) {
 
                 // If they've got data-src
                 if ( img.attr('data-src'))
