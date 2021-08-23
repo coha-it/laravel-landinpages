@@ -9,7 +9,6 @@
         "production": "mix --production",
         "prod": "npm run production"
     },
-
     "devDependencies": {
         "axios": "^0.21.1",
         "cross-env": "^7.0.2",
