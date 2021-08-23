@@ -55,47 +55,38 @@ section.bg-light.o-hidden.pt-5.pb-0
 
 section.bg-primary-3.text-white
    .container
-
-      if env('APP_ENV') === 'production'
-        .row.justify-content-center.text-center(style='margin: -2.5rem 0')
-          .col-12.col-lg-7.col-md-8.mb-5.mb-lg-0
-            img(
-                data-src=asset('assets/img/custom/logos/corporate-happiness-logo.svg')
-                style='filter: grayscale(1) brightness(1.2);opacity: .75;width: 200px;padding: 20px;'
-            )
-            .px-xl-4
-              | &quot;Wir unterst&uuml;tzen Menschen und Organisationen in ihrem Wunsch nach mehr Erf&uuml;llung und Erfolg. Dabei begleiten wir sie auf ihrem Weg zu ungeahntem Wachstum.
-              | Unsere einzigartige Methodik, auf der Grundlage wissenschaftlicher Erkenntnisse, sichert die Freisetzung bisher unentdeckter Selbstentfaltungskr&auml;fte.&quot;
-      else
-          .row.text-center
-             .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(
-                    data-src=asset('assets/img/logos/brand/das-neue-fuehren-logo.svg')
-                    alt=__('Das Neue Führen - Logo')
-                    data-inject-svg
-                    style="max-height: 32px;"
-                )
+        .row.text-center
+           .col-md-4.mb-5.mb-lg-0
+              img.bg-white.opacity-50.my-4(
+                  data-src=asset('assets/img/logos/brand/das-neue-fuehren-logo.svg')
+                  alt=__('Das Neue Führen - Logo')
+                  data-inject-svg
+                  style="max-height: 32px;"
+              )
+              //- .px-xl-4 &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
+           .col-md-4.mb-5.mb-lg-0
+              img.bg-white.opacity-50.my-4(
+                  data-src=asset('assets/img/logos/brand/corporate-happiness-logo.svg')
+                  alt=__('Corporate Happiness - Logo')
+                  data-inject-svg
+                  style="max-height: 62px; margin-top: 0px !important;"
+              )
+              //- .px-xl-4 &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS landscape.&rdquo;
+           .col-md-4.mb-5.mb-lg-0
+              img.bg-white.opacity-50.my-4(
+                  data-src=asset('assets/img/logos/brand/dr-oliver-haas-logo.svg')
+                  alt=__('Dr. Oliver Haas - Logo')
+                  data-inject-svg
+                  style="max-height: 41px;"
+              )
+              //- .px-xl-4 &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
+        .row.text-center
+            .mx-auto(style="color: #bec7cc; width: 610px; margin: 20px 0 0;")
                 .px-xl-4
-                   | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
-             .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(
-                    data-src=asset('assets/img/logos/brand/corporate-happiness-logo.svg')
-                    alt=__('Corporate Happiness - Logo')
-                    data-inject-svg
-                    style="max-height: 62px; margin-top: 0px !important;"
-                )
-                .px-xl-4
-                   | &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS
-                   | landscape.&rdquo;
-             .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(
-                    data-src=asset('assets/img/logos/brand/dr-oliver-haas-logo.svg')
-                    alt=__('Dr. Oliver Haas - Logo')
-                    data-inject-svg
-                    style="max-height: 41px;"
-                )
-                .px-xl-4
-                   | &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
+                    | &quot;Wir unterst&uuml;tzen Menschen und Organisationen in ihrem Wunsch nach mehr Erf&uuml;llung und Erfolg. Dabei begleiten wir sie auf ihrem Weg zu ungeahntem Wachstum.
+                    br
+                    br
+                    | Unsere einzigartige Methodik, auf der Grundlage wissenschaftlicher Erkenntnisse, sichert die Freisetzung bisher unentdeckter Selbstentfaltungskr&auml;fte.&quot;
 
 section.bg-light.o-hidden.pb-0
    .container
