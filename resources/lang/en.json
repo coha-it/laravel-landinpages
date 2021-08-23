@@ -1,6 +1,6 @@
 {
     "switch_language": "Switch language",
-    "de": "German",
+    "de": "Deutsch",
     "en": "English",
     "mab_title": "Employee surveys",
     "three_strings": "[\"easy\",\"clear\",\"individually\"]",
@@ -16,8 +16,20 @@
     "nav_language": "Language",
     "active_language": "Current language",
     "Mitarbeiterbefragungen": "Employee surveys",
-    "our": "Unsere",
-    "method": "Methode",
+    "our": "Our",
+    "method": "method",
     "launch_at": "Launch v1.0 am",
-    "badge_current": "current"
+    "badge_current": "current",
+    "German": "Deutsch",
+    "german": "deutsch",
+    "English": "Englisch",
+    "english": "englisch",
+    "online-surveys": "Online-surveys",
+    "anonym": "Anonymous",
+    "safe": "Safe",
+    "scalable": "Scalable",
+    "modern": "Modern",
+    "online_survey_text": "We provide online-based employee surveys based on our self-developed app to receive the climate of the workplace, executives, team  and the whole Company itself.",
+    "differently": "differently",
+    "act_differently_text": "Why we act <mark data-aos=\"highlight-text\" data-aos-delay=200)>:s</mark> from others"
 }

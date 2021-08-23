@@ -69,16 +69,31 @@ section.bg-primary-3.text-white
       else
           .row.text-center
              .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/kyan.svg') alt='Kyan company logo' data-inject-svg='')
+                img.bg-white.opacity-50.my-4(
+                    data-src=asset('assets/img/logos/brand/das-neue-fuehren-logo.svg')
+                    alt=__('Das Neue Führen - Logo')
+                    data-inject-svg
+                    style="max-height: 32px;"
+                )
+                .px-xl-4
+                   | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
+             .col-md-4.mb-5.mb-lg-0
+                img.bg-white.opacity-50.my-4(
+                    data-src=asset('assets/img/logos/brand/corporate-happiness-logo.svg')
+                    alt=__('Corporate Happiness - Logo')
+                    data-inject-svg
+                    style="max-height: 62px; margin-top: 0px !important;"
+                )
                 .px-xl-4
                    | &ldquo;A polished product from a solid performer in the brutal and ever-changing SaaS
                    | landscape.&rdquo;
              .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/goldline.svg') alt='Goldline company logo' data-inject-svg='')
-                .px-xl-4
-                   | &ldquo;It&apos;s clear that the team at Jumpstart have been listening to their customers.&rdquo;
-             .col-md-4.mb-5.mb-lg-0
-                img.bg-white.opacity-50.my-4(data-src=asset('assets/img/logos/brand/aven.svg') alt='Aven company logo' data-inject-svg='')
+                img.bg-white.opacity-50.my-4(
+                    data-src=asset('assets/img/logos/brand/dr-oliver-haas-logo.svg')
+                    alt=__('Dr. Oliver Haas - Logo')
+                    data-inject-svg
+                    style="max-height: 41px;"
+                )
                 .px-xl-4
                    | &ldquo;The future is looking bright for this punky young startup. One to watch for sure.&rdquo;
 
@@ -102,30 +117,29 @@ section.bg-light.o-hidden.pt-0
             )
 
          .col-md-9.col-lg-6.col-xl-5.mb-4.mb-md-5.mb-lg-0.order-lg-2(data-aos='fade-in')
-            h2.h1 Online-Befragungen
-            p.lead
-               | Wir führen online basierte Mitarbeiterbefragungen mit unserer eigens dafür entwickelten App durch, um die Wahrnehmung der MitarbeiterInnen über ihren Arbeitsplatz, die Führungskräfte, das Teamklima sowie das Unternehmen als Ganzes einzufangen.
+            h2.h1=__('online-surveys')
+            p.lead=__('online_survey_text')
             .d-flex.flex-wrap.justify-content-center.justify-content-lg-start.col-lg-9.pl-0
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='100')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
                         img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Binoculars icon', data-inject-svg='')
-                     h6.mb-0.ml-3 Anonym
+                     h6.mb-0.ml-3=__('anonym')
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='200')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
                         img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Layouts icon', data-inject-svg='')
-                     h6.mb-0.ml-3 Sicher
+                     h6.mb-0.ml-3=__('safe')
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='300')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
                         img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Box icon', data-inject-svg='')
-                     h6.mb-0.ml-3 Skalierbar
+                     h6.mb-0.ml-3=__('scalable')
                .mb-3.mr-4.ml-lg-0.mr-lg-4(data-aos='fade-left', data-aos-delay='400')
                   .d-flex.align-items-center
                      .rounded-circle.bg-success-alt
                         img.m-2.icon.icon-xs.bg-success(data-src=('assets/img/icons/interface/icon-check.svg'), alt='Lightning icon', data-inject-svg='')
-                     h6.mb-0.ml-3 Modern
+                     h6.mb-0.ml-3=__('modern')
             //- a.lead(href='#') Kontakt
 
 section.bg-light.o-hidden.pt-0
@@ -135,10 +149,7 @@ section.bg-light.o-hidden.pt-0
          .col-md-9.col-lg-6.col-xl-5.mb-4.mb-lg-0.pl-lg-5.pl-xl-0(data-aos='fade-in')
             div(data-aos='fade-in' data-aos-offset='250')
                 //- h2.h1.text-center.text-lg-left Here&apos;s how we do things differently
-                h2.h1.text-center.text-lg-left
-                    | Wieso wir&nbsp;
-                    mark(data-aos="highlight-text" data-aos-delay="200") anders
-                    |  als Andere vorgehen
+                h2.h1.text-center.text-lg-left {!! __('act_differently_text', ['s' => __('differently') ]) !!}
                 .d-flex.flex-wrap.justify-content-center.justify-content-lg-start
                    .my-4(data-aos='fade-left' data-aos-delay='200')
                       .d-flex
