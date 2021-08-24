@@ -53,7 +53,13 @@
     "feedback_text": "über Ihre personalwirtschaftlichen Maßnahmen.​",
 
     "your_advantages": "Ihre <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Vorteile</mark>",
+    "anonymous_surveys_heading": "Anonyme <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Befragungen</mark>",
+    "anonymous_surveys_text": "Anonyme, webbasierte Mitarbeiterbefragungen stellen ein sehr effizientes Instrument dar, um eine ehrliche Meinung der Mitarbeiter über den Arbeitsplatz, Vorgesetzten, Teamklima sowie das Unternehmen als Ganzes zu erfahren.",
+    "qualitative_analysis_heading": "Qualitative <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Analysen</mark>",
+    "qualitative_analysis_text": "Im Rahmen unserer anonymen Mitarbeiterbefragung werden von uns quantitative und qualitative Aussagen von Mitarbeitern Ihres Unternehmens erhoben und analysiert.​",
 
+    "alt_survey_web_zoomed": "Umfrage Webansicht vergrößerst",
+    "alt_survey_login_web_table": "Umfrage Anmeldung über Webview",
 
     "switch_language": "Sprache wechseln",
     "de": "Deutsch",

@@ -53,6 +53,13 @@
     "feedback_text": "about your personnel management measures.",
 
     "your_advantages": "Your <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>advantages</mark>",
+    "anonymous_surveys_heading": "Anonymous <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>surveys</mark>",
+    "anonymous_surveys_text": "Anonymous and web-based employee surveys are a very efficient tool to get an honest opinion of employees about the workplace, executives, team atmosphere and the company as a whole.",
+    "qualitative_analysis_heading": "Qualitative <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>analysis</mark>",
+    "qualitative_analysis_text": "As part of our anonymous employee survey, we collect and analyze quantitative and qualitative statements from employees in your company.",
+
+    "alt_survey_web_zoomed": "Survey webview zoomed",
+    "alt_survey_login_web_table": "Survey login on webview",
 
     "switch_language": "Switch language",
     "de": "Deutsch",
