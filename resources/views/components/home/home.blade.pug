@@ -147,7 +147,7 @@ section.bg-light.o-hidden.pt-0
                          .mr-3.mr-md-4
                             img.icon.bg-primary(data-src=asset('assets/img/icons/theme/design/select.svg') alt='Selection interface icon' data-inject-svg='')
                          div
-                            h5 Analysen & Empfehlungen
+                            h5=__('analysis_heading')
                             div
                                | Sie erhalten von uns nicht nur statistische Auswertungen, sondern eine auf unseren langjährigen Erfahrungswerten gestützte Einschätzung inklusive konkreter Handlungsempfehlungen.
                    .my-4(data-aos='fade-left' data-aos-delay='100')
@@ -155,7 +155,7 @@ section.bg-light.o-hidden.pt-0
                          .mr-3.mr-md-4
                             img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/shield-check.svg') alt='Bookmark icon' data-inject-svg='')
                          div
-                            h5 Individuelle Unterstützung
+                            h5=__('individual_support_heading')
                             div
                                | Wir unterstützen Sie auch dabei, die Ergebnisse transparent zu kommunizieren und einen Prozess zu starten, bei dem Maßnahmen erarbeitet, umgesetzt und nachgehalten werden. Uns ist es wichtig, dass nicht nur die Erkenntnisse gesammelt werden, sondern Ihr Unternehmen auch ins Tun kommt.
                 // a.lead(href='#' data-aos='fade-left' data-aos-delay='100') Kontakt
@@ -254,17 +254,17 @@ section.bg-light.o-hidden
                             .text-dark.mb-0 &ldquo;We are working at almost twice the capacity&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                     img.img-fluid(
-                        data-src='assets/img/custom/anonym-laptop_t.jpg'
-                        alt='Image'
-                        data-jarallax-element='-12 0'
+                      data-src=asset('assets/img/custom/laptop-email-anonym-'+config('app.locale')+'.jpg')
+                      alt='Image'
+                      data-jarallax-element='-12 0'
                     )
                     .position-absolute.p-0.col-4.col-xl-5.top.left.mt-5.mr-n5.mr-lg-n3.mr-xl-n5.d-md-block(style='margin-top: -10% !important')
-                        img.shadow-lg(
-                            data-src='assets/img/custom/anonym-smartphone_t.png'
-                            alt='Image'
-                            data-jarallax-element='-24 0'
-                            style='width: 70%'
-                        )
+                      img.shadow-lg(
+                        data-src='assets/img/custom/anonym-smartphone_t.png'
+                        alt='Image'
+                        data-jarallax-element='-24 0'
+                        style='width: 70%'
+                      )
                     //-   img.img-fluid.rounded.shadow.border(data-src='assets/img/custom/anonym-app_t.jpg' alt='Screenshot')
             #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
               .row.align-items-center.justify-content-around
