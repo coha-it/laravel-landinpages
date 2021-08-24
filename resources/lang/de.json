@@ -1,7 +1,5 @@
 {
-    "switch_language": "Sprache wechseln",
-    "de": "Deutsch",
-    "en": "Englisch",
+
     "mab_title": "Mitarbeiterbefragungen",
     "three_strings": "[\"einfach\",\"übersichtlich\",\"individuell\"]",
     "mab_subtext": "Erschaffen Sie echte Mitarbeiterbeteiligung durch gezielte Befragungen ",
@@ -15,7 +13,8 @@
     "nav_android": "Android",
     "nav_language": "Sprache",
     "active_language": "Aktuelle Sprache",
-    "our": "Unsere",
+    "our_a": "Unsere",
+    "our_b": "Unser",
     "method": "Methode",
     "launch_at": "Launch v1.0 am",
     "badge_current": "aktuell",
@@ -24,12 +23,39 @@
     "English": "Englisch",
     "online-surveys": "Online-Befragungen",
     "anonym": "Anonym",
+    "analytically": "Analytisch",
+    "individually": "Individuell",
     "safe": "Sicher",
     "scalable": "Skalierbar",
     "modern": "Modern",
     "online_survey_text": "Wir führen online basierte Mitarbeiterbefragungen mit unserer eigens dafür entwickelten App durch, um die Wahrnehmung der MitarbeiterInnen über ihren Arbeitsplatz, die Führungskräfte, das Teamklima sowie das Unternehmen als Ganzes einzufangen.",
     "differently": "anders",
-    "act_differently_text": "Wieso wir <mark data-aos=\"highlight-text\" data-aos-delay=200)>:s</mark> als Andere vorgehen",
+    "act_differently_text": "Wieso wir <mark data-aos=\"highlight-text\" data-aos-delay=\"200\")>:s</mark> als Andere vorgehen",
     "analysis_heading": "Analysen & Empfehlungen",
-    "individual_support_heading": "Individuelle Unterstützung"
+    "analysis_text": "Sie erhalten von uns nicht nur statistische Auswertungen, sondern eine auf unseren langjährigen Erfahrungswerten gestützte Einschätzung inklusive konkreter Handlungsempfehlungen.",
+    "individual_support_heading": "Individuelle Unterstützung",
+    "individual_support_text": "Wir unterstützen Sie auch dabei, die Ergebnisse transparent zu kommunizieren und einen Prozess zu starten, bei dem Maßnahmen erarbeitet, umgesetzt und nachgehalten werden. Uns ist es wichtig, dass nicht nur die Erkenntnisse gesammelt werden, sondern Ihr Unternehmen auch ins Tun kommt.",
+    "our_goal_heading": "Unser <mark data-aos=\"highlight-text\" data-aos-delay=\"200\")>Ziel</mark>",
+    "our_goal_text": "Wir ermitteln für Ihr Unternehmen …",
+
+
+    "satisfaction_heading": "Zufriedenheit",
+    "satisfaction_text": "Den Grad der Arbeitszufriedenheit - Sie gewinnen einen Einblick in das Betriebsklima und die Unternehmenskultur. ​",
+    "hints_heading": "Hinweise",
+    "hints_text": "Detaillierte Hinweise, z.B. zu den Arbeitsbedingungen oder der Arbeitsplatzgestaltung etc.​",
+    "weakpoint_heading": "Schwachstellen",
+    "weakpoint_text": "Schwachpunkte und Handlungschancen.​",
+    "communication_heading": "Kommunikation",
+    "communication_text": "Wie die Kommunikation zwischen Führungskräften und Mitarbeitern optimiert werden kann.​",
+    "connectedness_heading": "Das Maß an Verbundenheit",
+    "connectedness_text": "mit Ihrem Unternehmen - Sie erhalten Rückschlüsse auf Ihre Arbeitgeberattraktivität.",
+    "feedback_heading": "Feedback/Rückmeldung",
+    "feedback_text": "über Ihre personalwirtschaftlichen Maßnahmen.​",
+
+    "your_advantages": "Ihre <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Vorteile</mark>",
+
+
+    "switch_language": "Sprache wechseln",
+    "de": "Deutsch",
+    "en": "Englisch"
 }

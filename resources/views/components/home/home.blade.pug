@@ -93,7 +93,7 @@ section.bg-light.o-hidden.pb-0
       .row.section-title.justify-content-center.text-center
          .col-md-9.col-lg-8.col-xl-7
             h3.display-4
-               =__('our') + ' '
+               =__('our_a') + ' '
                mark(data-aos="highlight-text" data-aos-delay="200")=__('method')
 
 section.bg-light.o-hidden.pt-0
@@ -148,16 +148,14 @@ section.bg-light.o-hidden.pt-0
                             img.icon.bg-primary(data-src=asset('assets/img/icons/theme/design/select.svg') alt='Selection interface icon' data-inject-svg='')
                          div
                             h5=__('analysis_heading')
-                            div
-                               | Sie erhalten von uns nicht nur statistische Auswertungen, sondern eine auf unseren langjährigen Erfahrungswerten gestützte Einschätzung inklusive konkreter Handlungsempfehlungen.
+                            div=__('analysis_text')
                    .my-4(data-aos='fade-left' data-aos-delay='100')
                       .d-flex
                          .mr-3.mr-md-4
                             img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/shield-check.svg') alt='Bookmark icon' data-inject-svg='')
                          div
                             h5=__('individual_support_heading')
-                            div
-                               | Wir unterstützen Sie auch dabei, die Ergebnisse transparent zu kommunizieren und einen Prozess zu starten, bei dem Maßnahmen erarbeitet, umgesetzt und nachgehalten werden. Uns ist es wichtig, dass nicht nur die Erkenntnisse gesammelt werden, sondern Ihr Unternehmen auch ins Tun kommt.
+                            div=__('individual_support_text')
                 // a.lead(href='#' data-aos='fade-left' data-aos-delay='100') Kontakt
 
          .col-md-9.col-lg-5(data-aos='fade-in')
@@ -173,50 +171,40 @@ section.o-hidden
   .container
     .row.section-title.justify-content-center.text-center
       .col-md-9.col-lg-8.col-xl-7
-        h2.display-4
-          | Unser&nbsp;
-          mark(data-aos="highlight-text" data-aos-delay="200") Ziel
-        .lead
-          | Wir ermitteln für Ihr Unternehmen …
-
+        h2.display-4 {!! __('our_goal_heading')  !!}
+        .lead=__('our_goal_text')
     .row
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='100')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/half-heart.svg') alt='Lightning icon' data-inject-svg='')
-          h5.mt-4 Zufriedenheit
-          div
-            | Den Grad der Arbeitszufriedenheit - Sie gewinnen einen Einblick in das Betriebsklima und die Unternehmenskultur. ​
+          h5.mt-4=__('satisfaction_heading')
+          div=__('satisfaction_text')
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='300')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/search.svg') alt='Bookmark icon' data-inject-svg='')
-          h5.mt-4 Hinweise
-          div
-            | Detaillierte Hinweise, z.B. zu den Arbeitsbedingungen oder der Arbeitsplatzgestaltung etc.​
+          h5.mt-4=__('hints_heading')
+          div=__('hints_text')
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='500')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/design/select.svg') alt='Selection interface icon' data-inject-svg='')
-          h5.mt-4 Schwachstellen
-          div
-            | Schwachpunkte und Handlungschancen.​
+          h5.mt-4=__('weakpoint_heading')
+          div=__('weakpoint_text')
 
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='100')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/general/user.svg') alt='Bookmark icon' data-inject-svg='')
-          h5.mt-4 Kommunikation
-          div
-            |  Wie die Kommunikation zwischen Führungskräften und Mitarbeitern optimiert werden kann.​
+          h5.mt-4=__('communication_heading')
+          div=__('communication_text')
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='300')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/electric/fan.svg') alt='Bookmark icon' data-inject-svg='')
-          h5.mt-4 Das Maß an Verbundenheit
-          div
-            | mit Ihrem Unternehmen - Sie erhalten Rückschlüsse auf Ihre Arbeitgeberattraktivität.
+          h5.mt-4=__('connectedness_heading')
+          div=__('connectedness_text')
       .col-md-4.mb-4(data-aos='fade-left', data-aos-delay='500')
         div
           img.icon.bg-primary(data-src=asset('assets/img/icons/theme/communication/chat-5.svg') alt='Bookmark icon' data-inject-svg='')
-          h5.mt-4 Feedback/Rückmeldung
-          div
-            | über Ihre personalwirtschaftlichen Maßnahmen.​
+          h5.mt-4=__('feedback_heading')
+          div=__('feedback_text')
 
   .position-absolute.w-50.h-100.top.right(data-jarallax-element='100 48')
     .blob.blob-2.w-100.h-100.top.right.bg-gradient.opacity-10
@@ -225,18 +213,17 @@ section.bg-light.o-hidden
   .container
     .row.section-title.justify-content-center.text-center
       .col-md-9.col-lg-8.col-xl-7
-        h3.display-4 Ihre&nbsp;
-          mark(data-aos='highlight-text' data-aos-delay='250') Vorteile
+        h3.display-4 {!! __('your_advantages') !!}
     .container
       .row
         .col
           ul#myTab.nav.nav-pills.lead.mb-4.mb-md-5.justify-content-center(role='tablist')
             li.nav-item
-              a#home-tab.nav-link.active(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true') Anonym
+              a#home-tab.nav-link.active(data-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true')=__('anonym')
             li.nav-item
-              a#profile-tab.nav-link(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false') Analytisch
+              a#profile-tab.nav-link(data-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false')=__('analytically')
             li.nav-item
-              a#contact-tab.nav-link(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false') Individuell
+              a#contact-tab.nav-link(data-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false')=__('individually')
           #myTabContent.tab-content
             #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
               .row.align-items-center.justify-content-between.flex-lg-row-reverse

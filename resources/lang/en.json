@@ -1,7 +1,4 @@
 {
-    "switch_language": "Switch language",
-    "de": "Deutsch",
-    "en": "English",
     "mab_title": "Employee surveys",
     "three_strings": "[\"easy\",\"clear\",\"individually\"]",
     "mab_subtext": "Create real emloyee participation through target surveys​",
@@ -16,7 +13,8 @@
     "nav_language": "Language",
     "active_language": "Current language",
     "Mitarbeiterbefragungen": "Employee surveys",
-    "our": "Our",
+    "our_a": "Our",
+    "our_b": "Our",
     "method": "method",
     "launch_at": "Launch v1.0 am",
     "badge_current": "current",
@@ -26,6 +24,8 @@
     "english": "englisch",
     "online-surveys": "Online-surveys",
     "anonym": "Anonymous",
+    "analytically": "Analytically",
+    "individually": "Individually",
     "safe": "Safe",
     "scalable": "Scalable",
     "modern": "Modern",
@@ -33,5 +33,28 @@
     "differently": "differently",
     "act_differently_text": "Why we act <mark data-aos=\"highlight-text\" data-aos-delay=200)>:s</mark> from others",
     "analysis_heading": "Analysis and recommendations",
-    "individual_support_heading": "Individual support"
+    "analysis_text": "You will not only receive statistical evaluations from us, but also an assessment based on our many years of experience, including specific recommendations for your further actions.",
+    "individual_support_heading": "Individual support",
+    "individual_support_text": "We also support you in communicating the results transparently and in starting a process in which measures are developed, implemented and followed up. It is important to us that not only the knowledge is collected, but that your company also gets into action.",
+    "our_goal_heading": "Our <mark data-aos=\"highlight-text\" data-aos-delay=\"200\")>goal</mark>",
+    "our_goal_text": "We determine for your company …",
+
+    "satisfaction_heading": "Satisfaction",
+    "satisfaction_text": "The degree of job satisfaction - you gain an insight into the working atmosphere and corporate culture.",
+    "hints_heading": "Hints",
+    "hints_text": "Detailed information, e.g. on working conditions or workplace design, etc.",
+    "weakpoint_heading": "Weak points",
+    "weakpoint_text": "Weak points and the opportunities for action.",
+    "communication_heading": "Communication",
+    "communication_text": "How communication between managers and employees can be optimized.",
+    "connectedness_heading": "Level of connectedness",
+    "connectedness_text": "with your company - you get conclusions about your attractiveness as an employer.",
+    "feedback_heading": "Feedback",
+    "feedback_text": "about your personnel management measures.",
+
+    "your_advantages": "Your <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>advantages</mark>",
+
+    "switch_language": "Switch language",
+    "de": "Deutsch",
+    "en": "English"
 }
