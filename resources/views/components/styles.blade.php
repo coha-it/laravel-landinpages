@@ -1,5 +1,6 @@
 <!-- Font -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="preload" as="style">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap">
+
 
 @if(App::environment('production'))
 	<link href="{{ mix('assets/css/combined.min.css') }}" rel="stylesheet" type="text/css">
