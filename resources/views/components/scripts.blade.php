@@ -116,9 +116,14 @@
         win.scroll(coha_lazyload_on_scroll);
         win.scroll();
     }
+
     window.addEventListener("load",function(){
         document.querySelector('body').classList.add('loaded');
         coha_init_lazyload();
     });
+
+    setTimeout(function() {
+        coha_init_lazyload();
+    }, 200);
 
 </script>
