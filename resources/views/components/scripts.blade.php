@@ -123,7 +123,7 @@
     });
 
     setTimeout(function() {
-        coha_init_lazyload();
+        jQuery(window).scroll();
     }, 200);
 
 </script>
