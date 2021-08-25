@@ -16,7 +16,7 @@
     "our_a": "Unsere",
     "our_b": "Unser",
     "method": "Methode",
-    "launch_at": "Launch v1.0 am",
+    "launch_date": "Launch v1.0 am <span class=\"font-weight-bold\">12.09.21</span>",
     "badge_current": "aktuell",
     "German": "Deutsch",
     "german": "deutsch",
@@ -52,11 +52,14 @@
     "feedback_heading": "Feedback/Rückmeldung",
     "feedback_text": "über Ihre personalwirtschaftlichen Maßnahmen.​",
 
-    "your_advantages": "Ihre <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Vorteile</mark>",
-    "anonymous_surveys_heading": "Anonyme <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Befragungen</mark>",
+    "your_advantages": "Ihre <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">Vorteile</mark>",
+    "anonymous_surveys_heading": "Anonyme <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">Befragungen</mark>",
     "anonymous_surveys_text": "Anonyme, webbasierte Mitarbeiterbefragungen stellen ein sehr effizientes Instrument dar, um eine ehrliche Meinung der Mitarbeiter über den Arbeitsplatz, Vorgesetzten, Teamklima sowie das Unternehmen als Ganzes zu erfahren.",
-    "qualitative_analysis_heading": "Qualitative <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>Analysen</mark>",
+    "qualitative_analysis_heading": "Qualitative <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">Analysen</mark>",
     "qualitative_analysis_text": "Im Rahmen unserer anonymen Mitarbeiterbefragung werden von uns quantitative und qualitative Aussagen von Mitarbeitern Ihres Unternehmens erhoben und analysiert.​",
+    "individual_questionnaire_heading": "Individueller Fragebogen, individuelle <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">Ergebnisse</mark>.",
+    "individual_questionnaire_text": "Wir passen unseren bewährten Fragebogen gerne nach Ihren Wünschen an, führen die Befragung für Sie als unabhängiger Dienstleister durch, besprechen mit Ihnen die Ergebnisse und geben Ihnen konkrete Handlungsempfehlungen sowohl für die Kommunikation der Ergebnisse als auch für die zu ergreifenden Maßnahmen zur Optimierung.​",
+
 
     "alt_survey_web_zoomed": "Umfrage Webansicht vergrößerst",
     "alt_survey_login_web_table": "Umfrage Anmeldung über Webview",

@@ -34,19 +34,14 @@ section.bg-light.o-hidden.pt-5.pb-0
                 | Thanks, a member of our team will be in touch shortly.
               .d-none.alert.alert-danger.w-100(role='alert' data-error-message)
                 | Please fill all fields correctly.
-            if !production
-              .alert.rounded-lg.bg-secondary.d-inline-flex.align-items-center
-                .badge.badge-pill.badge-success Beta
-                .mx-3
-                  =__('launch_at')
-                  |&nbsp;
-                  span.font-weight-bold 01.09.21
+            .alert.rounded-lg.bg-secondary.d-inline-flex.align-items-center
+              .badge.badge-pill.badge-success Beta
+              .mx-3 {!! __('launch_date') !!}
       .col
         .row.justify-content-center(data-jarallax-element='-50')
           .coha_shadow.coha_rounded.col-10.col-sm-8.col-md-7.col-lg-9.col-xl-9(data-aos='zoom-in' data-aos-delay='250')
             img.img-fluid.iphone-cutted(
-              Xdata-src=url("https://dreamteam-survey.s3.eu-central-1.amazonaws.com/landingpage/images/stock_2.png")
-              data-src=asset('assets/img/custom/stock/iphone_stock_result_'+config('app.locale')+'.jpg')
+              data-src=asset('assets/img/custom/stock/iphone_stock_result_'.locale().'.jpg')
               alt='Screenshot'
             )
   .w-50.h-50.bottom.right.position-absolute(data-aos='zoom-in' data-aos-delay='500')
@@ -238,13 +233,13 @@ section.bg-light.o-hidden
                           .text-dark.mb-0 &ldquo;We are working at almost twice the capacity&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                   img.img-fluid(
-                    data-src=asset('assets/img/custom/laptop-email-anonym-'+config('app.locale')+'.jpg')
+                    data-src=asset('assets/img/custom/laptop-email-anonym-'.locale().'.jpg')
                     alt='Image'
                     data-jarallax-element='-12 0'
                   )
                   .position-absolute.p-0.col-4.col-xl-5.top.left.mt-5.mr-n5.mr-lg-n3.mr-xl-n5.d-md-block(style='margin-top: -10% !important')
                     img.shadow-lg(
-                      data-src=asset('assets/img/custom/iphone---pan-and-pin-'+config('app.locale')+'.jpg')
+                      data-src=asset('assets/img/custom/iphone---pan-and-pin-'.locale().'.jpg')
                       alt='Image'
                       data-jarallax-element='-24 0'
                       style='width: 70%; border-radius: 12.5%;'
@@ -277,12 +272,8 @@ section.bg-light.o-hidden
               .row.align-items-center.justify-content-around
                 .col-lg-6.col-xl-5.text-center.text-lg-left.mb-4.mb-md-5.mb-lg-0
                   .pr-lg-4.pr-xl-5(data-aos='fade-right')
-                    h3.h1
-                      | Individueller Fragebogen, individuelle&nbsp;
-                      mark(data-aos='highlight-text' data-aos-delay='250') Ergebnisse
-                      | .
-                    p
-                      | Wir passen unseren bewährten Fragebogen gerne nach Ihren Wünschen an, führen die Befragung für Sie als unabhängiger Dienstleister durch, besprechen mit Ihnen die Ergebnisse und geben Ihnen konkrete Handlungsempfehlungen sowohl für die Kommunikation der Ergebnisse als auch für die zu ergreifenden Maßnahmen zur Optimierung.​
+                    h3.h1 {!! __('individual_questionnaire_heading') !!}
+                    p=__('individual_questionnaire_text')
                     if !production
                       .mt-4
                         .media.rounded.align-items-center.pl-3.pr-3.pr-md-4.py-2.d-inline-flex.text-left.shadow-sm.bg-white
@@ -290,7 +281,7 @@ section.bg-light.o-hidden
                           .text-dark.mb-0 &ldquo;Jumpstart is a dream come true.&rdquo;
                 .col-lg-6.col-xl-7(data-aos='fade-left')
                   img.img-fluid.rounded.shadow.border.fade_left(
-                    data-src=asset('assets/img/custom/edit-surveys-'+config('app.locale')+'.jpg')
+                    data-src=asset('assets/img/custom/edit-surveys-'.locale().'.jpg')
                     alt='Screenshot'
             )
 
@@ -307,11 +298,11 @@ section
     .row.align-items-center.justify-content-around
       .col-md-9.col-lg-5(data-aos='fade-in')
         img.img-fluid.rounded.shadow(
-            data-src=asset('assets/img/custom/survey-web-on-table-'.app()->getLocale().'.jpg')
+            data-src=asset('assets/img/custom/survey-web-on-table-'.locale().'.jpg')
             alt=__('alt_survey_login_web_table')
         )
         img.position-absolute.p-0.col-4.col-xl-5.border.border-white.border-thick.top.left.shadow-lg.mt-5.ml-n5.ml-lg-n3.ml-xl-n5.d-none.d-md-block(
-          data-src=asset('assets/img/custom/survey-web-zoom-'.app()->getLocale().'.jpg')
+          data-src=asset('assets/img/custom/survey-web-zoom-'.locale().'.jpg')
           alt=__('alt_survey_web_zoomed')
           data-jarallax-element='-20 0'
           style='border-radius: 10%;'

@@ -16,7 +16,7 @@
     "our_a": "Our",
     "our_b": "Our",
     "method": "method",
-    "launch_at": "Launch v1.0 am",
+    "launch_date": "Launch v1.0 at <span class=\"font-weight-bold\">Sep 12th, 2021</span>",
     "badge_current": "current",
     "German": "Deutsch",
     "german": "deutsch",
@@ -57,6 +57,9 @@
     "anonymous_surveys_text": "Anonymous and web-based employee surveys are a very efficient tool to get an honest opinion of employees about the workplace, executives, team atmosphere and the company as a whole.",
     "qualitative_analysis_heading": "Qualitative <mark data-aos=\"highlight-text\" data-aos-delay=\"250\")>analysis</mark>",
     "qualitative_analysis_text": "As part of our anonymous employee survey, we collect and analyze quantitative and qualitative statements from employees in your company.",
+    "individual_questionnaire_heading": "Individual questionnaire, individual <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">results</mark>.",
+    "individual_questionnaire_text": "We are happy to adapt our tested questionnaire according to your wishes, carry out the survey for you as an independent service provider, discuss the results with you. We give you specific recommendations for action. Both for communicating the results and for the optimization measures to be taken.",
+
 
     "alt_survey_web_zoomed": "Survey webview zoomed",
     "alt_survey_login_web_table": "Survey login on webview",
