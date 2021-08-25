@@ -121,9 +121,4 @@
         coha_init_lazyload();
     });
 
-    document.addEventListener('DOMContentLoaded', coha_init_lazyload, false);
-    window.addEventListener('load', coha_init_lazyload, false )
-    document.attachEvent("onreadystatechange", coha_init_lazyload);
-    window.attachEvent("onload", coha_init_lazyload);
-
 </script>
