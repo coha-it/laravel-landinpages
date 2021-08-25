@@ -118,4 +118,38 @@ hr {
     border-radius: 3.25em;
 }
 
+// Blue Mark
+mark,
+.mark {
+
+    &.blue {
+
+        background-image: none;
+        position: relative;
+        display: inline-block;
+        color: #fff;
+
+        &:after {
+            content: "";
+            background: #305263;
+            position: absolute;
+            left: -3%;
+            left: calc(0% - 4px);
+            right: 0;
+            top: 0;
+            width: 106%;
+            width: calc(100% + 8px);
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+
 /* purgecss end ignore */
+
+
+

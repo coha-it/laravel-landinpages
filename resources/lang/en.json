@@ -60,6 +60,30 @@
     "individual_questionnaire_heading": "Individual questionnaire, individual <mark data-aos=\"highlight-text\" data-aos-delay=\"250\">results</mark>.",
     "individual_questionnaire_text": "We are happy to adapt our tested questionnaire according to your wishes, carry out the survey for you as an independent service provider, discuss the results with you. We give you specific recommendations for action. Both for communicating the results and for the optimization measures to be taken.",
 
+    "support_people_text": "\"We support people and organizations in their desire for more fulfillment and success. We guide you on your way to <mark class=\"blue\" data-aos=\"highlight-text\" data-aos-delay=\"250\">unsuspected growth.</mark> <br><br>Our unique methodology, based on <mark class=\"blue\" data-aos=\"highlight-text\" data-aos-delay=\"250\">scientific knowledge,</mark> ensures the release of previously undiscovered powers of self-development.\"",
+    "step_one": "Step 1",
+    "step_two": "Step 2",
+    "step_three": "Step 3",
+    "the_sequence_heading":" The <mark data-aos=\"highlight-text\" data-aos-delay=\"200\">sequence</mark>",
+    "the_sequence_subheading": "Exemplary survey for the employee satisfaction",
+
+    "questionnaire_heading": "Questionnaire",
+    "questionnaire_text": "You will receive a questionnaire from us in advance, which has proven itself in many of our projects. Of course, we will discuss with you to what extent we can change or add to the questions for your company.",
+    "creation_survey_access_heading": "Creation of the survey & access",
+    "creation_survey_access_text": "In order to keep the effort as low as possible for you, we will set up your online survey for you in our systems. \n\nThen you will receive a web link and access data for your employees (department or branch IDs can also be assigned here if you wish). \n\nSo that your employees can be sure that nobody knows who and which login If you have received a password, it is recommended that you have the accesses pulled out of a „lottery wheel“ in a concealed manner as part of a staff meeting. \n\nThe employees now have a period of, for example, 3 weeks to take part in the survey.",
+    "evaluation_results_heading": "Evaluation of results",
+    "evaluation_results_text": "That you have the maximum benefit and transparency about your results, we create an individual graphic evaluation of the collected answers as well as a list of the verbal answers given. In addition, we analyze your results and put together an independent recommendation for action from an expert's point of view - tailor-made for your company. Of course, we will discuss our analysis with you personally and clarify any open questions.​",
+    "further_fields_application_heading": "Further fields of application",
+
+    "further_evaluation_employee_satisfaction": "Evaluation of employee satisfaction​",
+    "further_back_to_the_office_survey​": "Back-to-the office survey​",
+    "further_fusions": "Fusions",
+    "further_restructuring": "Restructuring",
+    "further_product_developments": "Product developments",
+    "further_swarm_intelligence": "Use of swarm intelligence​",
+    "further_democratic_employee_participation": "Basic democratic employee participation",
+    "further_decisionmaking_processes": "Designing decision-making processes together​",
+
 
     "alt_survey_web_zoomed": "Survey webview zoomed",
     "alt_survey_login_web_table": "Survey login on webview",
