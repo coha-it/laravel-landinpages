@@ -32,6 +32,11 @@ mix.js([
 if (mix.inProduction()) {
     mix
         .options({
+            cssNano: {
+                discardComments: {
+                    removeAll: true,
+                },
+            },
             postCss: [
                 require('postcss-discard-comments')({
                     removeAll: true
