@@ -84,9 +84,30 @@
     "further_democratic_employee_participation": "Basic democratic employee participation",
     "further_decisionmaking_processes": "Designing decision-making processes together​",
 
-
     "alt_survey_web_zoomed": "Survey webview zoomed",
     "alt_survey_login_web_table": "Survey login on webview",
+
+    "svg_loading_icon": "Icon For Loading",
+
+    "footer_pages": "Pages",
+    "footer_home": "Home",
+    "footer_data_protection": "Data protection",
+    "footer_imprint": "Imprint",
+    "footer_login": "Login",
+    "footer_app": "App",
+    "footer_available_soon": "Avail. soon",
+    "footer_ios": "iOS",
+    "footer_android": "Android",
+    "footer_about_us": "About us",
+    "footer_coha_blog": "Der Corporate-Happiness Blog",
+    "footer_coha_blog_date": "February 2nd",
+    "footer_contact": "Contact",
+    "footer_contact_text": "Get in touch with us and get your individual offer",
+    "footer_contact_fill_correctly": "Please fill all fields correctly.",
+    "footer_contact_thanks": "Thanks, a member of our team will be in touch shortly.",
+    "footer_copyright_text": "© 2021 Corporate Happiness",
+    "footer_google_recaptcha_text": "® This page is protected by reCAPTCHA and part of Google's <a href=\"https://www.google.com/policies/privacy/\" target=\"_blank\">privacy policy</a> and <a href=\"https://policies.google.com/terms\", target=\"_blank\">terms of use</a>",
+    "footer_contact_privacy_text": "We treat your data confidentially and they will not be shared with any third company or third person",
 
     "switch_language": "Switch language",
     "de": "Deutsch",

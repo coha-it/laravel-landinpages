@@ -10,14 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
 
 
     // Only on Local
     Route::get('test', 'PageCtrl@test')->middleware('local');
 
     // CMS
-    Route::get(__('routes.imprint'),    'PageCtrl@imprint')->name('imprint'); // Imprints - Impressum
-    Route::get(__('routes.privacy'),    'PageCtrl@privacy')->name('privacy'); // Imprints - Impressum
+    Route::get('impressum', 'PageCtrl@imprint')->name('impressum');
+    Route::get('imprint', 'PageCtrl@imprint')->name('imprint');
+    Route::get('privacy', 'PageCtrl@privacy')->name('privacy');
+    Route::get('datenschutz', 'PageCtrl@privacy')->name('datenschutz');
 
     // Language Switcher
     Route::get(__('routes.lang').'/{locale}', 'LanguageCtrl@switch')->name('lang_switch');

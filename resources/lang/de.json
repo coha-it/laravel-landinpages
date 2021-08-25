@@ -87,6 +87,28 @@
     "alt_survey_web_zoomed": "Umfrage Webansicht vergrößerst",
     "alt_survey_login_web_table": "Umfrage Anmeldung über Webview",
 
+    "svg_loading_icon": "Ladesymbol",
+
+    "footer_pages": "Seiten",
+    "footer_home": "Startseite",
+    "footer_data_protection": "Datenschutz",
+    "footer_imprint": "Impressum",
+    "footer_login": "Login",
+    "footer_app": "App",
+    "footer_available_soon": "Bald Verfüg.",
+    "footer_ios": "iOS",
+    "footer_android": "Android",
+    "footer_about_us": "Über Uns",
+    "footer_coha_blog": "Der Corporate-Happiness Blog",
+    "footer_coha_blog_date": "2. Februar",
+    "footer_contact": "Kontakt",
+    "footer_contact_text": "Treten Sie mit uns in Kontakt und holen Sie sich Ihr individuelles Angebot",
+    "footer_contact_fill_correctly": "Bitte füllen Sie alle Eingabefelder korrekt aus.",
+    "footer_contact_thanks": "Vielen Dank, ein Mitarbeiter wird zeitnah mit Ihnen in Kontakt treten.",
+    "footer_copyright_text": "© 2021 Corporate Happiness",
+    "footer_google_recaptcha_text": "® Diese Seite ist geschützt durch reCAPTCHA und Teil von Google's <a href=\"https://www.google.com/policies/privacy/\" target=\"_blank\">Datenschutz-Bestimmungen</a> und <a href=\"https://policies.google.com/terms\", target=\"_blank\">Nutzungsbedingungen</a>",
+    "footer_contact_privacy_text": "Ihre Daten bleiben vertraulich und werden keinem 3. Unternehmen oder 3. Person mitgeteilt",
+
     "switch_language": "Sprache wechseln",
     "de": "Deutsch",
     "en": "Englisch"
