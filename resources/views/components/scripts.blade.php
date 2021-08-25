@@ -64,6 +64,9 @@
 
 @endif
 
+<!-- Google Recaptcha -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <!-- Test -->
 <script src="{{ asset('dist/js/app.js') }}" async defer></script>
 <script src="{{ asset('js/public_custom.js') }}" async defer></script>
