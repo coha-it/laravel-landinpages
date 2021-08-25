@@ -58,7 +58,14 @@ if (mix.inProduction()) {
             'public/dist/css/custom.css',
             /* And so on and so on */
           ],
-          'public/assets/css/combined.min.css'
+          'public/assets/css/combined.min.css',
+          {
+            use: [
+                require('postcss-discard-comments')({
+                    removeAll: true
+                })
+            ]
+          }
         )
         .combine([
             'public/assets/js/jquery.min.js',
