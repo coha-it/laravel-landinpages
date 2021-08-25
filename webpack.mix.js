@@ -31,6 +31,18 @@ mix.js([
 // LIVE
 if (mix.inProduction()) {
     mix
+        .options({
+            postCss: [
+                require('postcss-discard-comments')({
+                    removeAll: true
+                })
+            ],
+            uglify: {
+                uglifyOptions: {
+                    comments: false
+                },
+            }
+        })
         .styles([
             'public/assets/font-awesome-5/fontawesome.min.css',
             'public/assets/font-awesome-5/regular.min.css',
