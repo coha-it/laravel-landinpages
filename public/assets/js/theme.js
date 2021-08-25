@@ -4106,20 +4106,22 @@
      * ------------------------------------------------------------------------
      */
 
+    // Custom Alex
+    // setTimeout(function() {
+        $(document).ready(function () {
+          var Recaptchav2Elements = $.makeArray($(Selector.DATA_RECAPTCHA));
 
-    $(document).ready(function () {
-      var Recaptchav2Elements = $.makeArray($(Selector.DATA_RECAPTCHA));
+          if (Recaptchav2Elements.length > 0) {
+            mrUtil.getScript(RemoteScript.RECAPTCHAV2);
+            /* eslint-disable no-plusplus */
 
-      if (Recaptchav2Elements.length > 0) {
-        mrUtil.getScript(RemoteScript.RECAPTCHAV2);
-        /* eslint-disable no-plusplus */
-
-        for (var i = Recaptchav2Elements.length; i--;) {
-          var $Recaptchav2 = $(Recaptchav2Elements[i]);
-          Recaptchav2.jQueryInterface.call($Recaptchav2, $Recaptchav2.data());
-        }
-      }
-    });
+            for (var i = Recaptchav2Elements.length; i--;) {
+              var $Recaptchav2 = $(Recaptchav2Elements[i]);
+              Recaptchav2.jQueryInterface.call($Recaptchav2, $Recaptchav2.data());
+            }
+          }
+        });
+    // }, 5000);
     /**
      * ------------------------------------------------------------------------
      * jQuery
