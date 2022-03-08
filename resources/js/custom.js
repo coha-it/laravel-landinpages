@@ -5,16 +5,15 @@ var sAmazonAws = 'https://corporatehappiness.s3.eu-central-1.amazonaws.com/krise
 var interval = setInterval(function() {
     if(document.readyState === 'complete') {
         clearInterval(interval);
-        // Load Video
-        initAll();
+        setTimeout(() => {
+            // Load Video
+            // initVideos();
+            initResize();
+            window.scrollBy({ top: 1, left: 0, behavior: "instant" });
+            window.scrollBy({ top: -1, left: 0, behavior: "instant" });
+        }, 1);
     }
 }, 100);
-
-function initAll() {
-    // initVideos();
-
-    initResize();
-}
 
 function initResize () {
     $( window ).resize(function () {
